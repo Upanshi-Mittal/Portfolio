@@ -1,4 +1,4 @@
-import "./Contact.css"; // Make sure to link correct CSS file
+import "./contact.css";
 import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord } from "react-icons/fa";
 
 function Contact() {
