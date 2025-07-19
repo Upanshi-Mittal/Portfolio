@@ -13,8 +13,9 @@ import Project from './components/project/project';
 function App() {
   useEffect(() => {
     const idlebounce=gsap.to(".spaceship", { duration: 1, ease: "none", repeat: -1 ,y:100,yolo:true});
-    gsap.from(".spaceship-img", { duration: 100, x:750,y:2100, ease: "none",scale:7 ,repeat: -1 ,yolo:true});
     idlebounce.seek(0);
+    gsap.to(".spaceship-img", { duration: 20, x:750,y:2100, ease: "none",scale:7 });
+    idlebounce.pause();
   }, []);
  
   return (

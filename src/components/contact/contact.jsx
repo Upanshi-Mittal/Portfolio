@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import "./contact.css";
+=======
+import "./contact.css"; // Make sure to link correct CSS file
+>>>>>>> 19f046d (💫 updated files for new Netlify deploy)
 import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord } from "react-icons/fa";
 
 function Contact() {
