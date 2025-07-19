@@ -1,0 +1,42 @@
+/* Hinged Strings Container */
+.hinged-strings {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 2;
+  justify-content: space-between;
+  display:flex;
+  
+}
+
+/* Single String */
+.string {
+  top: 0;
+  width: 4px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.6);
+  transform-origin: top center;
+  animation: swing 5s ease-in-out infinite;
+  pointer-events: auto;
+}
+
+/* Adjusted string positions to span full width */
+.string:nth-child(1) {  height:350px; animation-delay: 0s; }
+.string:nth-child(2) {  height:300px; animation-delay: 0.5s; }
+.string:nth-child(3) {  height:250px; animation-delay: 1s; }
+.string:nth-child(4) {  height:200px; animation-delay: 1.5s; }
+.string:nth-child(5) {  height:250px; animation-delay: 2s; }
+.string:nth-child(6) {  height:300px; animation-delay: 2.5s; }
+.string:nth-child(7) {  height:350px; animation-delay: 2.5s; }
+
+/* Swing Animation */
+@keyframes swing {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(3deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-3deg); }
+  100% { transform: rotate(0deg); }
+}

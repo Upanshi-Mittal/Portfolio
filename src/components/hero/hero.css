@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+.intro-wrapper {
+  position: relative;
+  background: radial-gradient(circle at center, #1b1f3b, #0f1123);
+  overflow: hidden;
+  display: flex;
+ 
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  z-index:10;
+}
+.intro-text {
+  z-index: 10;
+  max-width: 700px;
+  padding: 1rem;
+  left:5%;
+  top:10%;
+  position:absolute
+}
+.intro-text h1 {
+  font-size: 5rem;
+  color: aquamarine;
+  text-shadow: 0 0 10px aquamarine;
+  left:10%;
+  opacity: 1;
+}
+.intro-text h2 {
+  font-size: 1.8rem;
+  color: #c6f5ff;
+  margin-top: 0.5rem;
+}
+.intro-text p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #ffe5ec;
+}
+
+.phero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  z-index:-1;
+  border-radius:20px;
+  width:80%;
+  top:-9%;
+  border:3px solid #55efc4;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transform: translate(70%, -50%);
+  left:85%;
+  top:30%;
+  position: relative;
+  z-index: 3;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color:rgb(41, 159, 120)
+}
+
+.spaceship-img {
+  position: relative !important;
+  width: 80px;
+  height: auto;
+  z-index: 10;
+}
+
+/* Simple float animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.profile {
+  position: relative; /* Needed for ::before to position relative to this container */
+  height:300px;
+  width:270px;
+  border-radius: 50%;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.profile::before,
+.profile::after{
+  content: '';
+  position: absolute;
+  width:105%;
+  height:105%;
+  top:30%;
+  transform: translate(65%, -50%);
+  left:85%;
+  border-radius: 50%;
+  z-index: 2;
+ background-image: conic-gradient(from var(--angle), #00b894, #55efc4, #81ecec, #00cec9, #00b894);
+  padding: 2px;
+  animation: glow 3s ease infinite;
+}
+.profile::before{
+  filter: blur(1.5rem);
+  opacity:1;
+  animation-delay: 1.5s;
+}
+
+@keyframes glow {
+  from{
+    --angle:0deg
+  }
+  to{
+    --angle:360deg
+  }
+}
+
+.spaceship {
+  width: 60px;
+  height: auto;
+  display: inline-block;
+  position: fixed;
+  z-index: 100;
+}
+.work {
+  background-color:#00b894;
+  border-radius:20px;
+  width:fit-content;
+  border:3px solid #55efc4;
+  position:relative;
+  left:-35%;
+  bottom:-10%;
+}

@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:content-box;
+  background-color:transparent;
+  color:white;
+}
+.container{
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  overflow: hidden;
+}
+.page1, .page2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  height: 100vh;
+  text-align: center;
+  z-index:1;
+  position:relative;
+  overflow:hidden;
+}
+.page2{
+  height: 120vh !important;
+}
+
+
+.spaceship {
+  width: 100px;
+  pointer-events: none;
+  background-color: transparent;
+  position:absolute;
+  height:auto;
+  z-index:100;
+  right: -28%;
+top: 65vh;
+transform:translate(50%,50%);
+bottom: auto;
+}
+
+.spaceship-img{
+  right:20%
+}
+
+.page2 h1{
+  width:fit-content;
+  top:10px;
+}
+
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+  position: fixed !important;
+  top: 50px !important;
+  left: 20px !important;
+  z-index: 9999 !important;
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  background: red !important;
+  border: 2px solid white !important;
+}
