@@ -56,7 +56,6 @@ function Hero() {
       <div className="profile">
         <img src="/img.jpeg" alt="profile" />
       </div>
-      <button className="workprojects">My Work</button>
     </div>
   );
 }

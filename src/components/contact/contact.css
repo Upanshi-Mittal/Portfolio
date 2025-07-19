@@ -29,7 +29,7 @@
   font-size: 1rem;
   resize: vertical;
   height:30px;
-
+  margin-right:10px;
 }
 
 .form-textarea {
@@ -47,7 +47,7 @@
 }
 
 .submit-btn:hover {
-  background: #45a049;
+  background: rgb(22, 114, 83);
 }
 .footer {
   width: 110%;
