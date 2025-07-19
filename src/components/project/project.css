@@ -1,0 +1,53 @@
+.project {
+  text-align: center;
+}
+
+.work {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  left:20%;
+  
+}
+
+.cardpro{
+  background-color: #1e1e2f;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #f0f0f0;
+  width:240px;
+  height:300px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out;
+  opacity:0.7;
+    transform-style:preserve-3d;
+    transform:perspective(1000px)
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cardpro:hover{
+  opacity:1;
+  scale:1.2;
+  filter:brightness(1);
+}
+.cardpro:hover+*{
+    filter:brightness(0.6);
+    transform:  perspective(1000px) translateZ(50px) rotateY(30deg);
+}
+.cardpro:has(+:hover){
+    filter:brightness(0.6);
+    transform:  perspective(1000px) translateZ(50px) rotateY(-30deg);
+}

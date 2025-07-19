@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './project.css';
+gsap.registerPlugin(ScrollTrigger);
 
 const work = [
   {
@@ -25,7 +26,7 @@ const Project = () => {
       <h1>🛠️ Projects</h1>
       <div className="work">
         {work.map((item, index) => (
-          <div className="card" key={index}>
+          <div className="cardpro" key={index}>
             <h2>{item.Name}</h2>
             <p>{item.Description}</p>
             {item.Link && (

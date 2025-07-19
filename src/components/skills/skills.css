@@ -31,12 +31,16 @@
   --radius: min(35vw, 1800px);
 }
 
+.skills .item:hover{
+  border: 2px solid #ff4c4c;
+  scale:1.1;
+}
 .skills .item {
      width: clamp(60px, 15vw, 100px);
   height: clamp(60px, 15vw, 100px);
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(3px);
-  border: 2px solid #ff4c4c;
+  border: 2px solid aquamarine;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -68,6 +72,8 @@
   font-size: clamp(2rem, 5vw, 4rem);
   margin-bottom: 5vh;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  display:flex;
+  top:90%;
 }
 .item {
   border: 2px solid red;

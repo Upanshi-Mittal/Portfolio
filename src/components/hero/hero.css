@@ -13,7 +13,7 @@
 }
 .intro-text {
   z-index: 10;
-  max-width: 700px;
+  max-width: 60%;
   padding: 1rem;
   left:5%;
   top:10%;
@@ -22,7 +22,7 @@
 .intro-text h1 {
   font-size: 5rem;
   color: aquamarine;
-  text-shadow: 0 0 10px aquamarine;
+  /*text-shadow: 0 0 10px aquamarine;*/
   left:10%;
   opacity: 1;
 }
@@ -136,7 +136,7 @@ p {
   position: fixed;
   z-index: 100;
 }
-.work {
+.workprojects {
   background-color:#00b894;
   border-radius:20px;
   width:fit-content;
@@ -145,3 +145,8 @@ p {
   left:-35%;
   bottom:-10%;
 }
+
+.intro-text h1 span.char {
+  color: aquamarine !important;
+}
+

@@ -1,9 +1,10 @@
 import "./Contact.css"; // Make sure to link correct CSS file
-import { FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord } from "react-icons/fa";
 
 function Contact() {
   return (
     <div className="contact">
+      <h1 className="contact-title">Let's connect</h1>
       <form
         action="https://api.web3forms.com/submit"
         method="POST"
@@ -59,11 +60,11 @@ function Contact() {
                 <FaLinkedin />
               </a>
               <a
-                href="http://upanshmittal.netlify.app/"
+                href="https://www.instagram.com/shi.in_stxllar/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGlobe />
+                <FaInstagram />
               </a>
             </div>
             <p className="copyright">

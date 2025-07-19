@@ -97,3 +97,14 @@
   font-size: 0.9rem;
   color: #aaa;
 }
+
+.contact-title{
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 5vh;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position:absolute;
+  bottom:20%;
+  left:20%;
+  color: aquamarine;
+  font-weight: 400;
+}

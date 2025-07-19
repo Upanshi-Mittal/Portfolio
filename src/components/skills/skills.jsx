@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef,useLayoutEffect } from "react";
 import "./skills.css"; // import this CSS file
+gsap.registerPlugin(ScrollTrigger);
 
 const skillsData = [
   {
@@ -44,7 +45,7 @@ const skillsData = [
   },
   {
     name: "Rust",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+    icon: "/rust-icon.png",
   },
   {
   name: "MySQL",
@@ -63,6 +64,7 @@ export default function Skills() {
     console.log(`Set --quantity: ${skillsData.length}`);
     }
   }, []);
+  
   return (
     <div 
     className="skills">
@@ -94,6 +96,20 @@ function SkillItem({ src, name, position }) {
       itemRef.current.style.setProperty('--position', position);
     }
   }, [position]);
+  const carouselRef = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.to(".skill", {
+        rotateY: 360,
+        duration: 20,
+        ease: "none",
+        repeat: -1,
+      });
+    }, carouselRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
       <div className="item" ref={itemRef}>
