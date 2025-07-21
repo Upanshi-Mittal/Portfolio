@@ -1,0 +1,83 @@
+[33mcommit 51eed4f6e39ed793c77ead5bfad153386e5ccb44[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sun Jul 20 17:27:58 2025 +0530
+
+    Moved built files to root for GitHub Pages
+
+[33mcommit 5a862e6b3441f9d91666dcdf2a0325b5d263f559[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sun Jul 20 17:18:18 2025 +0530
+
+    Deploying build to GitHub Pages
+
+[33mcommit 37cdec563dbbf428746fcce5447cbcee2a08e494[m
+Author: Upanshi-Mittal <upanshimittal7@gmail.com>
+Date:   Sun Jul 20 17:22:16 2025 +0530
+
+    Update vite.config.js
+
+[33mcommit 0b2e4a5ac26c4c2c5d923e3dc9816616fdac0157[m
+Author: Upanshi-Mittal <upanshimittal7@gmail.com>
+Date:   Sun Jul 20 17:15:07 2025 +0530
+
+    Update vite.config.js
+
+[33mcommit 484825cf8cb1f6731047c3ccc440f57dd0fe8f41[m
+Author: Upanshi-Mittal <upanshimittal7@gmail.com>
+Date:   Sun Jul 20 17:13:16 2025 +0530
+
+    Update vite.config.js
+
+[33mcommit 35e8a48d3ea69c2ef48b375869e7cb74734486a8[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 22:45:55 2025 +0530
+
+    final commit
+
+[33mcommit f8ad5e367d3d19a0120ccb4dc2f98084b283b82a[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 22:30:12 2025 +0530
+
+    💫 updated files for new Netlify deploy
+
+[33mcommit 290b43f67f71195011d28e72faabcce5585976d5[m
+Author: Upanshi-Mittal <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 22:24:09 2025 +0530
+
+    Update contact.jsx
+
+[33mcommit 567c7680929fb08f120c1f5c6c033f88c4cb3e8a[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 22:01:30 2025 +0530
+
+    Initial commit
+
+[33mcommit 951504f13e1c1c2adf03218f2331dbc5a7e49c4b[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 21:53:22 2025 +0530
+
+    fix deployment config
+
+[33mcommit 02f70f8fc7d582b7d32fd9ad230771fb5549dc38[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 21:21:54 2025 +0530
+
+    chore: added deploy scripts
+
+[33mcommit 5b84110ebf5da59bd801e334126703fb1c9c1775[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 21:16:55 2025 +0530
+
+    Cleaned up unused files and updated components
+
+[33mcommit dd542cac13f18f557718641950165c8bae43e0dd[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 10:08:31 2025 +0530
+
+    Update: improved layout and added description to NostalgicStack
+
+[33mcommit e0054c38a854ce90f6ff3387cb718426c27d6161[m
+Author: Luna <upanshimittal7@gmail.com>
+Date:   Sat Jul 19 10:03:02 2025 +0530
+
+    initial commit

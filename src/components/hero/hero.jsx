@@ -54,7 +54,7 @@ function Hero() {
       </div>
 
       <div className="profile">
-        <img src="/img.jpeg" alt="profile" />
+        <img src="./img.jpeg" alt="profile" />
       </div>
     </div>
   );
