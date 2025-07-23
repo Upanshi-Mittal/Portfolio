@@ -3,8 +3,6 @@ import "./hero.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import { Link } from "react-router-dom";
-import {ToastContainer} from "react-toastify";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -54,7 +52,7 @@ function Hero() {
       </div>
 
       <div className="profile">
-        <img src="./img.jpeg" alt="profile" />
+        <img src="/img.jpeg" alt="profile" />
       </div>
     </div>
   );
