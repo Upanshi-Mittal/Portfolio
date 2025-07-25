@@ -23,7 +23,7 @@ function App() {
     <BlinkingStars />
        <String />
     <span className="spaceship" style={{ position: 'relative', display: 'inline-block' }}>
-            <img src="./spaceship.png" alt="spaceship" className="spaceship-img" style={{ position: 'absolute' }} />
+            <img src="/spaceship.png" alt="spaceship" className="spaceship-img" style={{ position: 'absolute' }} />
           </span>
     <div className="container">
        
