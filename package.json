@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Upanshi-Mittal.github.io/Portfolio",
+  "homepage": "https://github.com/Upanshi-Mittal/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

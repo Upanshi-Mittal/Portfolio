@@ -45,7 +45,7 @@ const skillsData = [
   },
   {
     name: "Rust",
-    icon: "/rust-icon.png",
+    icon: "../public/rust-icon.png",
   },
   {
   name: "MySQL",
