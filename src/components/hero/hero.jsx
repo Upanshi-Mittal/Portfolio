@@ -1,10 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import "./hero.css";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import gsap from "gsap";import { SplitText } from "gsap/SplitText";
 
 function Hero() {
   const heroRef = useRef();
@@ -34,27 +30,30 @@ function Hero() {
 
   return (
     <div className="phero" ref={heroRef}>
-      <div className="intro-text">
-        <h1>Hi, I'm</h1>
-        <h1>Upanshi Mittal!</h1>
-        <hr />
-        <p>
-          A Full Stack Developer with a heart full of code and a mind orbiting
-          the tech cosmos.
-        </p>
-        <p>
-          I love crafting pixel-perfect frontends and building powerful
-          backends to bring ideas to life.
-        </p>
-        <p>
-          Welcome to my digital galaxy—let’s explore the magic of code together!
-        </p>
-      </div>
+  <div className="intro-text">
+    <h1>Hi, I'm</h1>
+    <h1>Upanshi Mittal!</h1>
+    <hr />
+    <p>
+      A versatile Full Stack Developer navigating the vast tech cosmos
+      with a passion for crafting seamless frontends, building robust backends,
+      and orchestrating complex projects with precision.
+    </p>
+    <p>
+      From pixel-perfect UI designs to scalable server architectures,
+      I thrive at the intersection of creativity and technology.
+    </p>
+    <p>
+      Let's embark on this coding journey together — exploring innovative
+      solutions and shaping the future, one line of code at a time.
+    </p>
+  </div>
 
-      <div className="profile">
-        <img src="/img.jpeg" alt="profile" />
-      </div>
-    </div>
+  <div className="profile">
+    <img src="/img.jpeg" alt="profile" />
+  </div>
+</div>
+
   );
 }
 

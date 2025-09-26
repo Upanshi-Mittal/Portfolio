@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './project.css';
-gsap.registerPlugin(ScrollTrigger);
-
 const work = [
   {
     Name: "NostalgicStack",

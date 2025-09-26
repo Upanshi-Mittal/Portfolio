@@ -5,11 +5,14 @@
   background-color:transparent;
   color:white;
 }
+body{
+  margin-top:90px;
+
+}
 .container{
   justify-content: center;
   align-items: center;
   position:relative;
-  overflow: hidden;
 }
 .page1, .page2 {
   display: flex;
@@ -20,7 +23,7 @@
   text-align: center;
   z-index:1;
   position:relative;
-  overflow:hidden;
+  
 }
 .page2{
   height: 120vh !important;
@@ -29,19 +32,42 @@
 
 .spaceship {
   width: 100px;
-  pointer-events: none;
   background-color: transparent;
-  position:absolute;
   height:auto;
-  z-index:100;
+  z-index:1000;
   right: -28%;
 top: 65vh;
 transform:translate(50%,50%);
 bottom: auto;
 }
 
-.spaceship-img{
-  right:20%
+svg{
+  z-index:1000;
+}
+
+#space-path {
+  stroke-width: 2;
+  fill: none;
+}
+
+.spaceship-img {
+  width: 100%;
+  height: auto;
+}
+
+
+.spaceship {
+  position: fixed;   /* ✅ stays on screen and works with GSAP path */
+  top: 0;
+  left: 0;
+  width: 120px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.spaceship-img {
+  width: 100%;
+  display: block;
 }
 
 .page2 h1{
@@ -49,24 +75,29 @@ bottom: auto;
   top:10px;
 }
 
-.gsap-marker-start,
-.gsap-marker-end,
-.gsap-marker-scroller-start,
-.gsap-marker-scroller-end {
-  position: fixed !important;
-  top: 50px !important;
-  left: 20px !important;
-  z-index: 9999 !important;
-  display: block !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  background: red !important;
-  border: 2px solid white !important;
-}
-
 .page3{
   width:100%;
   height:100vh;
   position:relative;
-  overflow:hidden;
+
+}
+
+Hero{
+  margin-top: 20px;
+}
+.svg-container {
+  position: fixed;           /* sits over whole screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;      /* don’t block scrolling/clicks */
+  z-index: 500;
+}
+
+.page4{
+  margin-left:60px;
+}
+.page5{
+  margin-top:70px;
 }

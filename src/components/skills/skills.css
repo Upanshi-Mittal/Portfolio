@@ -9,16 +9,7 @@
     translateZ(var(--radius))
     translate(-50%, -50%);
 }
-.skills {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .skills .card {
   width: 80vw;
