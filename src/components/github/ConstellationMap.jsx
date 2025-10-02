@@ -1,15 +1,38 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const baseRepos = [
-  { id: 1, name: "Three js", desc: "Full-stack blogging platform", tech: "React, Node.js" },
-  { id: 2, name: "Retro VM", desc: "Pixel-punk rust + JS OS Simulator", tech: "Rust, JS" },
-  { id: 3, name: "Mental_Health", desc: "Smart FAQ Chatbot", tech: "Python, NLP" },
-  { id: 4, name: "Crop Health Detector", desc: "AI-powered plant disease detection", tech: "Python, TensorFlow" },
-  { id: 5, name: "InkHive", desc: "Collaborative writing platform", tech: "React, Firebase" },
-  { id: 6, name: "Portfolio", desc: "My personal portfolio", tech: "React, Three.js" },
+  { 
+    id: 1, 
+    name: "Three.js", 
+    desc: "Interactive 3D web experiences using Three.js and modern web technologies", 
+    tech: "React, Node.js" 
+  },
+  { 
+    id: 2, 
+    name: "Machine Learning Projects", 
+    desc: "Implementation of AI/ML algorithms for predictive modeling and data analysis", 
+    tech: "Python, Rust, JavaScript" 
+  },
+  { 
+    id: 3, 
+    name: "DevOps & Automation", 
+    desc: "Deployment pipelines, automation scripts, and CI/CD integration for scalable apps", 
+    tech: "Python, Docker, Jenkins" 
+  },
+  { 
+    id: 4, 
+    name: "Crop Health Detector", 
+    desc: "AI-powered system for detecting plant diseases and providing actionable insights", 
+    tech: "Python, TensorFlow, Web Development" 
+  },
+  { 
+    id: 5, 
+    name: "Surveillance System", 
+    desc: "Real-time object detection and monitoring system using computer vision", 
+    tech: "OpenCV, Python, React" 
+  }
 ];
 
-// Generate star positions in circular layers with swirling animation offsets
 function generateStarPositions(count, radius, phase) {
   const pos = [];
   for (let i = 0; i < count; i++) {
@@ -26,7 +49,6 @@ function ComplexConstellation() {
   const [phase, setPhase] = useState(0);
   const requestRef = useRef();
 
-  // Animate phase for swirling effect
   const animate = (time) => {
     setPhase((prev) => (prev + 0.002) % (2 * Math.PI));
     requestRef.current = requestAnimationFrame(animate);
@@ -37,20 +59,17 @@ function ComplexConstellation() {
     return () => cancelAnimationFrame(requestRef.current);
   }, []);
 
-  // Generate layered star positions with swirling
   const layers = [
     generateStarPositions(6, 80, phase),
     generateStarPositions(8, 130, -phase * 1.5),
     generateStarPositions(10, 180, phase * 0.7),
   ];
 
-  // Flatten positions with repo info repeated or sliced
   const stars = layers.flat().map((pos, idx) => {
     const repo = baseRepos[idx % baseRepos.length];
     return { ...pos, ...repo };
   });
 
-  // Connect stars with lines by layer and between layers
   const innerConnect = (points) => {
     const lines = [];
     for (let i = 0; i < points.length; i++) {
@@ -69,7 +88,6 @@ function ComplexConstellation() {
     return lines;
   };
 
-  // Build SVG lines array
   const lines = [
     ...innerConnect(layers[0]),
     ...innerConnect(layers[1]),
@@ -78,12 +96,10 @@ function ComplexConstellation() {
     ...outerConnect(layers[1], layers[2]),
   ];
 
-  // Twinkle animation with CSS classes
-
   return (
 <div style={{ width: 600, height: 450, backgroundColor: "transparent", position: "relative", overflow: "hidden", borderRadius: '15px'}}>
+  <h2 style={{display:"flex",justifyContent:"center",color:"#7FFFD4"}}>currently working over these things</h2>
       <svg viewBox="0 0 500 400" style={{ width: "100%", height: "100%" }}>
-        {/* Connect lines */}
         {lines.map(({ from, to }, i) => (
           <line
             key={i}
@@ -96,7 +112,6 @@ function ComplexConstellation() {
           />
         ))}
 
-        {/* Stars */}
         {stars.map((star, i) => (
           <circle
             key={i}
@@ -119,7 +134,6 @@ function ComplexConstellation() {
     
       </svg>
 
-      {/* Selected star info box */}
       {selected && (
         <div
           style={{

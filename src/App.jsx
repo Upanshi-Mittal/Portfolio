@@ -66,7 +66,7 @@ function App() {
         </div>
         <div className="page5" style={{ height: '90vh',display:"flex" }}>
           <Contact />
-          <ConstellationMap/>
+          <ConstellationMap style={{marginLeft:"1000px"}}/>
         </div>
         
       </div>

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './project.css';
 const work = [
   {
-    Name: "NostalgicStack",
+    Name: "Dreamscape",
     Description: "A modern full-stack blog website that allows users to post, share, and showcase web development projects and articles.",
-    Link: "https://github.com/Upanshi-Mittal/Nostalgicstack"
+    Link: "https://github.com/Upanshi-Mittal/Dreamscape"
   },
   {
     Name: "Retro VM",

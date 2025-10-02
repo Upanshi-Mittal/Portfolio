@@ -52,7 +52,7 @@ const skillsData = [
   },
   {
     name: "java",
-    icon:"https:"
+    icon:"../java.png"
   }
 ];
 
