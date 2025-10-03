@@ -53,6 +53,10 @@ const skillsData = [
   {
     name: "java",
     icon:"../java.png"
+  },
+  {
+    name: "OpenCV",
+    icon:"../opencv.png"
   }
 ];
 

@@ -3,20 +3,26 @@ import './project.css';
 const work = [
   {
     Name: "Dreamscape",
-    Description: "A modern full-stack blog website that allows users to post, share, and showcase web development projects and articles.",
+    Description: "A modern full-stack blog website for posting, sharing, and showcasing web development projects and articles. Features user authentication, likes, and comments.",
     Link: "https://github.com/Upanshi-Mittal/Dreamscape"
   },
   {
-    Name: "Retro VM",
-    Description: "A pixel-punk virtual OS simulator. It features Ghost Mode 👻, Hacker Mode 💻, and a full-on nostalgic desktop experience built in Rust + JS.",
-    Link: "https://github.com/Upanshi-Mittal/RetroVM"
+    Name: "Mental_Health",
+    Description: "A smart FAQ chatbot trained on mental health queries using NLP (NLTK), cosine similarity, and TF-IDF to provide meaningful responses.",
+    Link: "https://github.com/Upanshi-Mittal/IR"
   },
   {
-    Name: "Mental_Health",
-    Description: "A smart FAQ chatbot trained on mental health queries. Uses NLP (NLTK), cosine similarity, and TF-IDF to give meaningful responses.",
-    Link: "https://github.com/Upanshi-Mittal/MentalHealthChatbot"
+    Name: "face detection",
+    Description: "A real-time Python and OpenCV-based system for face detection and recognition with webcam support, robust to lighting and pose variations. Implements Haar cascades and LBPH algorithm for accurate recognition.",
+    Link: "https://github.com/Upanshi-Mittal/face-detection"
+  },
+  {
+    Name: "PhaseShifter",
+    Description: "A Three.js based interactive 3D web experiment exploring dynamic geometry and real-time phase shifting visualizations. Designed to demonstrate creative uses of 3D graphics for browser-based animation.",
+    Link: "https://phase-shifter-henna.vercel.app"
   }
 ];
+
 
 const Project = () => {
   return (

@@ -98,7 +98,7 @@ function ComplexConstellation() {
 
   return (
 <div style={{ width: 600, height: 450, backgroundColor: "transparent", position: "relative", overflow: "hidden", borderRadius: '15px'}}>
-  <h2 style={{display:"flex",justifyContent:"center",color:"#7FFFD4"}}>currently working over these things</h2>
+  <h2 style={{display:"flex",justifyContent:"center",color:"#7FFFD4"}}>currently working on these things</h2>
       <svg viewBox="0 0 500 400" style={{ width: "100%", height: "100%" }}>
         {lines.map(({ from, to }, i) => (
           <line
