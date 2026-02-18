@@ -4,11 +4,9 @@
   box-sizing:content-box;
   background-color:transparent;
   color:white;
+  width:100%;
 }
-body{
-  margin-top:90px;
 
-}
 .container{
   justify-content: center;
   align-items: center;
@@ -18,29 +16,15 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
-  height: 100vh;
+  align-items:start;     /* horizontal centering */
+  height: fit-content;
   text-align: center;
   z-index:1;
   position:relative;
+  overflow: hidden;
+  width: 100% !important;
   
 }
-.page2{
-  height: 120vh !important;
-}
-
-
-.spaceship {
-  width: 100px;
-  background-color: transparent;
-  height:auto;
-  z-index:1000;
-  right: -28%;
-top: 65vh;
-transform:translate(50%,50%);
-bottom: auto;
-}
-
 svg{
   z-index:1000;
 }
@@ -57,17 +41,10 @@ svg{
 
 
 .spaceship {
-  position: fixed;   /* ✅ stays on screen and works with GSAP path */
-  top: 0;
-  left: 0;
-  width: 120px;
-  z-index: 1000;
+  position: absolute;   /*stays on screen and works with GSAP path */
+  top: 100px;
+  z-index: 0;
   pointer-events: none;
-}
-
-.spaceship-img {
-  width: 100%;
-  display: block;
 }
 
 .page2 h1{

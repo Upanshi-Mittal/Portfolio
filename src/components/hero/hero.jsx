@@ -35,22 +35,10 @@ function Hero() {
     <h1>Upanshi Mittal!</h1>
     <hr />
     <p>
-      A versatile Full Stack Developer navigating the vast tech cosmos
-      with a passion for crafting seamless frontends, building robust backends,
-      and orchestrating complex projects with precision.
-    </p>
-    <p>
-      From pixel-perfect UI designs to scalable server architectures,
-      I thrive at the intersection of creativity and technology.
-    </p>
-    <p>
-      Let's embark on this coding journey together — exploring innovative
-      solutions and shaping the future, one line of code at a time.
-    </p>
-  </div>
-
-  <div className="profile">
-    <img src="/img.jpeg" alt="profile" />
+      Software Developer building scalable web applications with a strong focus on backend architecture and system design.
+Currently expanding into DevOps to bridge development and deployment for efficient, production-ready systems.
+  I enjoy solving complex problems and turning ideas into structured, reliable solutions through clean and maintainable code.
+</p>
   </div>
 </div>
 
