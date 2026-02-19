@@ -33,6 +33,7 @@
 /* Icon inside star */
 .star_c img {
   width: 45px;
+  translate: -50% -50%;
   height: 45px;
   transition: transform 0.3s ease;
 }
