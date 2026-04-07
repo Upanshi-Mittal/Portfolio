@@ -118,3 +118,39 @@
   transform: translate(-50%, -50%);
   z-index: 5;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+  padding: 8px;
+
+  width: 60px;
+  height: 70px;
+
+  border-radius: 12px;
+
+  background: rgba(0, 255, 255, 0.08); /* subtle glass */
+  border: 1px solid rgba(0, 255, 255, 0.3);
+
+  backdrop-filter: blur(6px);
+
+  transition: 0.2s ease;
+}
+
+.skill-icon {
+  width: 40px;
+}
+
+.skill-name {
+  font-size: 11px;
+  color: white;
+  opacity: 0.9;
+  text-shadow: 0 0 5px rgba(255,255,255,0.6);
+  text-align: center;
+  margin: 0;
+  transform: translateX(-25px) translateY(-15px);
+}

@@ -2,26 +2,32 @@ import { useState, useMemo } from "react";
 import "./skills.css";
 
 const skillsData = [
-  { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", clusters: ["frontend"], x: 65, y: 35,connectsTo: ["TailwindCSS","JavaScript","React","CSS"] },
-  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", clusters: ["AI/ML"],x: 18, y: 22 ,connectsTo: ["C","C++","OpenCV"]},
-  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", clusters: ["frontend"] , x: 46, y: 43 , connectsTo: ["Streamlit","HTML"]},
-  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", clusters: ["frontend"] , x: 73, y: 27,connectsTo: ["HTML"]},
-  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", clusters: ["frontend"], x: 75, y: 45,connectsTo: ["HTML"] },
-  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", clusters: ["backend"], x: 15, y: 70 ,connectsTo: ["OpenCV","C++","MongoDB","MySQL"]},
-  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", clusters: ["backend"], x: 48, y: 80,connectsTo: ["node2","Node.js","MySQL"] },
-  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", clusters: ["version-control"], x: 50, y: 10,connectsTo: ["TailwindCSS"] },
-  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", clusters: [ "AI/ML","language"], x: 60, y: 60 ,connectsTo: ["Docker","node2","Streamlit","C"]},
-  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", clusters: ["language"], x: 9, y: 60,connectsTo: ["TensorFlow","OpenCV","Node.js","C"] },
-  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", clusters: ["language"], x: 37, y: 25,connectsTo: ["TensorFlow","Express.js","C++","Python"] },
-  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", clusters: ["backend"], x: 40, y: 50,connectsTo: ["Streamlit","Express.js","Node.js","MongoDB"] },
-  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", clusters: ["devops"], x: 65, y: 70,connectsTo: ["Python","node1"] },
-  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", clusters: ["backend"], x: 40, y: 40,connectsTo: ["MySQL","C"]},
-  { name: "OpenCV", icon: "../opencv.png", clusters: ["AI/ML"] , x: 20, y: 60,connectsTo: ["Node.js","C++","TensorFlow","Streamlit"] },
-  { name: "Streamlit", icon: "https://streamlit.io/images/brand/streamlit-mark-color.png", clusters: ["frontend","AI/ML"], x: 53, y: 50,connectsTo: ["MySQL","TailwindCSS","Python","CSS","OpenCV"] },
-  {name: "node1", icon:"", clusters: [""], x: 80, y: 77 , connectsTo: ["Docker"]},
-  { name: "TailwindCss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", clusters: ["frontend"], x: 50, y: 26,connectsTo: ["Git","Streamlit","HTML"] },
-  {name: "node2", icon: "", clusters: [""], x: 50, y: 70,connectsTo: ["MongoDB","Python"]},
-];
+  { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", clusters: ["frontend"], x: 65, y: 35, connectsTo: ["TailwindCSS", "JavaScript", "React", "CSS"] },
+  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", clusters: ["AI/ML"], x: 18, y: 22, connectsTo: ["C", "C++", "OpenCV"] },
+  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", clusters: ["frontend"], x: 46, y: 43, connectsTo: ["Streamlit", "HTML"] },
+  { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", clusters: ["frontend"], x: 73, y: 27, connectsTo: ["HTML"] },
+  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", clusters: ["frontend"], x: 75, y: 45, connectsTo: ["HTML"] },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", clusters: ["backend"], x: 15, y: 70, connectsTo: ["OpenCV", "C++", "MongoDB", "MySQL"] },
+  { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", clusters: ["backend"], x: 48, y: 80, connectsTo: ["node2", "Node.js", "MySQL"] },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", clusters: ["version-control"], x: 50, y: 10, connectsTo: ["TailwindCSS"] },
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", clusters: ["AI/ML", "language"], x: 60, y: 60, connectsTo: ["Docker", "node2", "Streamlit", "C"] },
+  { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", clusters: ["language"], x: 9, y: 60, connectsTo: ["TensorFlow", "OpenCV", "Node.js", "C"] },
+  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", clusters: ["language"], x: 37, y: 25, connectsTo: ["TensorFlow", "Express.js", "C++", "Python"] },
+  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", clusters: ["backend"], x: 40, y: 50, connectsTo: ["Streamlit", "Express.js", "Node.js", "MongoDB"] },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", clusters: ["devops"], x: 65, y: 70, connectsTo: ["Python", "node1"] },
+  { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", clusters: ["backend"], x: 40, y: 40, connectsTo: ["MySQL", "C"] },
+  { name: "OpenCV", icon: "../opencv.png", clusters: ["AI/ML"], x: 20, y: 60, connectsTo: ["Node.js", "C++", "TensorFlow", "Streamlit"] },
+  { name: "Streamlit", icon: "https://streamlit.io/images/brand/streamlit-mark-color.png", clusters: ["frontend", "AI/ML"], x: 53, y: 50, connectsTo: ["MySQL", "TailwindCSS", "Python", "CSS", "OpenCV"] },
+  { name: "node1", icon: "", clusters: [""], x: 80, y: 77, connectsTo: ["Docker"] },
+  { name: "TailwindCss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", clusters: ["frontend"], x: 50, y: 26, connectsTo: ["Git", "Streamlit", "HTML"] },
+{
+  name: "GSAP",
+  icon: "../greensock-svgrepo-com.svg.png",
+  clusters: ["frontend"],
+  x: 50,
+  y: 70,
+  connectsTo: ["Streamlit"]
+}];
 
 
 const clusterColors = {
@@ -49,43 +55,42 @@ function Skills() {
   };
 
   return (
-    <div className="skills-section">
-      <div className="text">My con<strong style={{color: "#e6230d"}}>SKILL</strong>ation</div>
+    <div className="skills-section" id="skills">
+      <div className="text">My con<strong style={{ color: "#e6230d" }}>SKILL</strong>ation</div>
       <svg className="lines">
-  {skillsData.map((skill) =>
-    skill.connectsTo?.map((targetName) => {
-      const target = skillsData.find(s => s.name === targetName);
-      if (!target) return null;
+        {skillsData.map((skill) =>
+          skill.connectsTo?.map((targetName) => {
+            const target = skillsData.find(s => s.name === targetName);
+            if (!target) return null;
 
-      const sharedCluster = skill.clusters.find(c =>
-        target.clusters.includes(c)
-      );
+            const sharedCluster = skill.clusters.find(c =>
+              target.clusters.includes(c)
+            );
 
-      const isActive =
-        activeClusters.length > 0 &&
-        sharedCluster &&
-        activeClusters.includes(sharedCluster);
+            const isActive =
+              activeClusters.length > 0 &&
+              sharedCluster &&
+              activeClusters.includes(sharedCluster);
 
-      return (
-        <line
-          key={`${skill.name}-${target.name}`}
-          x1={`${skill.x}%`}
-          y1={`${skill.y}%`}
-          x2={`${target.x}%`}
-          y2={`${target.y}%`}
-          stroke={
-            isActive
-              ? clusterColors[sharedCluster]
-              : "rgba(241, 234, 234, 0.2)"
-          }
-          strokeWidth={isActive ? 2 : 1}
-        />
-      );
-    })
-  )}
-</svg>
+            return (
+              <line
+                key={`${skill.name}-${target.name}`}
+                x1={`${skill.x}%`}
+                y1={`${skill.y}%`}
+                x2={`${target.x}%`}
+                y2={`${target.y}%`}
+                stroke={
+                  isActive
+                    ? clusterColors[sharedCluster]
+                    : "rgba(241, 234, 234, 0.2)"
+                }
+                strokeWidth={isActive ? 2 : 1}
+              />
+            );
+          })
+        )}
+      </svg>
 
-      <img src="public/sagittarius.png" alt="spaceship" className="sagrittarius" />
       <div className="constellation">
         {skillsData.map((skill) => {
 
@@ -101,21 +106,25 @@ function Skills() {
             : null;
 
           return (
-            <div
-              key={skill.name}
-              className="star_c"
-              style={{
-                top: `${skill.y}%`,
-                left: `${skill.x}%`,
-                opacity: isDimmed ? 0.2 : 1,
-                filter: glowColor
-                  ? `drop-shadow(0 0 15px ${glowColor})`
-                  : "none"
-              }}
-              onClick={() => handleClick(skill)}
-            >
-              
-              <img src={skill.icon} alt={skill.name} width="45" />
+            <div key={skill.name} className="star-container">
+              <div
+                key={skill.name}
+                className="star_c"
+                style={{
+                  top: `${skill.y}%`,
+                  left: `${skill.x}%`,
+                  opacity: isDimmed ? 0.2 : 1,
+                  filter: glowColor
+                    ? `drop-shadow(0 0 15px ${glowColor})`
+                    : "none"
+                }}
+                onClick={() => handleClick(skill)}
+              >
+                <div  style={{  }}>
+                  <img src={skill.icon} alt={skill.name} className="skill-icon card" />
+                  <div className="skill-name">{skill.name}</div>
+                </div>
+              </div>
             </div>
           );
         })}

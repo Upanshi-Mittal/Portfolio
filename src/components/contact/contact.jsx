@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord } from "react-ico
 
 function Contact() {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h1 className="contact-title" style={{marginTop:"50px"}}>Let's connect</h1>
       <form
         action="https://api.web3forms.com/submit"

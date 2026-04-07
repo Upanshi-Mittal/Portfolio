@@ -17,16 +17,15 @@ const work = [
     Link: "https://github.com/Upanshi-Mittal/face-detection"
   },
   {
-    Name: "PhaseShifter",
-    Description: "A Three.js based interactive 3D web experiment exploring dynamic geometry and real-time phase shifting visualizations. Designed to demonstrate creative uses of 3D graphics for browser-based animation.",
-    Link: "https://phase-shifter-henna.vercel.app"
-  }
+  Name: "BeatFall",
+  Description: "A gesture-controlled rhythm FPS game using React Three Fiber and MediaPipe hand tracking. Features real-time beat-based enemy spawning, 3D interactive gameplay, Firebase authentication, and global leaderboard system.",
+  Link: "https://github.com/arnav-khandelwal/BeatFall"
+}
 ];
-
 
 const Project = () => {
   return (
-    <div className="project">
+    <div className="project" id='projects'>
       <h1>🛠️ Projects</h1>
       <div className="work">
         {work.map((item, index) => (
