@@ -97,3 +97,7 @@ li a{
 body {
   color: var(--text);
 }
+
+h1 a{
+  color: #aab2b5;
+}

@@ -1,5 +1,6 @@
 .project {
   text-align: center;
+  margin-top: 50px;
 }
 
 .work {
@@ -26,6 +27,7 @@
   opacity:0.7;
     transform-style:preserve-3d;
     transform:perspective(1000px)
+
 }
 
 .card:hover {
@@ -33,7 +35,6 @@
 }
 
 .card a {
-  color: #00ffff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -51,3 +52,12 @@
     filter:brightness(0.6);
     transform:  perspective(1000px) translateZ(50px) rotateY(-30deg);
 }
+
+h1 {
+  font-size: 2.5rem;
+  color: #7a7f81;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

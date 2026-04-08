@@ -23,6 +23,7 @@
   position:relative;
   overflow: hidden;
   width: 100% !important;
+  height: 80vh;
   
 }
 svg{

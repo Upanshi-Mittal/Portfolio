@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import './App.css';
 import Skills from './components/skills/skills';
 import Hero from './components/hero/hero';
@@ -15,7 +15,25 @@ import ConstellationMap from './components/github/ConstellationMap';
 import Header from './components/header/header';
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 function App() {
+  const [path, setPath] = useState("");
+  useEffect(() => {
+  const handleResize = () => {
+    const width = window.innerWidth;
 
+    if (width < 600) {
+      // mobile path
+      setPath("M10 10 ...");
+    } else {
+      // desktop path
+      setPath("M26 7 ...");
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
   useGSAP(() => {
     gsap.to(".spaceship", {
       motionPath: {
@@ -47,7 +65,7 @@ function App() {
           <Hero />
         </div>
 
-        <div className="page2" style={{ height: '100vh' }}>
+        <div className="page2" style={{ height: '100vh'}}>
           <Skills />
         </div>
 
@@ -69,6 +87,7 @@ function App() {
           width="100vw"
           height="100vh"
           viewBox="0 -0 800 600"
+          preserveAspectRatio="xMidYMid meet"
 
         >
           <g transform="translate(0, 350)">
