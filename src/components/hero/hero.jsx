@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import "./hero.css";
-import gsap from "gsap";import { SplitText } from "gsap/SplitText";
+import gsap from "gsap"; import { SplitText } from "gsap/SplitText";
 
 function Hero() {
   const heroRef = useRef();
@@ -30,17 +30,17 @@ function Hero() {
 
   return (
     <div className="phero" id="phero" ref={heroRef}>
-  <div className="intro-text">
-    <h1>Hii, I'm Upanshi Mittal</h1>
-    <h2>Creative Developer & Problem Solver</h2>
-    <hr />
-    <p>
-      Software Developer focused on building scalable web applications with a strong emphasis on backend architecture and system design. 
-Currently expanding into DevOps to bridge development and deployment, aiming to build efficient, production-ready systems. 
-I enjoy solving complex problems and turning ideas into structured, reliable solutions through clean and maintainable code.
-</p>
-  </div>
-</div>
+      <div className="intro-text">
+        <h1>Hii, I'm Upanshi Mittal</h1>
+        <h2>Creative Developer & Problem Solver</h2>
+        <hr />
+        <p>
+          Software Developer focused on building scalable web applications with a strong emphasis on backend architecture and system design.
+          Currently expanding into DevOps to bridge development and deployment, aiming to build efficient, production-ready systems.
+          I enjoy solving complex problems and turning ideas into structured, reliable solutions through clean and maintainable code.
+        </p>
+      </div>
+    </div>
 
   );
 }

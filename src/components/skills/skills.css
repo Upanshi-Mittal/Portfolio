@@ -136,7 +136,7 @@
   border-radius: 12px;
 
   background: rgba(0, 255, 255, 0.08); /* subtle glass */
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  border: 1px solid #5485a3;
 
   backdrop-filter: blur(6px);
 
@@ -158,7 +158,7 @@
 }
 
 .highlight {
-  background: linear-gradient(90deg, #06395e, #0c63a1, #095b96);
+  background: linear-gradient(90deg, #84072f, #b22b56, #a07986);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -1,7 +1,8 @@
 .contact {
   height: auto;
   display: flex;
-  align-items: flex-start; /* Aligns form to the top vertically */
+  flex-direction: column;
+  align-items: center; /* Aligns form to the top vertically */
   justify-content: flex-start; /* Aligns form to the left */
   padding: 50px 20px 50px 20px; 
   width:70%;
@@ -23,7 +24,7 @@
 
 .form-input,
 .form-textarea {
-  width: 90%;
+  width: 100%;
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -59,8 +60,9 @@
   font-family: 'Poppins', sans-serif;
   bottom:0;
   border-top: 1px solid #333;
-  position: absolute;
+  position: relative;
   left: 0;
+  margin-top: 50px;
 }
 
 .footer-content {
@@ -106,9 +108,15 @@
   font-size: clamp(2rem, 4vw, 4rem);
   margin-bottom: 5vh;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  position:absolute;
-  bottom:20%;
-  left:15%;
   color: aquamarine;
   font-weight: 400;
+  text-align: center;
+}
+
+.project,
+.contact,
+.page3,
+.page5 {
+  position: relative;
+  z-index: 1;
 }

@@ -31,7 +31,7 @@
   /*text-shadow: 0 0 10px aquamarine;*/
   opacity: 1;
   align-items: center;
-  background: linear-gradient(90deg, #06395e, #0c63a1, #095b96);
+  background: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s ease infinite;
@@ -72,41 +72,6 @@ p {
   100% { transform: translateY(0); }
 }
 
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
-}
-.profile::before,
-.profile::after{
-  content: '';
-  position: absolute;
-  width:105%;
-  height:105%;
-  top:30%;
-  transform: translate(65%, -50%);
-  left:85%;
-  border-radius: 50%;
-  z-index: 2;
- background-image: conic-gradient(from var(--angle), #00b894, #55efc4, #81ecec, #00cec9, #00b894);
-  padding: 2px;
-  animation: glow 3s ease infinite;
-}
-.profile::before{
-  filter: blur(1.5rem);
-  opacity:1;
-  animation-delay: 1.5s;
-}
-
-@keyframes glow {
-  from{
-    --angle:0deg
-  }
-  to{
-    --angle:360deg
-  }
-}
-
 .spaceship {
   width: 60px;
   height: auto;
@@ -128,3 +93,27 @@ p {
   color: aquamarine !important;
 }
 
+@media screen and (max-width: 768px) {
+  .intro-text h1 {
+    font-size: 3.5rem;
+  }
+  hr{
+    margin-bottom: 0rem;
+  }
+  .intro-text p{
+    margin-top: 2rem;
+    padding-top: 0%;
+  }
+  .page1{
+    height:100%;
+  }
+  .phero p{
+    font-size:1.2rem;
+  }
+  .phero{
+    height:fit-content;
+    z-index:100;
+    margin-bottom: 95px;
+
+  }
+}
