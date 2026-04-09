@@ -1,13 +1,15 @@
 .contact {
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Aligns form to the top vertically */
-  justify-content: flex-start; /* Aligns form to the left */
-  padding: 50px 20px 50px 20px; 
-  width:70%;
+  padding: 50px 20px 0px 0px; 
+  width:100%;
   margin:20px;
-
+  display :flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: #7a7f81;
+  margin-top: 0.5rem;
 }
 
 .contact-form {
@@ -20,6 +22,7 @@
   max-width: 500px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 100px;
 }
 
 .form-input,
@@ -42,27 +45,28 @@
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: aquamarine;
-  color: white;
+  background: rgb(237, 120, 140);
+
+  color: #7a7f81;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .submit-btn:hover {
-  background: rgb(22, 114, 83);
+  background: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .footer {
-  width: 110%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.08);
-  color: #f2f2f2;
+  color: #7a7f81;
   text-align: center;
-  padding: 30px 10px;
+  padding-top:30px;
   font-family: 'Poppins', sans-serif;
-  bottom:0;
+  bottom:-20px;
   border-top: 1px solid #333;
   position: relative;
-  left: 0;
-  margin-top: 50px;
 }
 
 .footer-content {
@@ -71,6 +75,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  
 }
 
 .footer-text {
@@ -108,7 +113,8 @@
   font-size: clamp(2rem, 4vw, 4rem);
   margin-bottom: 5vh;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  color: aquamarine;
+  color: #7a7f81;
+
   font-weight: 400;
   text-align: center;
 }
@@ -119,4 +125,93 @@
 .page5 {
   position: relative;
   z-index: 1;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.mail{
+  background-color: #6f0325;
+}
+
+.Box{
+  width:20px;
+  height:20px;
+  padding :10px;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  gap:10px;
+  background-color: rgb(209, 19, 19);
+}
+
+.Box svg {
+  color: rgb(30, 29, 29);
+  font-size: 7rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  left: 100px;
+  max-width: 300px;
+}
+
+.mail,
+.Phone,
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  align-items: flex-start;
+  border: 1px solid   rgb(237, 120, 140);
+;
+}
+
+.title {
+  font-weight: 600;
+  color: rgb(237, 120, 140);
+}
+
+.social-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    align-items: center;
+  }
+}
+
+.contact-title{
+  font-size: clamp(2rem, 5vw, 3rem);  /* responsive */
+  color: #7a7f81;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 800;
 }

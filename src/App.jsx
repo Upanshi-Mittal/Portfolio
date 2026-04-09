@@ -76,9 +76,8 @@ function App() {
 
         <div className="page4">
         </div>
-        <div className="page5" style={{ height: '90vh',display:"flex" }}>
+        <div className="page5" style={{ height: 'fit-content' }}>
           <Contact />
-          <ConstellationMap style={{marginLeft:"1000px"}}/>
         </div>
         
       </div>
@@ -88,7 +87,6 @@ function App() {
           height="100vh"
           viewBox="0 -0 800 600"
           preserveAspectRatio="xMidYMid meet"
-
         >
           <g transform="translate(0, 350)">
             <path
