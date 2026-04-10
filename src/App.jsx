@@ -13,6 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ConstellationMap from './components/github/ConstellationMap';
 import Header from './components/header/header';
+import Sidebar from './components/sidebar/Sidebar';
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 function App() {
   const [path, setPath] = useState("");
@@ -59,6 +60,7 @@ function App() {
     <Header />
       <BlinkingStars />  
       <String />
+      <Sidebar />
       <div className="container">
 
         <div className="page1">

@@ -48,8 +48,8 @@ function Contact() {
           <div className="social-header">Get in Touch</div>
           <div className="mail" >
             <div className="icon">
-    <FaMessage />
-  </div>
+              <FaMessage />
+            </div>
 
             <div className="Box">
               <span className="title">Email</span>
@@ -59,8 +59,8 @@ function Contact() {
           </div>
           <div className="Phone" >
             <div className="icon">
-    <FaPhone />
-  </div>
+              <FaPhone />
+            </div>
 
             <div className="Box">
               <div className="title">Phone</div>
@@ -69,8 +69,8 @@ function Contact() {
           </div>
           <div className="location" >
             <div className="icon">
-    <FaLocationPin />
-  </div>
+              <FaLocationPin />
+            </div>
 
             <div className="Box">
               <div className="title">Location</div>
@@ -85,29 +85,6 @@ function Contact() {
       <div className="footer">
         <div className="footer-content">
           <p className="footer-text">Made with ❤️ by Upanshi Mittal</p>
-          <div className="footer-icons">
-            <a
-              href="https://github.com/Upanshi-Mittal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/upanshi-mittal-498213320/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://www.instagram.com/shi.in_stxllar/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram />
-            </a>
-          </div>
           <p className="copyright">
             © {new Date().getFullYear()} Upanshi Mittal. All Rights Reserved.
           </p>

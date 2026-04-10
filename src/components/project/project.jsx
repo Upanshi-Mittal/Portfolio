@@ -27,7 +27,7 @@ const work = [
 const Project = () => {
   return (
     <div className="project" id='projects'>
-      <h1 style={{ padding: "20px", marginTop: "20px", display: "flex", flexDirection: "row" }}>Pro
+      <h1 style={{ padding: "20px", marginTop: "20px", display: "flex", flexDirection: "row" }}> Featured Pro
         <img src="/flash.png" style={{ width: "40px", height: "auto", marginTop: "20px", marginRight: "-10px", marginLeft: "-10px" }} alt="J" className="flash-icon" />
         ects
       </h1>
