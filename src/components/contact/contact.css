@@ -28,13 +28,12 @@
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 1rem;
   resize: vertical;
   height:30px;
-  margin-right:10px;
+  padding: 10px 0 10px;
 }
 
 .form-textarea {
@@ -42,12 +41,12 @@
 }
 
 .submit-btn {
-  padding: 12px;
+    padding: 10px 0 10px;
   border: none;
   border-radius: 8px;
-  background: rgb(237, 120, 140);
-
-  color: #7a7f81;
+  background: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
+  font-weight: 800;
+  color: #b7c0c3;
   font-size: 1rem;
   cursor: pointer;
 }
@@ -136,33 +135,25 @@
   flex-wrap: wrap;
 }
 
-.mail{
-  background-color: #6f0325;
-}
 
 .Box{
-  width:20px;
-  height:20px;
+  display:flex;
+  flex-direction: column;
   padding :10px;
   border-radius: 10%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-right: 10px;
   gap:10px;
-  background-color: rgb(209, 19, 19);
 }
 
-.Box svg {
-  color: rgb(30, 29, 29);
-  font-size: 7rem;
-}
+
 
 .social-links {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  left: 100px;
   max-width: 300px;
 }
 
@@ -170,19 +161,14 @@
 .Phone,
 .location {
   display: flex;
-  flex-direction: column;
   gap: 8px;
   background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 12px;
-  align-items: flex-start;
-  border: 1px solid   rgb(237, 120, 140);
-;
+  align-items: center;
 }
 
 .title {
   font-weight: 600;
-  color: rgb(237, 120, 140);
+  color: linear-gradient(90deg, #6f0325, #b22b56, #a07986);;
 }
 
 .social-links a {
@@ -215,3 +201,28 @@
   flex-wrap: wrap;
   font-weight: 800;
 }
+.mail svg,
+.Phone svg,
+.location svg {
+  font-size: 1.5rem;
+  min-width: 25px;   /* keeps alignment same */
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7a7f81;
+  padding:3px;
+  border-radius: 20%;
+}
+
+.icon:hover{
+  background-color: #b22b56;
+  color: white;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+

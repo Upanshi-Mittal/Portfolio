@@ -5,13 +5,14 @@ import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord, FaLandmark, FaPh
 function Contact() {
   return (
     <div className="contact" id="contact">
-      <h1 className="contact-title" style={{ marginTop: "50px" }}>Let's connect</h1>
+      <h1 className="contact-title" style={{ marginTop: "50px" }}>Contact Me</h1>
       <div className="contact-container" >
         <form
           action="https://api.web3forms.com/submit"
           method="POST"
           className="contact-form"
         >
+          <div className="form-header">Send a Message</div>
           <input
             type="hidden"
             name="access_key"
@@ -40,32 +41,44 @@ function Contact() {
           ></textarea>
 
           <button type="submit" className="submit-btn">
-            Send
+            Send Message
           </button>
         </form>
-        <div className="social-links">
-          <div className="mail">
+        <div className="social-links"  >
+          <div className="social-header">Get in Touch</div>
+          <div className="mail" >
+            <div className="icon">
+    <FaMessage />
+  </div>
+
             <div className="Box">
-            <FaMessage />
-            <span className="title">Email</span>
+              <span className="title">Email</span>
+              <a href="mailto:upanshimittal7@gmail.com">upanshimittal7@gmail.com</a>
+
             </div>
-            <a href="mailto:upanshimittal7@gmail.com">upanshimittal7@gmail.com</a>
           </div>
-          <div className="Phone">
+          <div className="Phone" >
+            <div className="icon">
+    <FaPhone />
+  </div>
+
             <div className="Box">
-            <FaPhone />
-            <div className="title">Phone</div>
+              <div className="title">Phone</div>
+              <a href="tel:+1234567890">+1 (234) 567-890</a>
             </div>
-            <a href="tel:+1234567890">+1 (234) 567-890</a>
           </div>
-          <div className="location">
+          <div className="location" >
+            <div className="icon">
+    <FaLocationPin />
+  </div>
+
             <div className="Box">
-            <FaLocationPin />
-            <div className="title">Location</div>
+              <div className="title">Location</div>
+              <a href="https://www.google.com/maps/place/India" target="_blank" rel="noopener noreferrer">
+                Delhi, India
+              </a>
             </div>
-            <a href="https://www.google.com/maps/place/India" target="_blank" rel="noopener noreferrer">
-              Delhi, India
-            </a>
+
           </div>
         </div>
       </div>
