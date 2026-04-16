@@ -4,34 +4,30 @@
   box-sizing:border-box;
   background-color:transparent;
   color:white;
-  width:100%;
 }
 
 .container{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   position:relative;
 }
 .page1, .page2{
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertical centering */
-  align-items:start;     /* horizontal centering */
-  height: fit-content;
   text-align: center;
   z-index:1;
-  position:relative;
-  overflow: hidden;
   width: 100% !important;
-  min-height: 80vh;
-  
+
 }
 svg{
   z-index:1000;
 }
 
+.page1{
+  min-height:80vh !important;
+}
 #space-path {
   stroke-width: 2;
   fill: none;
@@ -57,9 +53,8 @@ svg{
 
 .page3{
   width:100%;
-  min-height:60vh;
   position:relative;
-
+  min-height: 50vh !important;
 }
 
 Hero{
@@ -77,20 +72,13 @@ Hero{
 
 
 .page4{
-  min-height: 100vh;
   width:100%;
   position: relative;
 }
 
-@media (max-width: 1250px) {
-  .page3 {
-    min-height: 110vh;
-  }
-}
 
-@media (max-width: 768px) {
-  .page3 {
-    min-height: 150vh;
-  }
-
+.page1, .page2, .page3, .page4 {
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
 }

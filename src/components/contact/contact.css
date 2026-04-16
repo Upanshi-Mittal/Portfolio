@@ -25,7 +25,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.08);
   margin-bottom: 0px;
-  border:2px solid #7a7f81;
+  border:1px solid #7a7f81;
 }
 
 .form-input,
@@ -69,9 +69,10 @@
   text-align: center;
   padding-top:30px;
   font-family: 'Poppins', sans-serif;
-  bottom:-20px;
-  border-top: 1px solid #333;
+  bottom:-30px;
   position: relative;
+  border-top:1px solid #7a7f81;
+
 }
 
 .footer-content {
@@ -159,7 +160,7 @@
   flex-direction: column;
   gap: 20px;
   min-width: 300px;
-  border:2px solid #7a7f81;
+  border:1px solid #7a7f81;
   padding: 30px;
   max-width:500px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -175,6 +176,8 @@
   background: rgba(255, 255, 255, 0.05);
   align-items: center;
   padding-left:50px;
+  min-width:340px;
+
 }
 
 .title {
@@ -217,7 +220,7 @@
 .Phone svg,
 .location svg {
   font-size: 1.5rem;
-  min-width: 25px;   /* keeps alignment same */
+  min-width: 25px;   
 }
 
 .icon {

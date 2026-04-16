@@ -15,19 +15,19 @@ function Header() {
         <div className="header">
             <div className="content">
                 <h1><a href="#phero">Um<span style={{ color: 'pink' }}>.</span></a></h1>
-                <div className={`mode ${day ? "day" : "night"}`} onClick={() => toggleDay()}>
-                    {day ? "🌞" : "🌜"}
-                </div>
+                <div className="nav-wrapper">
+
                 <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => toggleMenu()}>
                     ☰
                 </div>
-                
+                <div className={`circle ${menuOpen ? "show" : ""}`}></div>
                 <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-                    <li><a href="#skills" onClick={()=>toggleMenu()}>Skills</a></li>
-                    <li><a href="#projects" onClick={()=>toggleMenu()}>Projects</a></li>
-                    <li><a href="#contact" onClick={()=>toggleMenu()}>Contact</a></li>
+                    <li><a href="#skills" onClick={() => toggleMenu()}>Skills</a></li>
+                    <li><a href="#projects" onClick={() => toggleMenu()}>Projects</a></li>
+                    <li><a href="#contact" onClick={() => toggleMenu()}>Contact</a></li>
                 </ul>
 
+            </div>
             </div>
             <hr className="line" />
 

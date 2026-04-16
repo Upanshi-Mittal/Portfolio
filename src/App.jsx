@@ -67,15 +67,15 @@ function App() {
           <Hero />
         </div>
 
-        <div className="page2" style={{ height: '100vh'}}>
+        <div className="page2" >
           <Skills />
         </div>
 
-        <div className="page3" style={{ width: '100vw', height: '70vh' }}>
+        <div className="page3" >
           <Project />
           
         </div>
-        <div className="page4" style={{ height: 'fit-content' }}>
+        <div className="page4" >
           <Contact />
         </div>
         

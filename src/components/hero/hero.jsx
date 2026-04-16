@@ -63,7 +63,7 @@ function Hero() {
         <h1>Hii, I'm Upanshi Mittal</h1>
         <h2>Creative Developer & Problem Solver</h2>
         <Separator />
-        <p>
+        <p> 
           Software Developer focused on building scalable web applications with a strong emphasis on backend architecture and system design.
           Currently expanding into DevOps to bridge development and deployment, aiming to build efficient, production-ready systems.
           I enjoy solving complex problems and turning ideas into structured, reliable solutions through clean and maintainable code.
