@@ -44,7 +44,7 @@
 }
 
 .sidebar-links li a:hover {
-    background-color: #418e9f;
+    background-color: var(--glow);
     padding:8px;
     border-radius: 50%;
     margin:1px;
