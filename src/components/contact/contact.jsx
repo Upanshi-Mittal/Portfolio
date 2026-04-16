@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord, FaLandmark, FaPh
 function Contact() {
   return (
     <div className="contact" id="contact">
-      <h1 className="contact-title" style={{ marginTop: "50px" }}>Contact Me</h1>
+      <h1 className="contact-title text" style={{ marginTop: "50px" }}>Contact Me</h1>
       <div className="contact-container" >
         <form
           action="https://api.web3forms.com/submit"

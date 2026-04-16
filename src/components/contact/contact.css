@@ -24,7 +24,8 @@
   max-width: 500px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.08);
-  margin-bottom: 100px;
+  margin-bottom: 0px;
+  border:2px solid #7a7f81;
 }
 
 .form-input,
@@ -44,19 +45,22 @@
 
 .submit-btn {
   padding: 12px;
-  border: none;
+  border: 2px solid #7a7f81;
   border-radius: 8px;
-  background: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
-  font-weight: 800;
-  color: #b7c0c3;
+  background: linear-gradient(90deg, #545252, #2f5861, #155f6f );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  font-weight: 800;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .submit-btn:hover {
-  background: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
+  background: linear-gradient(90deg, #545252, #2f5861, #155f6f );
+  -webkit-background-clip: unset;   /* 👈 KEY FIX */
+  -webkit-text-fill-color: #f3eeee;
+    border: 2px solid #7a7f81;
+
 }
 .footer {
   width: 100%;
@@ -154,7 +158,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 300px;
+  min-width: 300px;
+  border:2px solid #7a7f81;
+  padding: 30px;
+  max-width:500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
 }
 
 .mail,
@@ -164,6 +174,7 @@
   gap: 8px;
   background: rgba(255, 255, 255, 0.05);
   align-items: center;
+  padding-left:50px;
 }
 
 .title {
@@ -200,6 +211,7 @@
   align-items: center;
   flex-wrap: wrap;
   font-weight: 800;
+  font-family: url("../../../assets/researcherfontregular.ttf");
 }
 .mail svg,
 .Phone svg,
@@ -215,14 +227,13 @@
   align-items: center;
   justify-content: center;
   background-color: #7a7f81;
-  padding:3px;
+  padding:10px;
   border-radius: 20%;
 }
 
 .icon:hover{
-  background-color: #b22b56;
+  background-color: #418e9f;
   color: white;
   transform: scale(1.2);
   transition: all 0.3s ease;
 }
-

@@ -28,7 +28,8 @@ ul {
 }
 
 li a{
-    color: azure;
+    color: #7a7f81;
+    font-size: 1.5rem;
 }
 
 .hamburger {
@@ -100,4 +101,10 @@ body {
 
 h1 a{
   color: #aab2b5;
+}
+
+.nav-links a:hover,
+.header a:hover
+{
+  color:#418e9f;
 }

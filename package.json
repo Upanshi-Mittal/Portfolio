@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://github.com/Upanshi-Mittal/Portfolio",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

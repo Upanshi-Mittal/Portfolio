@@ -27,11 +27,10 @@
 }
 .intro-text h1 {
   font-size: 5rem;
-  color: rgb(204, 226, 230);
   /*text-shadow: 0 0 10px aquamarine;*/
   opacity: 1;
   align-items: center;
-  background: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
+  background: linear-gradient(90deg, #545252, #2f5861, #155f6f );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s ease infinite;
@@ -116,4 +115,10 @@ p {
     margin-bottom: 95px;
 
   }
+}
+
+hr{
+  background-color:#4e5354;
+  height:3px;
+  border:none;
 }

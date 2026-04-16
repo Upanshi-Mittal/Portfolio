@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './project.css';
+import { FaBolt } from 'react-icons/fa6';
 const work = [
   {
     Name: "BeatFall",
@@ -27,10 +28,12 @@ const work = [
 const Project = () => {
   return (
     <div className="project" id='projects'>
-      <h1 style={{ padding: "20px", marginTop: "20px", display: "flex", flexDirection: "row" }}> Featured Pro
-        <img src="/flash.png" style={{ width: "40px", height: "auto", marginTop: "20px", marginRight: "-10px", marginLeft: "-10px" }} alt="J" className="flash-icon" />
-        ects
-      </h1>
+      <h1 className="heading">
+  <span className="title">
+    Featured Projects
+    <FaBolt className="bolt-icon" />
+  </span>
+</h1>
       <div className="cards">
         <div className="work">
           {work.map((item, index) => (

@@ -75,10 +75,7 @@ function App() {
           <Project />
           
         </div>
-
-        <div className="page4">
-        </div>
-        <div className="page5" style={{ height: 'fit-content' }}>
+        <div className="page4" style={{ height: 'fit-content' }}>
           <Contact />
         </div>
         
@@ -106,5 +103,4 @@ function App() {
         </>
         );
 }
-
         export default App;

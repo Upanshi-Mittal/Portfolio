@@ -86,7 +86,6 @@
   left:50%;
   transform:translateX(-50%);
   font-size:3rem;
-  font-family: 'Poppins', sans-serif;
   color: #7a7f81;
 }
 .sagrittarius{
@@ -158,7 +157,5 @@
 }
 
 .highlight {
-  background: linear-gradient(90deg, #84072f, #b22b56, #a07986);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color:#196475;
 }
