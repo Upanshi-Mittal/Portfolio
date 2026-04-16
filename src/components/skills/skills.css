@@ -88,15 +88,7 @@
   font-size:3rem;
   color: #7a7f81;
 }
-.sagrittarius{
-  position:absolute;
-  width:100vh;
-  z-index: 3;
-  transform:translate(-50%, -10%) rotate(20deg);
-  opacity:0.3;
-  height:120vh;
-  opacity: 0;
-}
+
 
 .dot{
   background-color: aquamarine;

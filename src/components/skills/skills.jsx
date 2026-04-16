@@ -18,8 +18,8 @@ const skillsData = [
   { name: "Express.js", icon: "../images.png", clusters: ["Backend"], x: 40, y: 40, connectsTo: ["MySQL", "C"] },
   { name: "OpenCV", icon: "../opencv.png", clusters: ["AI/ML"], x: 20, y: 60, connectsTo: ["Node.js", "C++", "TensorFlow", "Streamlit"] },
   { name: "Streamlit", icon: "https://streamlit.io/images/brand/streamlit-mark-color.png", clusters: ["Frontend", "AI/ML"], x: 53, y: 50, connectsTo: ["MySQL", "TailwindCSS", "Python", "CSS", "OpenCV"] },
-  { name: "node1", icon: "", clusters: [""], x: 80, y: 77, connectsTo: ["Docker"] },
-  { name: "TailwindCss", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg", clusters: ["Frontend"], x: 50, y: 26, connectsTo: ["Git", "Streamlit", "HTML"] },
+  { name: "MySql", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", clusters: ["Backend"], x: 80, y: 77, connectsTo: ["Streamlit", "Express.js", "Node.js", "MongoDB"] },
+  { name: "TailwindCss", icon: "../tailwindcss.svg", clusters: ["Frontend"], x: 50, y: 26, connectsTo: ["Git", "Streamlit", "HTML"] },
   { name: "GSAP",icon: "../greensock-svgrepo-com.svg.png",clusters: ["Frontend"],x: 50,y: 70,connectsTo: ["Streamlit"]
 }];
 

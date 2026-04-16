@@ -5,7 +5,7 @@ const work = [
   {
     Name: "BeatFall",
     Description: "A gesture-controlled rhythm FPS game using React Three Fiber and MediaPipe hand tracking. Features real-time beat-based enemy spawning, 3D interactive gameplay, Firebase authentication.",
-    Link: "https://github.com/arnav-khandelwal/BeatFall"
+    Link: "https://beatfall.netlify.app/"
   },
   {
     Name: "Dreamscape",
