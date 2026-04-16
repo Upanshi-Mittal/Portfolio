@@ -1,0 +1,141 @@
+
+:root {
+  --grad: linear-gradient(90deg, #c29c8a, #b7582c, #a00842);
+  --grad-soft: linear-gradient(180deg, #c29c8a, #b7582c, #a00842);
+  --glow: #b7582c;
+  --glowr:#a00842;
+  --text:white;
+}
+
+.about {
+  min-height: 100vh;
+  padding: 0px 0px;
+   display: flex;
+   flex-direction: column;
+align-items: center;
+min-width: 100vw;
+margin:0 !important;
+}
+
+.about-title {
+  font-size: 3rem;
+  min-width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+.about-wrapper {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  max-width: 100%; 
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.timeline {
+  position: relative;
+  width: 320px;
+  height:fit-content;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom:0;
+  width: 2px;
+  background: var(--grad-soft);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 50px;
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: var(--grad);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #b7582c, 0 0 20px #a00842;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
+  height:fit-content;
+  width:auto;
+  max-width: 280px;  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--glowr);
+  box-shadow: 0 0 15px rgba(65,142,159,0.3);
+}
+
+.year {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.about-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 1.2rem;
+  color: #bbb;
+  line-height: 1.8;
+}
+
+.about-text strong {
+    background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+.stats {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  padding: 15px 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  border: 1px solid #b7582c;;
+  box-shadow: 0 0 15px rgba(183, 88, 44, 0.4);
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}

@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   font-size: 1.5rem;
-  color: #7a7f81;
+  color: var(--text);
   margin-top: 0.5rem;
   column-gap: 100px;
 }
@@ -25,6 +25,7 @@
   background: rgba(255, 255, 255, 0.08);
   margin-bottom: 0px;
   border:1px solid #7a7f81;
+  backdrop-filter: blur(10px);
 }
 
 .form-input,
@@ -46,7 +47,7 @@
   padding: 12px;
   border: 2px solid #7a7f81;
   border-radius: 8px;
-  background: linear-gradient(90deg, #545252, #2f5861, #155f6f );
+  background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  font-weight: 800;
   font-size: 1rem;
@@ -55,7 +56,7 @@
 
 .submit-btn:hover {
   
-  background: linear-gradient(90deg, #545252, #2f5861, #155f6f );
+  background: var(--grad);
   -webkit-background-clip: unset;   /* 👈 KEY FIX */
   -webkit-text-fill-color: #f3eeee;
     border: 2px solid #7a7f81;
@@ -116,7 +117,7 @@
 .contact-title{
   margin-bottom: 5vh;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  color: #7a7f81;
+  color: var(--grad) !important;
   font-size:3rem;
   font-weight: 400;
   text-align: center;
@@ -138,7 +139,6 @@
   width: 100%;
   flex-wrap: wrap;
 }
-
 
 .Box{
   display:flex;
@@ -163,6 +163,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
+  backdrop-filter: blur(10px);
+
 
 }
 
@@ -224,7 +226,7 @@
 }
 
 .icon:hover{
-  background-color: #418e9f;
+  background-color: var(--glow);
   color: white;
   transform: scale(1.2);
   transition: all 0.3s ease;
@@ -232,7 +234,7 @@
 
 .title1{
   font-size: 1.4rem;
-  color: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
+  color: white;
 }
 
 .social-header{

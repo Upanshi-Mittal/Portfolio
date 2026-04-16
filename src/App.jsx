@@ -14,6 +14,7 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import ConstellationMap from './components/github/ConstellationMap';
 import Header from './components/header/header';
 import Sidebar from './components/sidebar/Sidebar';
+import About from './components/about/about';
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 function App() {
   const [path, setPath] = useState("");
@@ -66,7 +67,9 @@ function App() {
         <div className="page1">
           <Hero />
         </div>
-
+        <div className="page2" >
+          <About />
+        </div>
         <div className="page2" >
           <Skills />
         </div>

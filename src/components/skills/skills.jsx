@@ -20,8 +20,9 @@ const skillsData = [
   { name: "Streamlit", icon: "https://streamlit.io/images/brand/streamlit-mark-color.png", clusters: ["Frontend", "AI/ML"], x: 53, y: 50, connectsTo: ["MySQL", "TailwindCSS", "Python", "CSS", "OpenCV"] },
   { name: "MySql", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", clusters: ["Backend"], x: 80, y: 77, connectsTo: ["Streamlit", "Express.js", "Node.js", "MongoDB"] },
   { name: "TailwindCss", icon: "../tailwindcss.svg", clusters: ["Frontend"], x: 50, y: 26, connectsTo: ["Git", "Streamlit", "HTML"] },
-  { name: "GSAP",icon: "../greensock-svgrepo-com.svg.png",clusters: ["Frontend"],x: 50,y: 70,connectsTo: ["Streamlit"]
-}];
+  {
+    name: "GSAP", icon: "../greensock-svgrepo-com.svg.png", clusters: ["Frontend"], x: 50, y: 70, connectsTo: ["Streamlit"]
+  }];
 
 
 const clusterColors = {
@@ -49,19 +50,19 @@ function Skills() {
   };
 
   return (
-    <div className="skills-section" id="skills" style={{padding:"40px"}}>
-      <div className="text" style={{marginBottom:"40px"}}> My con<strong className="highlight">SKILL</strong>ation
+    <div className="skills-section" id="skills" style={{ padding: "40px" }}>
+      <div className="text" style={{ marginBottom: "40px" }}> <div>My con<strong className="highlight">SKILL</strong>ation </div>
         {activeClusters.length > 0 && (
-    <div
-      style={{
-        marginLeft: "10px",
-        fontSize: "26px",
-        color: "#777d7d"
-      }}
-    >
-    {activeClusters[0] || activeClusters.length > 1 ? `${activeClusters.join(", ")}` : `${activeClusters[0]}`}
-    </div>
-  )}
+          <div
+            style={{
+              marginLeft: "10px",
+              fontSize: "26px",
+              color: "#777d7d"
+            }}
+          >
+            {activeClusters[0] || activeClusters.length > 1 ? `${activeClusters.join(", ")}` : `${activeClusters[0]}`}
+          </div>
+        )}
       </div>
       <svg className="lines">
         {skillsData.map((skill) =>
@@ -126,8 +127,8 @@ function Skills() {
                 }}
                 onClick={() => handleClick(skill)}
               >
-                <div  style={{  }}>
-                  <img src={skill.icon} alt={skill.name} className="skill-icon card" />
+                <div style={{}}>
+                  <img src={skill.icon} alt={skill.name} className="skill-icon cardskill" />
                   <div className="skill-name">{skill.name}</div>
                 </div>
               </div>

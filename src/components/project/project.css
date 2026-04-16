@@ -18,7 +18,7 @@
   padding: 1.5rem;
   border-radius: 1rem;
   color: #f0f0f0;
-
+  backdrop-filter:blur(10px);
   width: 100%;
   max-width: 280px;   
   min-height: 320px;  
@@ -66,7 +66,7 @@ h1 {
 }
 
 .description{
-  color: #418e9f;
+  color: var(--glow);
   font-size: 1.3rem;
 }
 
@@ -139,16 +139,22 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color:#418e9f;
   font-size:3rem;
+  color: var(--text);
 
 }
 
 .bolt-icon {
   font-size: 0.8em;   
   transform: translateY(-2px); 
+  animation: flash 1.5s infinite;
 }
 
+@keyframes flash {
+  0%, 100% { opacity: 1;
+ }
+  50% { opacity: 0.5; }
+}
 .cardpro h2{
   margin-bottom:10px;
 }

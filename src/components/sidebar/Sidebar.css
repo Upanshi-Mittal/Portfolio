@@ -38,6 +38,11 @@
     transition: opacity 0.3s ease;
 }
 
+.sidebar-links li {
+    list-style: none;
+    position: relative;
+}
+
 .sidebar-links li a:hover {
     background-color: #418e9f;
     padding:8px;

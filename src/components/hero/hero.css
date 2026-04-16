@@ -30,7 +30,7 @@
   /*text-shadow: 0 0 10px aquamarine;*/
   opacity: 1;
   align-items: center;
-  background: linear-gradient(90deg, #545252, #2f5861, #155f6f );
+  background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s ease infinite;
@@ -40,14 +40,13 @@
 
 .intro-text h2 {
   font-size: 1.8rem;
-  color: #7a7f81;
+  color: var(--text);
   margin-top: 0.5rem;
 }
 .intro-text p {
   margin-top: 2rem;
   font-size: 1.5rem;
-  color: #5b5e5f;
-
+  color: var(--text);
 }
 
 .phero {
@@ -115,7 +114,7 @@
 }
 
 hr{
-  background-color:#4e5354;
+  background-color:var(--text);
   height:3px;
   border:none;
 
