@@ -3,14 +3,17 @@
     flex-direction: column;
     align-items:end;
     position: fixed;
-    top: 50%;
-    right: 0;
+    top: 40%;
+    right: 5px;
     transform: translateY(-50%);
     padding: 20px;
     border-radius: 0 10px 10px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    width:fit-content
+    width:fit-content;
+    gap:20px;
+    z-index:10;
+    transition: all 0.5s ease;
 }
 .sidebar-links{
     display: flex;
@@ -26,6 +29,10 @@
     transition: color 0.3s ease;
 }
 
+.sidebar.bottom-mode {
+  top: 75%; /* push downward */
+  right: 80px; /* align near card */
+}
 .open{
     opacity:1;
     pointer-events: auto;
@@ -54,4 +61,27 @@
     display: inline-flex;   /* 👈 fix */
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar.bottom-mode {
+    right: 10px;
+    top: auto;
+    bottom: 140px;
+  }
+}
+
+.sidebar.bottom-mode {
+  animation: floatIn 0.5s ease;
+}
+
+@keyframes floatIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
 }

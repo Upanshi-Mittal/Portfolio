@@ -5,7 +5,7 @@ function About() {
         <div className="about" id="about">
             <h1 className="about-title">
                 <div>About Me</div>
-                <hr/></h1>
+                <hr /></h1>
 
             <div className="about-wrapper">
 
@@ -33,14 +33,16 @@ function About() {
 
                 <div className="about-text">
                     <p>
-                        I’m Upanshi Mittal, a developer focused on building scalable web
-                        applications with strong backend architecture and system design.
+                        I’m Upanshi Mittal, a developer focused on building reliable and scalable web applications. I enjoy working on systems where structure, performance, and clean architecture actually matter.
                     </p>
 
                     <p>
-                        I enjoy solving complex problems and turning ideas into structured,
-                        production-ready solutions. Currently, I’m expanding into DevOps to
-                        bridge development and deployment.
+                        My approach is to understand problems deeply and design solutions that are both efficient and maintainable. I’m particularly interested in backend development and how different components of a system interact with each other.
+                    </p>
+
+                    <p>
+                        Alongside this, I’m actively exploring <strong>AI and Machine Learning</strong>, aiming to integrate intelligent features into real-world applications and build systems that go beyond static functionality.
+                        I’m also expanding into <strong>DevOps and deployment practices</strong> to understand how applications perform in production and how to make them robust, scalable, and efficient.
                     </p>
                     <div className="stats">
                         <div className="stat-card">

@@ -1,10 +1,10 @@
-import { FaLocationPin, FaMessage } from "react-icons/fa6";
+import { FaLocationPin, FaMessage , FaPhone} from "react-icons/fa6";
 import "./contact.css";
-import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord, FaLandmark, FaPhone } from "react-icons/fa";
+import {useRef} from "react";
 
-function Contact() {
+function Contact({ contactRef }) {
   return (
-    <div className="contact" id="contact">
+    <div className="contact" id="contact " ref={contactRef}>
       <h1 className="contact-title" style={{ marginTop: "50px" }}>Contact Me</h1>
       <div className="contact-container" >
         <form
@@ -45,7 +45,7 @@ function Contact() {
           </button>
         </form>
         <div className="social-links"  >
-          <div className="social-header">Get in Touch</div>
+          <div className="form-header">Get in Touch</div>
           <div className="mail" >
             <div className="icon">
               <FaMessage />

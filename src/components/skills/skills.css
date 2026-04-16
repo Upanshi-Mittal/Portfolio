@@ -127,7 +127,7 @@
   border-radius: 12px;
 
   background: rgba(0, 255, 255, 0.08); /* subtle glass */
-  border: 1px solid #5485a3;
+  border: 1px solid var(--glowr);
 
   backdrop-filter: blur(6px);
 

@@ -8,7 +8,7 @@
 }
 
 .about {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 0px 0px;
    display: flex;
    flex-direction: column;

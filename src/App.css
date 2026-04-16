@@ -26,7 +26,7 @@ svg{
 }
 
 .page1{
-  min-height:80vh !important;
+  min-height:100vh !important;
 }
 #space-path {
   stroke-width: 2;

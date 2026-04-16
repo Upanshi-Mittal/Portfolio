@@ -11,6 +11,7 @@
   color: var(--text);
   margin-top: 0.5rem;
   column-gap: 100px;
+  position: relative;
 }
 
 .contact-form {
@@ -22,7 +23,7 @@
   width: 100%;
   max-width: 500px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 0px;
   border:1px solid #7a7f81;
   backdrop-filter: blur(10px);
@@ -68,7 +69,7 @@
   color: #7a7f81;
   text-align: center;
   padding-top:30px;
-  bottom:-30px;
+  bottom:-90px;
   position: relative;
   border-top:1px solid #7a7f81;
 

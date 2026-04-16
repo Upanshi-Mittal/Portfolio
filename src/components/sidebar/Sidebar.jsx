@@ -1,13 +1,29 @@
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 import "./Sidebar.css";
 
-function Sidebar() {
-  const [isOpen, setIsOpen] = useState(true);
+function Sidebar({ contactRef }) {
+  const [atBottom, setAtBottom] = useState(false);
+  useEffect(() => {
+  if (!contactRef?.current) return;
 
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      console.log("VISIBLE:", entry.isIntersecting); // 👈 DEBUG
+      setAtBottom(entry.isIntersecting);
+    },
+    {
+      rootMargin: "-100px 0px -100px 0px"
+    }
+  );
+
+  observer.observe(contactRef.current);
+
+  return () => observer.disconnect();
+}, [contactRef]);
   return (
-    <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
+    <div className={`sidebar`}>
       <ul className="sidebar-links">
         <li>
           <a
