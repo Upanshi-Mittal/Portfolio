@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaGlobe, FaInstagram, FaDiscord, FaLandmark, FaPh
 function Contact() {
   return (
     <div className="contact" id="contact">
-      <h1 className="contact-title text" style={{ marginTop: "50px" }}>Contact Me</h1>
+      <h1 className="contact-title" style={{ marginTop: "50px" }}>Contact Me</h1>
       <div className="contact-container" >
         <form
           action="https://api.web3forms.com/submit"
@@ -52,7 +52,7 @@ function Contact() {
             </div>
 
             <div className="Box">
-              <span className="title">Email</span>
+              <span className="title1">Email</span>
               <a href="mailto:upanshimittal7@gmail.com">upanshimittal7@gmail.com</a>
 
             </div>
@@ -63,7 +63,7 @@ function Contact() {
             </div>
 
             <div className="Box">
-              <div className="title">Phone</div>
+              <div className="title1">Phone</div>
               <a href="tel:+1234567890">+1 (234) 567-890</a>
             </div>
           </div>
@@ -73,7 +73,7 @@ function Contact() {
             </div>
 
             <div className="Box">
-              <div className="title">Location</div>
+              <div className="title1">Location</div>
               <a href="https://www.google.com/maps/place/India" target="_blank" rel="noopener noreferrer">
                 Delhi, India
               </a>

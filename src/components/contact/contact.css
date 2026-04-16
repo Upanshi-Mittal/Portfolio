@@ -114,11 +114,10 @@
 }
 
 .contact-title{
-  font-size: clamp(2rem, 4vw, 4rem);
   margin-bottom: 5vh;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   color: #7a7f81;
-
+  font-size:3rem;
   font-weight: 400;
   text-align: center;
 }
@@ -164,6 +163,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
+
 }
 
 .mail,
@@ -204,16 +204,7 @@
   }
 }
 
-.contact-title{
-  font-size: clamp(2rem, 5vw, 3rem);  /* responsive */
-  color: #7a7f81;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  font-weight: 800;
-  font-family: url("../../../assets/researcherfontregular.ttf");
-}
+
 .mail svg,
 .Phone svg,
 .location svg {
@@ -237,4 +228,13 @@
   color: white;
   transform: scale(1.2);
   transition: all 0.3s ease;
+}
+
+.title1{
+  font-size: 1.4rem;
+  color: linear-gradient(90deg, #6f0325, #b22b56, #a07986);
+}
+
+.social-header{
+  font-size: 2.3rem;
 }
