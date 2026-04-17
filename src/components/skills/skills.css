@@ -5,7 +5,6 @@
   margin-bottom: 50px;
   position: relative;
   overflow: hidden;
-  background: transparent; /* keep your space background */
 }
 
 /* Constellation container */
@@ -18,7 +17,6 @@
 /* Star base style */
 .star_c {
     position: absolute;
-  transform: translate(-50%, -50%);
   cursor: pointer;
   transition: opacity 0.4s ease, filter 0.4s ease;
 
@@ -34,7 +32,6 @@
 /* Icon inside star */
 .star_c img {
   width: 45px;
-  translate: -50% -50%;
   height: 45px;
   transition: transform 0.3s ease;
 }
@@ -57,10 +54,6 @@
   }
 }
 
-/* Apply floating */
-.star_c {
-  animation: float 4s ease-in-out infinite;
-}
 
 /* Dimmed state */
 .star_c .dim {
@@ -102,8 +95,7 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  translate: -50%;
-  color: #ea1b1b;
+  transform: translate(-50%,0%);
 }
 
 .star_c {

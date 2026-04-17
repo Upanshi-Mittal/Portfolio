@@ -1,7 +1,7 @@
 
 :root {
-  --grad: linear-gradient(90deg, #c29c8a, #b7582c, #a00842);
-  --grad-soft: linear-gradient(180deg, #c29c8a, #b7582c, #a00842);
+  --grad: linear-gradient(90deg, #c0577f, #a00842, #a00842);
+  --grad-soft: linear-gradient(180deg, #c0577f, #a00842, #a00842);
   --glow: #b7582c;
   --glowr:#a00842;
   --text:white;
@@ -13,7 +13,7 @@
    display: flex;
    flex-direction: column;
 align-items: center;
-min-width: 100vw;
+min-width: 100%;
 margin:0 !important;
 }
 
@@ -69,7 +69,7 @@ margin:0 !important;
 
 .card {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -119,7 +119,7 @@ margin:0 !important;
 .stat-card {
   padding: 15px 20px;
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-radius: 12px;
   text-align: center;
   border: 1px solid rgba(255,255,255,0.1);

@@ -1,8 +1,10 @@
-import React, { useLayoutEffect, useRef, useEffect} from "react";
+import React, { useLayoutEffect, useRef, useEffect } from "react";
 import "./hero.css";
-import gsap from "gsap"; 
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger); 
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiPython, SiTensorflow, SiScikitlearn, SiMongodb } from "react-icons/si";
+gsap.registerPlugin(ScrollTrigger);
 
 function Separator() {
   const lineRef = useRef(null);
@@ -60,17 +62,31 @@ function Hero() {
   return (
     <div className="phero" id="phero" ref={heroRef}>
       <div className="intro-text">
-        <h1>Hii, I'm Upanshi Mittal</h1>
+        <h1>Hello, I'm Upanshi Mittal</h1>
         <h2>Creative Developer & Problem Solver</h2>
         <Separator />
-        <p> 
-          Software Developer focused on building scalable web applications with a strong emphasis on backend architecture and system design.
-          Currently expanding into DevOps to bridge development and deployment, aiming to build efficient, production-ready systems.
-          I enjoy solving complex problems and turning ideas into structured, reliable solutions through clean and maintainable code.
+        <p className="hero-desc">
+          Working across full-stack development and AI/ML, building scalable and intelligent systems.
         </p>
+
+        <p className="hero-tech">
+          Core stack:
+          <span className="tag"><FaReact />  React</span>,
+          <span className="tag"><FaNodeJs /> Node.js</span>,
+          <span className="tag"><SiPython /> Python</span>,
+          <span className="tag"><SiTensorflow /> TensorFlow</span>,
+          <span className="tag"><SiScikitlearn /> sklearn</span>,
+          <span className="tag"><SiMongodb /> MongoDB</span>,
+        </p>
+
+        <button className="hero-sub">
+          <a href="#skills" style={{ color: "inherit", textDecoration: "none" }}>
+            + more in skills ↓
+          </a>
+          
+        </button>
       </div>
     </div>
-
   );
 }
 

@@ -3,7 +3,7 @@ import "./skills.css";
 
 const skillsData = [
   { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", clusters: ["Frontend"], x: 65, y: 35, connectsTo: ["TailwindCSS", "JavaScript", "React", "CSS"] },
-  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", clusters: ["AI/ML"], x: 18, y: 22, connectsTo: ["C", "C++", "OpenCV"] },
+  { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", clusters: ["AI/ML"], x: 15, y: 22, connectsTo: ["C", "C++", "OpenCV"] },
   { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", clusters: ["Frontend"], x: 46, y: 43, connectsTo: ["Streamlit", "HTML"] },
   { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", clusters: ["Frontend"], x: 73, y: 27, connectsTo: ["HTML"] },
   { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", clusters: ["Frontend"], x: 75, y: 45, connectsTo: ["HTML"] },

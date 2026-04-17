@@ -42,6 +42,7 @@
   font-size: 1.8rem;
   color: var(--text);
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .intro-text p {
   margin-top: 2rem;
@@ -118,4 +119,65 @@ hr{
   height:3px;
   border:none;
 
+}
+
+.hero-desc {
+  font-size: 1.3rem;
+  color: #bbb;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hero-tech {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+/* tag container behavior */
+.hero-tech .tag {
+  display: inline-block;
+  margin: 6px 6px;
+}
+
+/* smoother spacing */
+.tag {
+  padding: 5px 14px;
+  border-radius: 10px;
+  border: 1px dashed rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+}
+
+.tag:hover {
+  border-color: var(--glowr);
+  box-shadow: 0 0 8px rgba(183, 88, 44, 0.4);
+}
+
+.tag:nth-child(1) { animation-delay: 0.3s; }
+.tag:nth-child(2) { animation-delay: 0.4s; }
+.tag:nth-child(3) { animation-delay: 0.5s; }
+.tag:nth-child(4) { animation-delay: 0.6s; }
+.tag:nth-child(5) { animation-delay: 0.7s; }
+.tag:nth-child(6) { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-sub{
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--text);
+  background: var(--grad);
 }

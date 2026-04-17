@@ -3,7 +3,6 @@
   padding: 50px 20px 0px 0px; 
   width:100%;
   margin-top:0px;
-  margin:20px;
   display :flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,7 +25,7 @@
   background-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 0px;
   border:1px solid #7a7f81;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
 
 .form-input,
@@ -46,9 +45,9 @@
 
 .submit-btn {
   padding: 12px;
-  border: 2px solid #7a7f81;
+  border: 2px solid var(--glowr);
   border-radius: 8px;
-  background: var(--grad);
+  background: var(--text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  font-weight: 800;
   font-size: 1rem;
@@ -60,19 +59,29 @@
   background: var(--grad);
   -webkit-background-clip: unset;   /* 👈 KEY FIX */
   -webkit-text-fill-color: #f3eeee;
-    border: 2px solid #7a7f81;
+    border: 2px solid var(--glowr);
 
 }
 .footer {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.08);
+  width: 100vw !important;
+  left:0;
+  bottom:0;
+  background: linear-gradient(
+    to right,
+    rgba(194,156,138,0.1),
+    rgba(183,88,44,0.1),
+    rgba(160,8,66,0.1)
+  );
+    backdrop-filter: blur(6px);
+
   color: #7a7f81;
   text-align: center;
-  padding-top:30px;
   bottom:-90px;
-  position: relative;
+  position: static;
   border-top:1px solid #7a7f81;
-
+  margin:0;
+  padding: 30px 20px;
+  margin-top: 60px; 
 }
 
 .footer-content {
@@ -164,7 +173,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 10px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 
 
 }
@@ -228,7 +237,7 @@
 }
 
 .icon:hover{
-  background-color: var(--glow);
+  background-color: var(--glowr);
   color: white;
   transform: scale(1.2);
   transition: all 0.3s ease;

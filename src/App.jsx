@@ -89,7 +89,7 @@ function App() {
       </div>
       <div className="svg-container">
         <svg
-          width="100vw"
+          width="100%"
           height="100vh"
           viewBox="0 -0 800 600"
           preserveAspectRatio="xMidYMid meet"
