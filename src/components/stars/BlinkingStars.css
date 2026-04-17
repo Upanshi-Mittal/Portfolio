@@ -7,12 +7,8 @@
   left: 0;
   z-index: -100;
 background: 
-  radial-gradient(circle at 20% 20%, rgba(66, 30, 77, 0.4), transparent),
   radial-gradient(circle at 80% 40%, rgba(30, 60, 120, 0.3), transparent),
   radial-gradient(circle at center, #050510, #000000),
-  radial-gradient(circle at 10% 80%, rgba(120, 30, 60, 0.2), transparent),
-  radial-gradient(circle at 70% 90%, rgba(30, 120, 60, 0.3), transparent),
-  radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent),
   radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.2), transparent);
 }
 

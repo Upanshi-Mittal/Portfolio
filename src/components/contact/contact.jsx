@@ -1,8 +1,35 @@
 import { FaLocationPin, FaMessage , FaPhone} from "react-icons/fa6";
 import "./contact.css";
 import {useRef} from "react";
+import {useGSAP} from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Contact({ contactRef }) {
+    useGSAP(() => {
+  const mm = gsap.matchMedia();
+  // 📱 MOBILE ANIMATION
+  mm.add("(max-width: 768px)", () => {
+    gsap.fromTo(
+      ".social-links",
+      { y: 0, opacity: 1},
+      {
+        y: 20,
+        x: -50,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact",
+          start: "center 85%",
+          toggleActions: "play reverse play reverse",
+          markers: false
+        }
+      }
+    )
+  }); 
+}, []); 
   return (
     <div className="contact" id="contact " ref={contactRef}>
       <h1 className="contact-title" style={{ marginTop: "50px" }}>Contact Me</h1>
