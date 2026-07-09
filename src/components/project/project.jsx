@@ -3,26 +3,41 @@ import './project.css';
 import { FaBolt } from 'react-icons/fa6';
 const work = [
   {
+    Name: "AccessLens",
+    Description:
+      "An AI-driven accessibility assistant that helps visually impaired users understand and navigate their surroundings through real-time scene analysis, object detection, and intelligent voice guidance.",
+    Link: "https://accesslens-azure.vercel.app/"
+  },
+  {
+    Name: "OptiBuild",
+    Description:
+      "A C++ build optimization framework that analyzes project dependencies, constructs build graphs, and minimizes unnecessary recompilation for faster and more efficient software builds.",
+    Link: "https://github.com/Upanshi-Mittal/Optibuild"
+  },
+  {
+    Name: "Intervue AI",
+    Description:
+      "An AI-powered interview platform featuring a real-time 3D avatar, voice conversations, camera-based behavioral analysis, and intelligent interview feedback for realistic mock interviews.",
+    Link: "https://github.com/Upanshi-Mittal/Intervue"
+  },
+  {
+    Name: "SentinelMesh",
+    Description:
+      "A collaborative AI and Web3 platform combining intelligent automation with decentralized infrastructure, where I primarily contributed to backend development and AI integration.",
+    Link: "https://web3-ai-web.vercel.app"
+  },
+  {
     Name: "BeatFall",
-    Description: "A gesture-controlled rhythm FPS game using React Three Fiber and MediaPipe hand tracking. Features real-time beat-based enemy spawning, 3D interactive gameplay, Firebase authentication.",
+    Description:
+      "A gesture-controlled rhythm FPS game built with React Three Fiber and MediaPipe, featuring real-time hand tracking, beat-synchronized gameplay, and immersive 3D environments.",
     Link: "https://beatfall.netlify.app/"
   },
   {
-    Name: "Dreamscape",
-    Description: "A modern full-stack blog website for posting, sharing, and showcasing web development projects and articles. Features user authentication, likes, and comments.",
-    Link: "https://github.com/Upanshi-Mittal/Dreamscape"
-  },
-  {
-    Name: "Mental_Health",
-    Description: "A smart FAQ chatbot trained on mental health queries using NLP (NLTK), cosine similarity, and TF-IDF to provide meaningful responses.",
-    Link: "https://github.com/Upanshi-Mittal/IR"
-  },
-  {
-    Name: "face detection",
-    Description: "A real-time Python and OpenCV-based system for face detection and recognition with webcam support, robust to lighting and pose variations. Implements Haar cascades for accurate recognition.",
-    Link: "https://github.com/Upanshi-Mittal/face-detection"
-  },
-
+    Name: "NeRF (Coming Soon)",
+    Description:
+      "Building Neural Radiance Fields from scratch to explore neural scene representation, volume rendering, and novel view synthesis for realistic 3D reconstruction.",
+    Link: "#"
+  }
 ];
 
 const Project = () => {

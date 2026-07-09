@@ -12,7 +12,7 @@ const skillsData = [
   { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", clusters: ["Version-Control"], x: 50, y: 10, connectsTo: ["TailwindCSS"] },
   { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", clusters: ["AI/ML", "Language"], x: 60, y: 60, connectsTo: ["Docker", "node2", "Streamlit", "C"] },
   { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", clusters: ["Language"], x: 9, y: 60, connectsTo: ["TensorFlow", "OpenCV", "Node.js", "C"] },
-  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", clusters: ["Language"], x: 37, y: 25, connectsTo: ["TensorFlow", "Express.js", "C++", "Python"] },
+  { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg", clusters: ["Language"], x: 37, y: 28, connectsTo: ["TensorFlow", "Express.js", "C++", "Python"] },
   { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", clusters: ["Backend"], x: 40, y: 50, connectsTo: ["Streamlit", "Express.js", "Node.js", "MongoDB"] },
   { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", clusters: ["Devops"], x: 65, y: 70, connectsTo: ["Python", "node1"] },
   { name: "Express.js", icon: "../images.png", clusters: ["Backend"], x: 40, y: 40, connectsTo: ["MySQL", "C"] },
@@ -20,9 +20,8 @@ const skillsData = [
   { name: "Streamlit", icon: "https://streamlit.io/images/brand/streamlit-mark-color.png", clusters: ["Frontend", "AI/ML"], x: 53, y: 50, connectsTo: ["MySQL", "TailwindCSS", "Python", "CSS", "OpenCV"] },
   { name: "MySql", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", clusters: ["Backend"], x: 80, y: 77, connectsTo: ["Streamlit", "Express.js", "Node.js", "MongoDB"] },
   { name: "TailwindCss", icon: "../tailwindcss.svg", clusters: ["Frontend"], x: 50, y: 26, connectsTo: ["Git", "Streamlit", "HTML"] },
-  {
-    name: "GSAP", icon: "../greensock-svgrepo-com.svg.png", clusters: ["Frontend"], x: 50, y: 70, connectsTo: ["Streamlit"]
-  }];
+  { name: "GSAP", icon: "../greensock-svgrepo-com.svg.png", clusters: ["Frontend"], x: 50, y: 70, connectsTo: ["Streamlit"]}
+];
 
 
 const clusterColors = {
