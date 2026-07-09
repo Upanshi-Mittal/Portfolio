@@ -46,7 +46,7 @@ svg{
 .spaceship {
   position: absolute;   /*stays on screen and works with GSAP path */
   top: 100px;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 

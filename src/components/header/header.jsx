@@ -14,7 +14,7 @@ function Header() {
     return (
         <div className="header">
             <div className="content">
-                <h1><a href="#phero" >Um<span className="highlight">.</span></a></h1>
+                <h1><a href="#page1" >Um<span className="highlight">.</span></a></h1>
                 <div className="nav-wrapper">
 
                     <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => toggleMenu()}>
@@ -22,9 +22,9 @@ function Header() {
                     </div>
                     <div className={`circle ${menuOpen ? "show" : ""}`}></div>
                     <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-                        <li><a href="#skills" onClick={() => toggleMenu()}>Skills</a></li>
-                        <li><a href="#projects" onClick={() => toggleMenu()}>Projects</a></li>
-                        <li><a href="#contact" onClick={() => toggleMenu()}>Contact</a></li>
+                        <li><a href="#skillspage" onClick={() => toggleMenu()}>Skills</a></li>
+                        <li><a href="#projectpage" onClick={() => toggleMenu()}>Projects</a></li>
+                        <li><a href="#contactpage" onClick={() => toggleMenu()}>Contact</a></li>
                     </ul>
 
                 </div>

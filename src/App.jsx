@@ -67,21 +67,21 @@ function App() {
       <Sidebar />
       <div className="container">
 
-        <div className="page1">
+        <div className="page1" id="page1">
           <Hero />
         </div>
-        <div className="page2" >
+        <div className="page2"  >
           <About />
         </div>
-        <div className="page2" >
+        <div className="page2" id="skillspage">
           <Skills />
         </div>
 
-        <div className="page3" >
+        <div className="page3" id="projectpage">
           <Project />
           
         </div>
-        <div className="page4" >
+        <div className="page4" id="contactpage">
           <Contact contactRef={contactRef} />
           <Sidebar contactRef={contactRef} />
         </div>
