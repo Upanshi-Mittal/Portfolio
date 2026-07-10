@@ -12,26 +12,30 @@
   padding: 0px 0px;
    display: flex;
    flex-direction: column;
-align-items: center;
 min-width: 100%;
-margin:0 !important;
+gap:20px; 
 }
+
 
 .about-title {
   font-size: 3rem;
   min-width: 100%;
   margin-bottom: 60px;
   text-align: center;
-  justify-content: center;
+  font-size: clamp(4rem, 7vw, 6rem);
+font-weight: 300;
+letter-spacing: -2px;
 }
 
+.about-title h1 {
+    margin: 0;
+}
 .about-wrapper {
   display: flex;
   gap: 100px;
   justify-content: center;
-  max-width: 100%; 
-    width: 100%;
-    flex-wrap: wrap;
+  width: 100%;
+  lex-wrap: wrap;
 }
 
 .timeline {
@@ -46,8 +50,8 @@ margin:0 !important;
   top: 0;
   bottom:0;
   width: 2px;
-  background: var(--grad-soft);
-  box-shadow: 0 0 10px var(--glow);
+  background: var(--border);
+  box-shadow: 0 0 10px var(--accent-blue);
 }
 
 .timeline-item {
@@ -62,12 +66,14 @@ margin:0 !important;
   top: 5px;
   width: 18px;
   height: 18px;
-  background: var(--grad);
+  background: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 10px #b7582c, 0 0 20px #a00842;
+  box-shadow: 0 0 10px var(--accent-blue), 0 0 20px var(--accent-blue);
+  border-color: 1px solid var(--accent-blue);
 }
 
 .card {
+  
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(5px);
   padding: 20px;
@@ -76,18 +82,19 @@ margin:0 !important;
   transition: 0.3s ease;
   height:fit-content;
   width:auto;
-  max-width: 280px;  
+  max-width: 480px;  
+  justify-content: center;
+
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: var(--glowr);
+  border-color: var(--accent-blue);
   box-shadow: 0 0 15px rgba(65,142,159,0.3);
 }
 
 .year {
   font-size: 0.8rem;
-  color: #aaa;
 }
 
 .about-text {
@@ -98,6 +105,9 @@ margin:0 !important;
   font-size: 1.2rem;
   color: #bbb;
   line-height: 1.8;
+  text-align:center;
+  align-content: center;
+  justify-content:center
 }
 
 .about-text strong {
@@ -118,24 +128,27 @@ margin:0 !important;
 
 .stat-card {
   padding: 15px 20px;
-  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(5px);
   border-radius: 12px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid var(--border);
   transition: 0.3s ease;
 }
 
 .stat-card:hover {
   transform: scale(1.05);
-  border: 1px solid #b7582c;;
+  border: 1px solid var(--accent-blue);;
   box-shadow: 0 0 15px rgba(183, 88, 44, 0.4);
 }
 
 .stat-card h2 {
   font-size: 2rem;
-  background: var(--grad);
+  background: var(--accent-blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+}
+
+.label{
+  color:var(--secondary-text);
 }

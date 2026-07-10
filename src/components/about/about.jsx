@@ -3,9 +3,17 @@ import "./about.css";
 function About() {
     return (
         <div className="about" id="about">
-            <h1 className="about-title">
-                <div>About Me</div>
-                <hr /></h1>
+            <div className="inline-flex items-center rounded-full border border-[#2B3139] bg-[#151A21] px-4 py-1.5 gap-2 mb-[300px] self-start">
+                <span className=" h-2 w-2 rounded-full bg-[#5E6AD2]" />
+
+                <span className="text-xs font-medium uppercase tracking-normal text-[#8B949E]">
+                    Log Entry 01
+                </span>
+            </div>
+            <div className="about-title mt-[300px]">
+                <h1><ul>About</ul></h1>
+                
+            </div>
 
             <div className="about-wrapper">
 
@@ -14,50 +22,65 @@ function About() {
 
                     <div className="timeline-item">
                         <div className="dot"></div>
-                        <div className="card">
-                            <span className="year">2024–2028</span>
-                            <h3>B.Tech in Computer Science</h3>
-                            <p>JIIT Noida</p>
-                        </div>
+                        <span className="year text-[var(--accent-blue)]">2024–2028 • IN PROGRESS</span>
+                        <h3>B.Tech in Computer Science</h3>
+                        <p>JIIT Noida</p>
                     </div>
 
                     <div className="timeline-item">
                         <div className="dot"></div>
-                        <div className="card">
-                            <span className="year">2020–2023</span>
-                            <h3>Secondary School and High School</h3>
-                            <p>Jaypee Vidya Mandir, Chirchitta, Bulandshahr</p>
-                        </div>
+                        <span className="year">2020–2023</span>
+                        <h3>Secondary School and High School</h3>
+                        <p>Jaypee Vidya Mandir, Chirchitta, Bulandshahr</p>
                     </div>
                 </div>
 
                 <div className="about-text">
-                    <p>
-                        I’m Upanshi Mittal, a developer focused on building reliable and scalable web applications. I enjoy working on systems where structure, performance, and clean architecture actually matter.
-                    </p>
-
-                    <p>
-                        My approach is to understand problems deeply and design solutions that are both efficient and maintainable. I’m particularly interested in backend development and how different components of a system interact with each other.
-                    </p>
-
-                    <p>
-                        Alongside this, I’m actively exploring <strong>AI and Machine Learning</strong>, aiming to integrate intelligent features into real-world applications and build systems that go beyond static functionality.
-                        I’m also expanding into <strong>DevOps and deployment practices</strong> to understand how applications perform in production and how to make them robust, scalable, and efficient.
-                    </p>
+                    <div className="card">
+                        <div className="uppercase mb-8 ">System profile</div>
+                        <div className="flex justify-between ">
+                            <span className="label">Identity</span>
+                            <span className="log">Upanshi Mittal</span>
+                        </div>
+                        <div className="flex justify-between ">
+                            <span className="label">Role</span>
+                            <span className="log">Full-stack + AI engineer</span>
+                        </div>
+                        <div className="flex justify-between ">
+                            <span className="label">specialization</span>
+                            <span className="log">ML.Backend. DevOps</span>
+                        </div>
+                        <div className="flex justify-between ">
+                            <span className="label">Current focus</span>
+                            <span className="log">AI Infrastructure</span>
+                        </div>
+                        <hr style={{margin:"10px 0 0 0 "}}/>
+                        <div>
+                            <span
+  className="block text-left uppercase label"
+  style={{ margin: "20px 0 0 0" }}
+>Mission</span>
+                            <div className="block text-left">Build software that is reliable,intelligent, and production-ready</div>
+                        </div>
+                    </div>
                     <div className="stats">
                         <div className="stat-card">
-                            <h2>8+</h2>
+                            <h2>2+</h2>
+                            <p>Experience</p>
+                        </div>
+                        <div className="stat-card">
+                            <h2>10+</h2>
                             <p>Projects</p>
                         </div>
 
                         <div className="stat-card">
-                            <h2>1.5+</h2>
-                            <p>Years Learning</p>
+                            <h2>12+</h2>
+                            <p>Technologies</p>
                         </div>
 
                         <div className="stat-card">
                             <h2>100+</h2>
-                            <p>DSA Questions</p>
+                            <p>Algorithms</p>
                         </div>
                     </div>
                 </div>

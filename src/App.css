@@ -15,7 +15,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertical centering */
-  text-align: center;
   z-index:1;
   width: 100% !important;
 
