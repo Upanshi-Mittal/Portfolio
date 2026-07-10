@@ -12,11 +12,10 @@ function Header() {
         document.body.classList.toggle("dark-theme");
     };
     return (
-        <div className="header">
+        <div className="header border-b border-[var(--border)]">
             <div className="content">
-                <h1><a href="#page1" >Um<span className="highlight">.</span></a></h1>
+                <h1 className="gap-4"><a href="#page1" className="text-2xl">Um<span className=" inline-block mr-3 h-1 w-1 rounded-full bg-[#5E6AD2]" > </span></a></h1>
                 <div className="nav-wrapper">
-
                     <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => toggleMenu()}>
                         ☰
                     </div>
@@ -29,8 +28,6 @@ function Header() {
 
                 </div>
             </div>
-            <hr className="line" />
-
 
         </div>
     );

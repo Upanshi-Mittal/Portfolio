@@ -6,7 +6,7 @@ const BlinkingStars = () => {
     const starsContainer = document.getElementById('stars');
 
     // Generate blinking stars
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 5; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
 

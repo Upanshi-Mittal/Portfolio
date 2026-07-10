@@ -63,7 +63,6 @@ function App() {
     <>
     <Header />
       <BlinkingStars />  
-      <String />
       <Sidebar />
       <div className="container">
 

@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap');
+@import "tailwindcss" ;
+
 :root {
     font-family: url("../assets/Yaparivariable-ultra.ttf");     
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  --background: #0B0D10;
+  --surface : #14181D;
+  --secondary-surface: #1B2128;
+  --border : #2A313A;
+  --primary-text: #F5F7FA;
+  --secondary-text : #8B949E;
+  --muted-text : #6B7280;
+  --accent-blue : #5E6AD2;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,14 +29,6 @@ body{
   margin: 0;
   place-items: center;
   min-height: 100vh;
-}
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 h1 {

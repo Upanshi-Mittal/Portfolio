@@ -30,7 +30,7 @@ function Separator() {
     return () => ctx.revert();
   }, []);
 
-  return <hr ref={lineRef} className="separator" />;
+  return <hr ref={lineRef} className="separator m-[7800px]" />;
 }
 
 function Hero() {
@@ -60,17 +60,45 @@ function Hero() {
 
 
   return (
-    <div className="phero" id="phero" ref={heroRef}>
-      <div className="intro-text">
-        <h1>Hello, I'm Upanshi Mittal</h1>
-        <h2>Creative Developer & Problem Solver</h2>
-        <Separator />
-        <p className="hero-desc">
-          Working across full-stack development and AI/ML, building scalable and intelligent systems.
-        </p>
+    <div className="phero relative pt-32" id="phero" ref={heroRef}>
+      <div className="absolute top-[-40px] right-[-170px] hidden lg:flex flex-col gap-5 opacity-65 select-none">
+  <div className="flex items-center justify-between gap-8">
+    <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
+      STATUS
+    </span>
 
-        <p className="hero-tech">
-          Core stack:
+    <span className="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
+      <span className="h-2 w-2 rounded-full bg-[var(--accent-blue)] shadow-[0_0_10px_var(--accent-blue)]"></span>
+      ONLINE
+    </span>
+  </div>
+
+  <div className="flex items-center justify-between gap-8">
+    <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
+      FOCUS
+    </span>
+
+    <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
+      AI SYSTEMS
+    </span>
+  </div>
+
+  <div className="flex items-center justify-between gap-8">
+    <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
+      AVAILABLE
+    </span>
+
+    <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
+      OPEN TO WORK
+    </span>
+  </div>
+</div>
+      <div className="intro-text">
+        <h1>Upanshi Mittal</h1>
+        <h2>Building intelligent systems through full-stack engineering and AI</h2>
+        <Separator />
+        <div className="mt-8">CORE TECHNOLOGIES</div>
+        <p className="hero-tech mb-[100px]">
           <span className="tag"><FaReact />  React</span>,
           <span className="tag"><FaNodeJs /> Node.js</span>,
           <span className="tag"><SiPython /> Python</span>,
@@ -78,13 +106,14 @@ function Hero() {
           <span className="tag"><SiScikitlearn /> sklearn</span>,
           <span className="tag"><SiMongodb /> MongoDB</span>,
         </p>
-
-        <button className="hero-sub">
-          <a href="#skills" style={{ color: "inherit", textDecoration: "none" }}>
-            + more in skills ↓
+        <div className="mt-8">
+          <a
+            href="#skills"
+            className="inline-flex items-center justify-center rounded-2xl bg-[var(--accent-blue)] px-10 py-4 text-lg font-semibold text-white no-underline hover:bg-[#707BDF] transition-all min-w-[220px]"
+          >
+            Explore capabilities →
           </a>
-          
-        </button>
+        </div>
       </div>
     </div>
   );

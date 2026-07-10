@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 .intro-wrapper {
   position: relative;
@@ -22,7 +21,6 @@
   justify-content: center;
   text-align: center;   /* center text */
   margin: 0 auto;     
-  padding: 40px 20px;
 
 }
 .intro-text h1 {
@@ -30,7 +28,7 @@
   /*text-shadow: 0 0 10px aquamarine;*/
   opacity: 1;
   align-items: center;
-  background: var(--grad);
+  background: var(--primary-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s ease infinite;
@@ -40,7 +38,7 @@
 
 .intro-text h2 {
   font-size: 1.8rem;
-  color: var(--text);
+  color: var(--secondary-text);
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -56,13 +54,9 @@
   align-items: center;
   border-radius:20px;
   width:80%;
-  top:3%;
+  padding-top: 120px;
   overflow:visible;
 }
-
-
-
-
 
 /* Simple float animation */
 @keyframes float {
@@ -115,10 +109,9 @@
 }
 
 hr{
-  background-color:var(--text);
+  background-color:var(--border);
   height:3px;
   border:none;
-
 }
 
 .hero-desc {
@@ -139,21 +132,25 @@ hr{
 
 /* tag container behavior */
 .hero-tech .tag {
-  display: inline-block;
   margin: 6px 6px;
+  gap:3px;
 }
 
 /* smoother spacing */
 .tag {
   padding: 5px 14px;
-  border-radius: 10px;
-  border: 1px dashed rgba(255,255,255,0.4);
+  border-radius: 18px ;
+  border: 1px dashed var(--border);
   background: rgba(255,255,255,0.05);
   transition: 0.3s ease;
-}
+  display: inline-flex;
 
+}
+.tag svg{
+  margin-top: 5px;
+}
 .tag:hover {
-  border-color: var(--glowr);
+  border-color: var(--accent-blue);
   box-shadow: 0 0 8px rgba(183, 88, 44, 0.4);
 }
 
@@ -180,4 +177,13 @@ hr{
   font-size: 1.2rem;
   color: var(--text);
   background: var(--grad);
+}
+
+.separator {
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border: none;
+
+  margin: 2rem 0;   /* <-- control spacing here */
 }
