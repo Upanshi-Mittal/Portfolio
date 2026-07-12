@@ -8,18 +8,15 @@
 
 .about {
   min-height: 80vh;
-  padding: 0px 0px;
+  padding: 0px 50px;
    display: flex;
    flex-direction: column;
 min-width: 100%;
 gap:20px; 
 }
 .about-title {
-  font-size: 3rem;
   min-width: 100%;
-  margin-bottom: 60px;
-  text-align: center;
-  font-size: clamp(4rem, 7vw, 6rem);
+  font-size: clamp(4rem, 4rem, 5rem);
 font-weight: 300;
 letter-spacing: -2px;
 }

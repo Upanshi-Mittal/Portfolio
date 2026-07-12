@@ -1,11 +1,9 @@
 .contact {
-  background: #0B0D10;
   padding: 96px 40px;
   display: flex;
   flex-direction: column;
 }
 
-/* Log entry badge */
 .log-badge {
   display: inline-flex;
   align-items: center;

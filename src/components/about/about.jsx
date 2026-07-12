@@ -10,8 +10,8 @@ function About() {
                     Log Entry 01
                 </span>
             </div>
-            <div className="about-title mt-[300px]">
-                <h1><ul>About</ul></h1>
+            <div className="about-title">
+                About
                 
             </div>
 

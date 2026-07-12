@@ -4,6 +4,7 @@ import "./contact.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { div } from "three/src/nodes/math/OperatorNode.js";
 gsap.registerPlugin(ScrollTrigger);
 
 function Contact({ contactRef }) {
@@ -27,6 +28,7 @@ function Contact({ contactRef }) {
   }, []);
 
   return (
+    <div>
     <div className="contact" id="contact" ref={contactRef}>
       <div className="log-badge">
         <span className="log-dot" />
@@ -121,7 +123,9 @@ function Contact({ contactRef }) {
         </div>
       </div>
 
-      <div className="footer">
+      
+    </div>
+    <div className="footer">
         <div className="footer-content">
           <p className="footer-text">Um. — built from scratch, {new Date().getFullYear()}</p>
           <p className="copyright">
