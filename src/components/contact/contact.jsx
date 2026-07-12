@@ -1,123 +1,134 @@
-import { FaLocationPin, FaMessage , FaPhone} from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaEnvelope, FaGithub } from "react-icons/fa";
 import "./contact.css";
-import {useRef} from "react";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Contact({ contactRef }) {
-    useGSAP(() => {
-  const mm = gsap.matchMedia();
-  // 📱 MOBILE ANIMATION
-  mm.add("(max-width: 768px)", () => {
+  useGSAP(() => {
     gsap.fromTo(
-      ".social-links",
-      { y: 0, opacity: 1},
+      ".contact-form, .social-links",
+      { y: 24, opacity: 0 },
       {
-        y: 20,
-        x: -50,
+        y: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.8,
+        stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".contact",
-          start: "center 85%",
-          toggleActions: "play reverse play reverse",
-          markers: false
-        }
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
       }
-    )
-  }); 
-}, []); 
+    );
+  }, []);
+
   return (
-    <div className="contact" id="contact " ref={contactRef}>
-      <h1 className="contact-title" style={{ marginTop: "50px" }}>Contact Me</h1>
-      <div className="contact-container" >
+    <div className="contact" id="contact" ref={contactRef}>
+      <div className="log-badge">
+        <span className="log-dot" />
+        <span className="log-label">Log Entry 04</span>
+      </div>
+
+      <h1 className="contact-title">Open a transmission</h1>
+      <p className="contact-subtitle">Reach out — I read every message myself.</p>
+
+      <div className="contact-container">
         <form
           action="https://api.web3forms.com/submit"
           method="POST"
           className="contact-form"
         >
-          <div className="form-header">Send a Message</div>
+          <div className="form-header">Message form</div>
           <input
             type="hidden"
             name="access_key"
             value="4c17aaf7-76ec-45d2-bdca-555c20b0a7cb"
           />
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            className="form-input"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            className="form-input"
-          />
+          <div className="form-row">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              required
+              className="form-input"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              required
+              className="form-input"
+            />
+          </div>
+
           <textarea
             name="message"
-            placeholder="Your Message"
+            placeholder="What are you reaching out about?"
             required
+            rows={4}
             className="form-textarea"
-          ></textarea>
+          />
 
           <button type="submit" className="submit-btn">
-            Send Message
+            Send transmission
           </button>
         </form>
-        <div className="social-links"  >
-          <div className="form-header">Get in Touch</div>
-          <div className="mail" >
-            <div className="icon">
-              <FaMessage />
-            </div>
 
-            <div className="Box">
-              <span className="title1">Email</span>
-              <a href="mailto:upanshimittal7@gmail.com">upanshimittal7@gmail.com</a>
+        <div className="social-links">
+          <div className="form-header">Get in touch</div>
 
+          <a
+            className="contact-row"
+            href="mailto:upanshimittal7@gmail.com"
+          >
+            <FaEnvelope className="contact-icon" />
+            <div className="contact-box">
+              <span className="contact-label">Email</span>
+              <span className="contact-value">upanshimittal7@gmail.com</span>
             </div>
-          </div>
-          <div className="Phone" >
-            <div className="icon">
-              <FaPhone />
-            </div>
+          </a>
 
-            <div className="Box">
-              <div className="title1">Phone</div>
-              <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <a
+            className="contact-row"
+            href="https://github.com/Upanshi-Mittal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="contact-icon" />
+            <div className="contact-box">
+              <span className="contact-label">GitHub</span>
+              <span className="contact-value">Upanshi-Mittal</span>
             </div>
-          </div>
-          <div className="location" >
-            <div className="icon">
-              <FaLocationPin />
-            </div>
+          </a>
 
-            <div className="Box">
-              <div className="title1">Location</div>
-              <a href="https://www.google.com/maps/place/India" target="_blank" rel="noopener noreferrer">
-                Delhi, India
-              </a>
+          <a
+            className="contact-row"
+            href="https://www.linkedin.com/in/upanshi-mittal-498213320/?skipRedirect=true"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin className="contact-icon" />
+            <div className="contact-box">
+              <span className="contact-label">LinkedIn</span>
+              <span className="contact-value">upanshi-mittal</span>
             </div>
-
-          </div>
+          </a>
         </div>
       </div>
+
       <div className="footer">
         <div className="footer-content">
-          <p className="footer-text">Made with ❤️ by Upanshi Mittal</p>
+          <p className="footer-text">Um. — built from scratch, {new Date().getFullYear()}</p>
           <p className="copyright">
-            © {new Date().getFullYear()} Upanshi Mittal. All Rights Reserved.
+            © {new Date().getFullYear()} Upanshi Mittal. All rights reserved.
           </p>
         </div>
       </div>
-
     </div>
   );
 }
