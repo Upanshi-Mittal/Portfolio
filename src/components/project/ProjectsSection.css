@@ -1,0 +1,863 @@
+/* ═══════════════════════════════════════════════════════════════
+   Projects Section — Mission Control Dashboard
+   ═══════════════════════════════════════════════════════════════ */
+
+.projects-section {
+  color: #E5E7EB;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  padding: 40px 48px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ─── Section Header ─── */
+.projects-header {
+  max-width: 1200px;
+  margin: 0 auto 64px;
+  text-align: left;
+}
+
+.projects-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #2B3139;
+  background: #111827;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6366F1;
+}
+
+.badge-text {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8B949E;
+}
+
+.projects-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.projects-subtitle {
+  color: #6B7280;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* ─── Main Layout ─── */
+.projects-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.projects-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 120px;
+}
+
+/* ─── Right: Radar Wrapper ─── */
+.projects-radar-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.projects-radar-sticky {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mission-card {
+  opacity: 0; /* GSAP will animate this in */
+}
+
+.mission-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mission-divider-label {
+  color: #6366F1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.mission-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #2B3139 0%, transparent 100%);
+}
+
+.mission-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #1F2937;
+  border-radius: 20px;
+  padding: 40px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mission-card-inner:hover {
+  border-color: #2B3139;
+  box-shadow: 0 0 60px rgba(99, 102, 241, 0.04);
+}
+
+/* ─── Card Content (Left) ─── */
+.mission-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mission-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mission-id {
+  font-size: 0.7rem;
+  color: #4B5563;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.mission-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 3px 10px;
+  opacity: 0.8;
+}
+
+.status-indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.mission-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.mission-description {
+  color: #9CA3AF;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ─── Engineering Challenge ─── */
+.engineering-challenge {
+  background: rgba(99, 102, 241, 0.04);
+  border-left: 2px solid #6366F1;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+}
+
+.challenge-label {
+  display: block;
+  font-size: 0.65rem;
+  color: #6366F1;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.challenge-text {
+  color: #D1D5DB;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── Modules ─── */
+.modules-section {
+  border: 1px solid #1F2937;
+  border-radius: 12px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.section-label {
+  display: block;
+  font-size: 0.65rem;
+  color: #4B5563;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.modules-text {
+  color: #E5E7EB;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── Tech Stack ─── */
+.tech-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-pill {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  border: 1px solid #2B3139;
+  border-radius: 999px;
+  padding: 5px 14px;
+  background: transparent;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.tech-pill:hover {
+  border-color: #6366F1;
+  color: #E5E7EB;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ─── Links ─── */
+.mission-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.link-primary {
+  background: #6366F1;
+  color: #fff;
+  border: none;
+}
+
+.link-primary:hover {
+  background: #5558E0;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+.link-primary.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.link-secondary {
+  background: transparent;
+  color: #9CA3AF;
+  border: 1px solid #2B3139;
+}
+
+.link-secondary:hover {
+  border-color: #4B5563;
+  color: #E5E7EB;
+}
+
+/* ─── Browser Preview (Right) ─── */
+.mission-preview {
+  background: #0F131A;
+  border: 1px solid #1F2937;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #1F2937;
+  background: #111827;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #374151;
+}
+
+.browser-url {
+  color: #4B5563;
+  font-size: 0.75rem;
+  margin-left: 8px;
+  font-family: "SF Mono", Monaco, monospace;
+}
+
+.browser-viewport {
+  flex: 1;
+  background: #0B0F17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.preview-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #374151;
+}
+
+.preview-icon {
+  font-size: 2.5rem;
+  opacity: 0.5;
+}
+
+.preview-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Mission Radar Panel
+   ═══════════════════════════════════════════════════════════════ */
+
+.radar-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #1F2937;
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ─── Radar Info ─── */
+.radar-info {
+  text-align: center;
+  width: 100%;
+}
+
+.radar-mission-label {
+  display: block;
+  font-size: 0.65rem;
+  color: #6366F1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.radar-project-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+.radar-status-row {
+  margin-bottom: 12px;
+}
+
+.radar-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.radar-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.radar-progress {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.progress-current {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.progress-separator {
+  font-size: 1rem;
+  color: #4B5563;
+}
+
+.progress-total {
+  font-size: 1rem;
+  color: #6B7280;
+}
+
+/* ─── Radar Visual ─── */
+.radar-visual {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rings */
+.radar-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.radar-ring-outer {
+  width: 220px;
+  height: 220px;
+  border-color: rgba(99, 102, 241, 0.08);
+}
+
+.radar-ring-middle {
+  width: 160px;
+  height: 160px;
+  border-color: rgba(99, 102, 241, 0.12);
+}
+
+.radar-ring-inner {
+  width: 100px;
+  height: 100px;
+  border-color: rgba(99, 102, 241, 0.18);
+}
+
+/* Grid lines */
+.radar-grid-h,
+.radar-grid-v {
+  position: absolute;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.radar-grid-h {
+  width: 220px;
+  height: 1px;
+}
+
+.radar-grid-v {
+  width: 1px;
+  height: 220px;
+}
+
+/* Center core */
+.radar-core {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  z-index: 3;
+}
+
+.radar-core-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #6366F1;
+  position: relative;
+  z-index: 2;
+}
+
+.radar-core-glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.2);
+  filter: blur(8px);
+  animation: corePulse 3s ease-in-out infinite;
+}
+
+@keyframes corePulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Sweep */
+.radar-sweep-container{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transform-origin:center center;
+    z-index:2;
+}
+
+.radar-sweep{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:2px;
+    height:110px;
+
+    transform-origin:bottom center;
+    transform:translate(-50%,-100%);
+}
+
+/* Nodes */
+.radar-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  
+}
+
+.radar-node-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.radar-node-label {
+  font-size: 9px;
+  margin-top: 6px;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+/* Node states */
+.radar-node-upcoming .radar-node-dot {
+  background: #374151;
+}
+.radar-node-upcoming .radar-node-label {
+  color: #4B5563;
+}
+
+.radar-node-active .radar-node-dot {
+  background: #6366F1;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.6), 0 0 32px rgba(99, 102, 241, 0.2);
+  animation: nodePulse 2s ease-in-out infinite;
+}
+.radar-node-active .radar-node-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.radar-node-completed .radar-node-dot {
+  background: #06B6D4;
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+.radar-node-completed .radar-node-label {
+  color: #0891B2;
+}
+
+@keyframes nodePulse {
+  0%, 100% { box-shadow: 0 0 16px rgba(99, 102, 241, 0.6), 0 0 32px rgba(99, 102, 241, 0.2); }
+  50% { box-shadow: 0 0 24px rgba(99, 102, 241, 0.8), 0 0 48px rgba(99, 102, 241, 0.3); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Mission Timeline
+   ═══════════════════════════════════════════════════════════════ */
+
+.mission-timeline {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid #1F2937;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.timeline-header {
+  display: block;
+  font-size: 0.65rem;
+  color: #4B5563;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.timeline-item:hover {
+  opacity: 0.8;
+}
+
+.timeline-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  padding-top: 4px;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  margin-top: 4px;
+  transition: background 0.4s ease;
+}
+
+.timeline-name {
+  font-size: 0.85rem;
+  color: #6B7280;
+  transition: color 0.3s ease;
+  padding-top: 1px;
+}
+
+/* Timeline states */
+.timeline-item-upcoming .timeline-dot {
+  border-color: #374151;
+  background: transparent;
+}
+.timeline-item-upcoming .timeline-line {
+  background: #1F2937;
+}
+.timeline-item-upcoming .timeline-name {
+  color: #4B5563;
+}
+
+.timeline-item-active .timeline-dot {
+  border-color: #6366F1;
+  background: #6366F1;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+.timeline-item-active .timeline-line {
+  background: linear-gradient(180deg, #6366F1 0%, #1F2937 100%);
+}
+.timeline-item-active .timeline-name {
+  color: #fff;
+  font-weight: 500;
+}
+
+.timeline-item-completed .timeline-dot {
+  border-color: #06B6D4;
+  background: #06B6D4;
+}
+.timeline-item-completed .timeline-line {
+  background: #06B6D4;
+}
+.timeline-item-completed .timeline-name {
+  color: #0891B2;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .projects-section {
+    padding: 60px 32px;
+  }
+
+  .projects-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .projects-radar-wrapper {
+    order: -1;
+  }
+
+  .projects-radar-sticky {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .radar-panel {
+    flex: 0 0 auto;
+    padding: 20px;
+  }
+
+  .radar-visual {
+    width: 180px;
+    height: 180px;
+  }
+
+  .radar-ring-outer {
+    width: 180px;
+    height: 180px;
+  }
+
+  .radar-ring-middle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .radar-ring-inner {
+    width: 80px;
+    height: 80px;
+  }
+
+  .radar-grid-h {
+    width: 180px;
+  }
+
+  .radar-grid-v {
+    height: 180px;
+  }
+
+  .mission-timeline {
+    flex: 1;
+  }
+
+  .mission-card-inner {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+
+  .mission-preview {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px 20px;
+  }
+
+  .projects-radar-sticky {
+    flex-direction: column;
+  }
+
+  .mission-title {
+    font-size: 1.6rem;
+  }
+
+  .mission-card-inner {
+    padding: 24px;
+    gap: 28px;
+  }
+
+  .engineering-challenge {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .mission-title {
+    font-size: 1.4rem;
+  }
+
+  .link-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+.radar-sweep{
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    width:3px;
+    height:110px;
+
+    transform:translate(-50%,-100%);
+    transform-origin:bottom center;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        to top,
+        rgba(99,102,241,0.9),
+        rgba(99,102,241,.45),
+        transparent
+    );
+}

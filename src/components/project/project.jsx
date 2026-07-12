@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./project.css";
 
+
 const work = [
   {
     sno: 1,

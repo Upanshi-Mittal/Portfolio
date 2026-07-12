@@ -15,7 +15,7 @@ import ConstellationMap from './components/github/ConstellationMap';
 import Header from './components/header/header';
 import Sidebar from './components/sidebar/Sidebar';
 import About from './components/about/about';
-
+import ProjectsSection from './components/project/ProjectsSection';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 function App() {
@@ -77,7 +77,7 @@ function App() {
         </div>
 
         <div className="page3" id="projectpage">
-          <Project />
+          <ProjectsSection />
           
         </div>
         <div className="page4" id="contactpage">

@@ -22,16 +22,20 @@ function About() {
 
                     <div className="timeline-item">
                         <div className="dot"></div>
-                        <span className="year text-[var(--accent-blue)]">2024–2028 • IN PROGRESS</span>
+                        <div >
+<span className="year text-[var(--accent-blue)]">2024–2028 • IN PROGRESS</span>
                         <h3>B.Tech in Computer Science</h3>
                         <p>JIIT Noida</p>
+                        </div>
+                        
                     </div>
 
                     <div className="timeline-item">
                         <div className="dot"></div>
-                        <span className="year">2020–2023</span>
+                        <div><span className="year">2020–2023</span>
                         <h3>Secondary School and High School</h3>
-                        <p>Jaypee Vidya Mandir, Chirchitta, Bulandshahr</p>
+                        <p>Jaypee Vidya Mandir, Chirchitta, Bulandshahr</p></div>
+                        
                     </div>
                 </div>
 
