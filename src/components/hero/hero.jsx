@@ -93,12 +93,12 @@ function Hero() {
           </span>
         </div>
       </div>
-      <div className="intro-text" style={{marginTop:"70px"}}>
-        <h1>Upanshi Mittal</h1>
+      <div className="intro-text" style={{marginTop:"120px"}}>
+        <h1 className="hero-title">Upanshi Mittal</h1>
         <h2>Building intelligent systems through full-stack engineering and AI</h2>
         <Separator />
-        <div className="mt-8">CORE TECHNOLOGIES</div>
-        <p className="hero-tech mb-[100px]">
+        <div className="">CORE TECHNOLOGIES</div>
+        <p className="hero-tech ">
           <span className="tag"><FaReact />  React</span>,
           <span className="tag"><FaNodeJs /> Node.js</span>,
           <span className="tag"><SiPython /> Python</span>,
@@ -106,10 +106,10 @@ function Hero() {
           <span className="tag"><SiScikitlearn /> sklearn</span>,
           <span className="tag"><SiMongodb /> MongoDB</span>
         </p>
-        <div className="mt-8">
+        <div>
           <a
             href="#skills"
-            className="inline-flex items-center justify-center rounded-2xl bg-[var(--accent-blue)] px-10 py-4 text-lg font-semibold text-white no-underline hover:bg-[#707BDF] transition-all min-w-[220px]"
+            className="inline-flex items-center justify-center rounded-2xl bg-[var(--accent-blue)] px-10 py-8 text-lg font-semibold text-white no-underline hover:bg-[#707BDF] transition-all min-w-[220px]" style={{marginTop:"15px"}}
           >
             Explore capabilities →
           </a>

@@ -176,7 +176,7 @@ const ProjectsSection = () => {
               <span className="badge-dot" />
               <span className="badge-text">Log Entry 03</span>
             </div>
-            <h2 className="projects-title">Projects</h2>
+            <h2 className="projects-title hero-title">Projects</h2>
 
             <div className="mission-divider">
               <span className="mission-divider-label">Mission 0{activeIndex+1} of 06</span>

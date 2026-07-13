@@ -10,7 +10,7 @@ function About() {
                     Log Entry 01
                 </span>
             </div>
-            <div className="about-title">
+            <div className="about-title hero-title">
                 About
                 
             </div>

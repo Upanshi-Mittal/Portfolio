@@ -112,7 +112,7 @@ export default function skills() {
           <span className="log-label">Log Entry 04</span>
         </div>
 
-        <h2 className="font-serif text-4xl md:text-5xl text-zinc-100 mb-2">Core capabilities</h2>
+        <h2 className="font-serif text-4xl md:text-5xl text-zinc-100 mb-2 hero-title">Core capabilities</h2>
         <p className="text-zinc-500 text-base md:text-lg mb-10 md:mb-12">How I engineer software.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
