@@ -30,7 +30,7 @@ function Separator() {
     return () => ctx.revert();
   }, []);
 
-  return <hr ref={lineRef} className="separator m-[7800px]" />;
+  return <hr ref={lineRef} className="separator" />;
 }
 
 function Hero() {
@@ -60,40 +60,40 @@ function Hero() {
 
 
   return (
-    <div className="phero relative pt-32" id="phero" ref={heroRef}>
-      <div className="absolute top-[-40px] right-[-170px] hidden lg:flex flex-col gap-5 opacity-65 select-none">
-  <div className="flex items-center justify-between gap-8">
-    <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
-      STATUS
-    </span>
+    <div className="phero relative pt-32 " id="phero" ref={heroRef}>
+      <div className="absolute top-[90px] right-[-170px] hidden lg:flex flex-col gap-5 opacity-65 select-none  absolute">
+        <div className="flex items-center justify-between gap-8 " >
+          <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
+            STATUS
+          </span>
 
-    <span className="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
-      <span className="h-2 w-2 rounded-full bg-[var(--accent-blue)] shadow-[0_0_10px_var(--accent-blue)]"></span>
-      ONLINE
-    </span>
-  </div>
+          <span className="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
+            <span className="h-2 w-2 rounded-full bg-[var(--accent-blue)] shadow-[0_0_10px_var(--accent-blue)]"></span>
+            ONLINE
+          </span>
+        </div>
 
-  <div className="flex items-center justify-between gap-8">
-    <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
-      FOCUS
-    </span>
+        <div className="flex items-center justify-between gap-8">
+          <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
+            FOCUS
+          </span>
 
-    <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
-      AI SYSTEMS
-    </span>
-  </div>
+          <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
+            AI SYSTEMS
+          </span>
+        </div>
 
-  <div className="flex items-center justify-between gap-8">
-    <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
-      AVAILABLE
-    </span>
+        <div className="flex items-center justify-between gap-8">
+          <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
+            AVAILABLE
+          </span>
 
-    <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
-      OPEN TO WORK
-    </span>
-  </div>
-</div>
-      <div className="intro-text">
+          <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
+            OPEN TO WORK
+          </span>
+        </div>
+      </div>
+      <div className="intro-text" style={{marginTop:"70px"}}>
         <h1>Upanshi Mittal</h1>
         <h2>Building intelligent systems through full-stack engineering and AI</h2>
         <Separator />
@@ -104,7 +104,7 @@ function Hero() {
           <span className="tag"><SiPython /> Python</span>,
           <span className="tag"><SiTensorflow /> TensorFlow</span>,
           <span className="tag"><SiScikitlearn /> sklearn</span>,
-          <span className="tag"><SiMongodb /> MongoDB</span>,
+          <span className="tag"><SiMongodb /> MongoDB</span>
         </p>
         <div className="mt-8">
           <a
