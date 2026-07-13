@@ -3,14 +3,11 @@ import { gsap } from "gsap";
 
 const NODE_POSITIONS = [
   { top: "0%", left: "50%" },
-  { top: "60%", left: "85%" },
-  { top: "50%", left: "100%" },
-  { top: "85%", left: "15%" },
+  { top: "25%", left: "95%" },
+  { top: "75%", left: "95%" },
   { top: "100%", left: "50%" },
-  
-  
-  
-  { top: "50%", left: "100%" },
+  { top: "75%", left: "5%" },
+  { top: "25%", left: "5%" },
   
   
 ];
