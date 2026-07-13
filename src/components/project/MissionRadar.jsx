@@ -3,11 +3,16 @@ import { gsap } from "gsap";
 
 const NODE_POSITIONS = [
   { top: "0%", left: "50%" },
+  { top: "60%", left: "85%" },
   { top: "50%", left: "100%" },
-  { top: "100%", left: "50%" },
-  { top: "50%", left: "0%" },
-  { top: "15%", left: "85%" },
   { top: "85%", left: "15%" },
+  { top: "100%", left: "50%" },
+  
+  
+  
+  { top: "50%", left: "100%" },
+  
+  
 ];
 
 const MissionRadar = ({ activeIndex, projects }) => {

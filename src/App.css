@@ -14,7 +14,6 @@
 .page1, .page2{
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
   z-index:1;
   width: 100% !important;
 
@@ -25,6 +24,8 @@ svg{
 
 .page1{
   min-height:100vh !important;
+    align-items: center;
+
 }
 #space-path {
   stroke-width: 2;
@@ -75,13 +76,13 @@ Hero{
 .page4{
   width:100%;
   position: relative;
+  
 }
 
 
 .page1, .page2, .page3, .page4 {
   min-height: 100vh;
   width: 100%;
-  align-items: center;
 }
 
 .star,
