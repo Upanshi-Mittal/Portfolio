@@ -3,7 +3,6 @@
 :root {
     font-family: url("../assets/Yaparivariable-ultra.ttf");     
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   --background: #0B0D10;
   --surface : #14181D;
   --secondary-surface: #1B2128;

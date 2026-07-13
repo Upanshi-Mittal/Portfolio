@@ -109,7 +109,7 @@ export default function skills() {
       <div className="w-full max-w-5xl">
         <div className="log-badge">
           <span className="log-dot" />
-          <span className="log-label">Log Entry 04</span>
+          <span className="log-label">Log Entry 02</span>
         </div>
 
         <h2 className="font-serif text-4xl md:text-5xl text-zinc-100 mb-2 hero-title">Core capabilities</h2>

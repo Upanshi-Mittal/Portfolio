@@ -43,7 +43,7 @@ letter-spacing: -2px;
   left: 12px;
   top: 0;
   bottom:0;
-  width: 2px;
+  width: 50px;
   background: var(--border);
   box-shadow: 0 0 10px var(--accent-blue);
 }
@@ -56,10 +56,13 @@ letter-spacing: -2px;
   display: flex;
 }
 
+.check:hover{
+  scale:1.02;
+}
 .dot {
   position: absolute;
   left: 5px;
-  top: 20px;
+  top: 40%;
   width: 18px;
   height: 18px;
   background: transparent;
@@ -68,8 +71,16 @@ letter-spacing: -2px;
   border-color: 1px solid var(--accent-blue);
 }
 
-.check{
+.check .year,
+.check h3,
+.check p{
   margin-left: 40px;
+  color:var(--primary-text)
+}
+.check h3:hover,
+.check p:hover{
+  color:var(--text);
+  
 }
 .card {
   
@@ -95,7 +106,7 @@ letter-spacing: -2px;
 
 .year {
   font-size: 0.8rem;
-  
+  color:var(--accent-blue) !important
 }
 
 .about-text {
