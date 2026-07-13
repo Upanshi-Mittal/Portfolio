@@ -301,7 +301,7 @@ export default function MissionCommandPalette() {
       <button
         onClick={openPalette}
         style={{ height: "52px", width: "280px" }}
-        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-500 hover:border-zinc-700 hover:bg-zinc-900/80 transition-colors"
+        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-[var(--secondary-text)] bg-red-500 hover:border-[var(--accent-blue)] hover:bg-[var(--secondary-surface)] transition-colors"
       >
         <Search size={16} className={"flex-shrink-0 "+ (open ?"opacity-0 ":"opacity-80" ) }/>
         <span className="flex-1 text-left text-sm text-zinc-600">Search mission files...</span>
@@ -312,12 +312,19 @@ export default function MissionCommandPalette() {
 
       {/* header trigger — mobile */}
       <button
-        onClick={openPalette}
-        className="sm:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-500"
-      >
-        <Search size={18} />
-      </button>
-
+  onClick={openPalette}
+  className="
+    sm:hidden
+    flex items-center justify-center
+    w-11 h-11
+    p-0
+    rounded-xl
+    border border-zinc-800
+  "
+>
+  <Search className="w-5 h-5" />
+</button>
+{/*sm:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-500  */}
       {/* toast for actions that don't navigate (copy email, toggles) */}
       {toast && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] font-mono text-xs text-zinc-200 bg-zinc-900 border border-zinc-700 rounded-lg px-3.5 py-2 shadow-2xl">

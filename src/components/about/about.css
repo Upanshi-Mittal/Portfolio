@@ -29,7 +29,8 @@ letter-spacing: -2px;
   gap: 100px;
   justify-content: center;
   width: 100%;
-  lex-wrap: wrap;
+  margin-bottom:80px;
+
 }
 
 .timeline {

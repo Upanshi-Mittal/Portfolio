@@ -69,10 +69,10 @@ function App() {
         <div className="page1" id="page1">
           <Hero />
         </div>
-        <div className="page2"  >
+        <div className="page2 "  >
           <About />
         </div>
-        <div className="page2" id="skillspage">
+        <div className="page2 " id="skillspage">
           <Skills />
         </div>
 

@@ -2,14 +2,11 @@ import "./about.css";
 
 function About() {
     return (
-        <div className="about" id="about">
-            <div className="inline-flex items-center rounded-full border border-[#2B3139] bg-[#151A21] px-4 py-1.5 gap-2 mb-[300px] self-start">
-                <span className=" h-2 w-2 rounded-full bg-[#5E6AD2]" />
-
-                <span className="badge-text">
-                    Log Entry 01
-                </span>
-            </div>
+        <div className="about " id="about">
+            <div className="log-badge">
+          <span className="log-dot" />
+          <span className="log-label">Log Entry 02</span>
+        </div>
             <div className="about-title hero-title">
                 About
 
