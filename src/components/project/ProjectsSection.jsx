@@ -170,20 +170,18 @@ const ProjectsSection = () => {
     <section ref={sectionRef} className="projects-section" id="projects">
       <div className="projects-layout">
         {/* LEFT: Header + Radar (pinned together) */}
-        <div ref={pinnedLeftRef} className="projects-left-col">
+        <div  className="projects-left-col ">
           <div className="projects-header-pinned">
             <div className="projects-badge">
               <span className="badge-dot" />
               <span className="badge-text">Log Entry 03</span>
             </div>
             <h2 className="projects-title hero-title">Projects</h2>
-
-            <div className="mission-divider">
-              <span className="mission-divider-label">Mission 0{activeIndex+1} of 06</span>
-              <div className="mission-divider-line" />
-            </div>
           </div>
-          <MissionRadar activeIndex={activeIndex} projects={PROJECTS} />
+          <div ref={pinnedLeftRef}
+ className="hidden lg:flex flex-col">
+          <MissionRadar activeIndex={activeIndex} projects={PROJECTS}  />
+          </div>
         </div>
 
         {/* RIGHT: Cards (scrolls naturally) */}

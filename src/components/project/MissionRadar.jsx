@@ -38,7 +38,7 @@ const MissionRadar = ({ activeIndex, projects }) => {
   };
 
   return (
-    <div className="radar-panel">
+    <div className="radar-panel ">
       <div className="radar-info">
         <span className="radar-mission-label">Mission 0{activeProject.sno}</span>
         <h3 className="radar-project-name">{activeProject.Name}</h3>

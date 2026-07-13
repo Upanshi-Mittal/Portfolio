@@ -47,7 +47,7 @@
 
 .projects-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 600;
+  font-weight: 400;
   color: #fff;
   margin: 0 0 12px;
   letter-spacing: -0.02em;
@@ -59,6 +59,8 @@
   margin: 0;
 }
 
+
+
 /* ─── Main Layout ─── */
 .projects-layout {
   display: grid;
@@ -69,6 +71,11 @@
   align-items: start;
 }
 
+@media (max-width: 1023px) {
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+}
 .projects-cards {
   display: flex;
   flex-direction: column;

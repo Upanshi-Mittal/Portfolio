@@ -30,7 +30,7 @@
 
 .contact-title {
   font-family: var(--font-voice, serif);
-  font-size: 38px;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 400;
   color: #F5F7FA;
   margin: 0 0 6px;

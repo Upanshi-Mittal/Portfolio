@@ -9,10 +9,13 @@ const ProjectCard = forwardRef(({ project, index, total }, ref) => {
     <div ref={ref} className="mission-card" data-mission={index}>
       <div className="mission-divider">
         
-        <div className="mission-divider-line" />
+        <span className="mission-divider-label">Mission 0{index+1} of 06</span>
+              <div className="mission-divider-line" />
       </div>
 
       <div className="mission-card-inner">
+              
+        
         {/* Left: Content */}
         <div className="mission-content">
           <div className="mission-meta">
