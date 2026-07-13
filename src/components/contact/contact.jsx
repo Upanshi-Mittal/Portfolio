@@ -35,7 +35,7 @@ function Contact({ contactRef }) {
         <span className="log-label">Log Entry 04</span>
       </div>
 
-      <h1 className="contact-title">Open a transmission</h1>
+      <h1 className="contact-title hero-title">Open a transmission</h1>
       <p className="contact-subtitle">Reach out — I read every message myself.</p>
 
       <div className="contact-container">

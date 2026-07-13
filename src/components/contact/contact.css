@@ -1,5 +1,5 @@
 .contact {
-  padding: 96px 40px;
+  padding: 6px 40px ;
   display: flex;
   flex-direction: column;
 }
@@ -58,7 +58,7 @@
 .contact-form {
   border: 0.5px solid #2A313A;
   border-radius: 12px;
-  background: #14181D;
+  background-color: rgba(255, 255, 255, 0.03);
   padding: 26px;
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@
 .social-links {
   border: 0.5px solid #2A313A;
   border-radius: 12px;
-  background: #14181D;
+  background: rgba(255, 255, 255, 0.03);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -173,6 +173,7 @@
 /* Footer */
 .footer {
   margin-top: 56px;
+  margin-bottom:20px;
   padding-top: 20px;
   border-top: 0.5px solid #2A313A;
 }

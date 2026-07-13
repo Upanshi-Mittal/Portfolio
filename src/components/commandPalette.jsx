@@ -301,7 +301,8 @@ export default function MissionCommandPalette() {
       <button
         onClick={openPalette}
         style={{ height: "52px", width: "280px" }}
-        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl bg-[var(--surface)] border border-[var(--border)] text-[var(--secondary-text)] bg-red-500 hover:border-[var(--accent-blue)] hover:bg-[var(--secondary-surface)] transition-colors"
+        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl bg-[rgba(255, 255, 255, 0.03);
+] border border-[var(--border)] text-[var(--secondary-text)] bg-red-500 hover:border-[var(--accent-blue)] hover:bg-[var(--secondary-surface)] transition-colors"
       >
         <Search size={16} className={"flex-shrink-0 "+ (open ?"opacity-0 ":"opacity-80" ) }/>
         <span className="flex-1 text-left text-sm text-zinc-600">Search mission files...</span>
