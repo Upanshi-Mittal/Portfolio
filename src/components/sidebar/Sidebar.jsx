@@ -13,7 +13,6 @@ function Sidebar({ contactRef }) {
 
   useGSAP(() => {
   const mm = gsap.matchMedia();
-  // 📱 MOBILE ANIMATION
   mm.add("(max-width: 768px)", () => {
     gsap.fromTo(
       ".sidebar",

@@ -34,7 +34,7 @@ const PROJECTS = [
     module: ["Dependency Parser", "Build Graph", "Incremental Compiler", "CLI Tool"],
     tech: ["C++17", "CMake", "LLVM", "Graphviz"],
     code: "https://github.com/Upanshi-Mittal/Optibuild",
-    Link: "https://github.com/Upanshi-Mittal/Optibuild",
+    Link: "#",
     url: "optibuild.dev",
     visible: true
   },
@@ -49,7 +49,7 @@ const PROJECTS = [
     module: ["3D Avatar", "Voice Pipeline", "Behavioral Analysis", "Feedback LLM"],
     tech: ["React Three Fiber", "WebRTC", "OpenAI API", "MediaPipe"],
     code: "https://github.com/Upanshi-Mittal/Intervue",
-    Link: "https://github.com/Upanshi-Mittal/Intervue",
+    Link: "#",
     url: "intervue.ai",
     visible: true
   },
@@ -170,7 +170,7 @@ const ProjectsSection = () => {
     <section ref={sectionRef} className="projects-section" id="projects">
       <div className="projects-layout">
         {/* LEFT: Header + Radar (pinned together) */}
-        <div  className="projects-left-col ">
+        <div className="projects-left-col ">
           <div className="projects-header-pinned">
             <div className="projects-badge">
               <span className="badge-dot" />
@@ -179,8 +179,8 @@ const ProjectsSection = () => {
             <h2 className="projects-title hero-title">Projects</h2>
           </div>
           <div ref={pinnedLeftRef}
- className="hidden lg:flex flex-col">
-          <MissionRadar activeIndex={activeIndex} projects={PROJECTS}  />
+            className="hidden lg:flex flex-col">
+            <MissionRadar activeIndex={activeIndex} projects={PROJECTS} />
           </div>
         </div>
 
