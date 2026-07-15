@@ -21,40 +21,9 @@ const PROJECTS = [
     code: "https://github.com/Upanshi-Mittal/accesslens",
     Link: "https://accesslens-azure.vercel.app/",
     url: "accesslens.app",
-    visible: true
   },
   {
     sno: 2,
-    status: "Deployed",
-    Name: "OptiBuild",
-    Description:
-      "A C++ build optimization framework that analyzes project dependencies, constructs build graphs, and minimizes unnecessary recompilation for faster and more efficient software builds.",
-    hardest_part:
-      "Constructing accurate dependency graphs for complex template-heavy C++ codebases with circular dependencies and macro-generated code.",
-    module: ["Dependency Parser", "Build Graph", "Incremental Compiler", "CLI Tool"],
-    tech: ["C++17", "CMake", "LLVM", "Graphviz"],
-    code: "https://github.com/Upanshi-Mittal/Optibuild",
-    Link: "#",
-    url: "optibuild.dev",
-    visible: true
-  },
-  {
-    sno: 3,
-    status: "Deployed",
-    Name: "Intervue AI",
-    Description:
-      "An AI-powered interview platform featuring a real-time 3D avatar, voice conversations, camera-based behavioral analysis, and intelligent interview feedback for realistic mock interviews.",
-    hardest_part:
-      "Synchronizing lip-synced 3D avatar animation with real-time STT/TTS latency under 200ms while maintaining natural conversation flow.",
-    module: ["3D Avatar", "Voice Pipeline", "Behavioral Analysis", "Feedback LLM"],
-    tech: ["React Three Fiber", "WebRTC", "OpenAI API", "MediaPipe"],
-    code: "https://github.com/Upanshi-Mittal/Intervue",
-    Link: "#",
-    url: "intervue.ai",
-    visible: true
-  },
-  {
-    sno: 4,
     status: "Deployed",
     Name: "SentinelMesh",
     Description:
@@ -66,10 +35,9 @@ const PROJECTS = [
     code: "https://github.com/Upanshi-Mittal/SentinelMesh",
     Link: "https://web3-ai-web.vercel.app",
     url: "sentinelmesh.io",
-    visible: true
   },
   {
-    sno: 5,
+    sno: 3,
     status: "Deployed",
     Name: "BeatFall",
     Description:
@@ -82,6 +50,35 @@ const PROJECTS = [
     Link: "https://beatfall.netlify.app/",
     url: "beatfall.netlify.app",
     visible: false
+  },
+  {
+    sno: 4,
+    status: "In Progress",
+    Name: "OptiBuild",
+    Description:
+      "A C++ build optimization framework that analyzes project dependencies, constructs build graphs, and minimizes unnecessary recompilation for faster and more efficient software builds.",
+    hardest_part:
+      "Constructing accurate dependency graphs for complex template-heavy C++ codebases with circular dependencies and macro-generated code.",
+    module: ["Dependency Parser", "Build Graph", "Incremental Compiler", "CLI Tool"],
+    tech: ["C++17", "CMake", "LLVM", "Graphviz"],
+    code: "https://github.com/Upanshi-Mittal/Optibuild",
+    Link: "#",
+    url: "optibuild.dev",
+  },
+  {
+    sno: 5,
+    status: "In Progress",
+    Name: "Intervue AI",
+    Description:
+      "An AI-powered interview platform featuring a real-time 3D avatar, voice conversations, camera-based behavioral analysis, and intelligent interview feedback for realistic mock interviews.",
+    hardest_part:
+      "Synchronizing lip-synced 3D avatar animation with real-time STT/TTS latency under 200ms while maintaining natural conversation flow.",
+    module: ["3D Avatar", "Voice Pipeline", "Behavioral Analysis", "Feedback LLM"],
+    tech: ["React Three Fiber", "WebRTC", "OpenAI API", "MediaPipe"],
+    code: "https://github.com/Upanshi-Mittal/Intervue",
+    Link: "#",
+    url: "intervue.ai",
+    visible: true
   },
   {
     sno: 6,
