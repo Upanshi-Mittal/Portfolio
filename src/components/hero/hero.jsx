@@ -93,7 +93,7 @@ function Hero() {
           </span>
         </div>
       </div>
-      <div className="intro-text" style={{marginTop:"120px"}}>
+      <div className="intro-text">
         <h1 className="hero-title">Upanshi Mittal</h1>
         <h2>Building intelligent systems through full-stack engineering and AI</h2>
         <Separator />

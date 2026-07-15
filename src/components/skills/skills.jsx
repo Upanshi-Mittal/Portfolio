@@ -103,7 +103,7 @@ export default function skills() {
   const wide = CARDS.filter((c) => c.size === "wide");
 
   return (
-    <section className="w-full flex  md:px-10 pt-28 md:pt-36 pb-16 gap-[20px] " style={{padding: "0px 50px"}}>
+    <section className="w-full flex md:px-10 pt-28 md:pt-36 pb-16 gap-[20px] skills-section-wrapper">
       {/* flex+justify-center centers this reliably regardless of what the
           parent layout is doing — more robust than relying on mx-auto */}
       <div className="w-full max-w-5xl">
@@ -115,7 +115,7 @@ export default function skills() {
         <h2 className="about-title hero-title">Core capabilities</h2>
         <p className="text-zinc-500 text-base md:text-lg mb-10 md:mb-12">How I engineer software.</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex justify-center " style={{margin:"10px 50px 0 50px"}}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex justify-center skills-grid">
           <Card card={tall} />
           <div className="grid grid-cols-1 gap-4 ">
             {small.map((c) => (
@@ -126,7 +126,7 @@ export default function skills() {
 
        
 
-        <div className="grid grid-cols-1 gap-4 " style={{margin:"20px 50px 0 50px"}}>
+        <div className="grid grid-cols-1 gap-4 skills-grid-wide">
           {wide.map((c) => (
             <Card key={c.id} card={c} />
           ))}

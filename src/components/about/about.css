@@ -8,11 +8,12 @@
 
 .about {
   min-height: 80vh;
-  padding: 0px 50px;
+  padding: 60px 50px;
    display: flex;
    flex-direction: column;
-min-width: 100%;
-gap:20px; 
+  min-width: 100%;
+  gap:20px;
+  box-sizing: border-box;
 }
 .about-title {
   min-width: 100%;
@@ -26,17 +27,18 @@ letter-spacing: -2px;
 }
 .about-wrapper {
   display: flex;
-  gap: 100px;
+  gap: 60px;
   justify-content: center;
   width: 100%;
-  margin-bottom:80px;
-
+  margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 
 .timeline {
   position: relative;
-  width: 320px;
+  width: clamp(240px, 40vw, 320px);
   height:fit-content;
+  flex-shrink: 0;
 }
 
 .timeline-line {
@@ -92,11 +94,10 @@ letter-spacing: -2px;
   border: 1px solid rgba(255,255,255,0.1);
   transition: 0.3s ease;
   height:fit-content;
-  width:auto;
+  width: 100%;
   max-width: 480px;  
   justify-content: center;
-  
-
+  box-sizing: border-box;
 }
 
 .card:hover {
@@ -164,4 +165,51 @@ letter-spacing: -2px;
 
 .label{
   color:var(--secondary-text);
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 40px 30px;
+  }
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .timeline {
+    width: 100%;
+    max-width: 400px;
+  }
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 30px 16px;
+  }
+  .about-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+  .timeline-item {
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+  .check .year,
+  .check h3,
+  .check p {
+    margin-left: 20px;
+  }
+  .stats {
+    gap: 12px;
+  }
+  .stat-card {
+    padding: 12px 14px;
+    min-width: 120px;
+  }
 }

@@ -24,7 +24,7 @@
 
 }
 .intro-text h1 {
-  font-size: 5rem;
+  font-size: clamp(2.8rem, 7vw, 5rem);
   /*text-shadow: 0 0 10px aquamarine;*/
   opacity: 1;
   align-items: center;
@@ -37,10 +37,11 @@
 }
 
 .intro-text h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 3vw, 1.8rem);
   color: var(--secondary-text);
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  padding: 0 1rem;
 }
 .intro-text p {
   margin-top: 1rem;
@@ -53,9 +54,11 @@
   flex-direction: column;
   align-items: center;
   border-radius:20px;
-  width:80%;
+  width: min(80%, 100%);
   padding-top: 120px;
   overflow:visible;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Simple float animation */
@@ -88,23 +91,49 @@
 
 @media screen and (max-width: 768px) {
   .intro-text{
-    margin-top:90px;
+    margin-top: 70px !important;
+    padding: 0 0.5rem;
   }
-  .intro-text h1 {
-    font-size: 3.5rem;
+  .intro-text h2 {
+    font-size: clamp(0.9rem, 3.5vw, 1.3rem);
   }
   .intro-text p{
     margin-top: 1rem;
     padding-top: 0%;
   }
   .phero p{
-    font-size:1.2rem;
+    font-size:1rem;
   }
   .phero{
+    width: 95%;
     height:fit-content;
     z-index:100;
-    margin-bottom: 95px;
+    margin-bottom: 40px;
+    padding-top: 80px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .hero-tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+  .tag {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .phero {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 70px;
+  }
+  .intro-text h2 {
+    font-size: 0.95rem;
   }
 }
 

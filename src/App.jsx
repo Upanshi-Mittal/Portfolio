@@ -2,16 +2,13 @@ import { useEffect,useState,useRef } from 'react';
 import './App.css';
 import Skills from './components/skills/skills';
 import Hero from './components/hero/hero';
-import String from './components/string/string'
 //import An from './another';
 import BlinkingStars from './components/stars/blinking';
 import Contact from './components/contact/contact';
 import gsap from "gsap";
-import Project from './components/project/project';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import ConstellationMap from './components/github/ConstellationMap';
 import Header from './components/header/header';
 import Sidebar from './components/sidebar/Sidebar';
 import About from './components/about/about';

@@ -168,3 +168,32 @@
     flex-wrap: nowrap;
   }
 }
+
+/* Skills section responsive wrapper */
+.skills-section-wrapper {
+  padding: 60px 50px 40px 50px;
+  box-sizing: border-box;
+}
+
+.skills-grid {
+  margin: 10px 0 0 0;
+}
+
+.skills-grid-wide {
+  margin: 20px 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .skills-section-wrapper {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-section-wrapper {
+    padding: 30px 16px;
+  }
+  .skills-title {
+    font-size: 28px;
+  }
+}
