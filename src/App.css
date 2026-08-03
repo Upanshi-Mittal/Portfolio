@@ -23,8 +23,7 @@ svg{
 }
 
 .page1{
-  min-height:100vh !important;
-    align-items: center;
+      align-items: center;
 
 }
 #space-path {
@@ -43,7 +42,7 @@ svg{
 
 
 .spaceship {
-  position: absolute;   /*stays on screen and works with GSAP path */
+  position: absolute;   
   top: 100px;
   z-index: 1;
   pointer-events: none;
@@ -81,7 +80,6 @@ Hero{
 
 
 .page1, .page2, .page3 {
-  min-height: 100vh;
   width: 100%;
 }
 

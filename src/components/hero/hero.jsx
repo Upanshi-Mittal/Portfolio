@@ -26,7 +26,6 @@ function Separator() {
         }
       );
     });
-
     return () => ctx.revert();
   }, []);
 
