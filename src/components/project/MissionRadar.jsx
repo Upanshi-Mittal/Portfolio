@@ -11,6 +11,8 @@ const NODE_POSITIONS = [
   
   
 ];
+const NODE_ANGLES = [0, 60, 120, 180, 240, 300];
+
 
 const MissionRadar = ({ activeIndex, projects }) => {
   const sweepRef = useRef(null);
@@ -19,17 +21,33 @@ const MissionRadar = ({ activeIndex, projects }) => {
   const total = projects.length;
 
   useEffect(() => {
-    const activeNode = nodesRef.current[activeIndex];
-    if (activeNode) {
-      gsap.to(activeNode, {
-        scale: 1.3,
-        duration: 0.6,
-        ease: "power2.out",
-        yoyo: true,
-        repeat: 1,
-      });
-    }
-  }, [activeIndex]);
+
+    gsap.to(sweepRef.current,{
+        rotate:360,
+        duration:6,
+        ease:"none",
+        repeat:-1
+    });
+
+},[]);
+useEffect(() => {
+
+    const node = nodesRef.current[activeIndex];
+
+    gsap.fromTo(
+        node,
+        {
+            scale:1
+        },
+        {
+            scale:1.35,
+            duration:.4,
+            repeat:1,
+            yoyo:true
+        }
+    );
+
+},[activeIndex]);
 
   const getNodeState = (index) => {
     if (index < activeIndex) return "completed";

@@ -45,7 +45,7 @@ function Card({ card }) {
 
   if (card.size === "tall") {
     return (
-      <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 md:p-7 flex flex-col h-full min-h-56 gap-5 md:min-h-0 hover:border-zinc-700 transition-colors "style={{ padding:"20px"}}>
+      <div className="rounded-2xl border border-zinc-800 bg-[var(--element-background)] p-6 md:p-7 flex flex-col h-full min-h-56 gap-5 md:min-h-0 hover:border-[var(--accent-blue)] transition-colors "style={{ padding:"20px"}}>
         <div className="w-9 h-9 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 ">
           <Icon size={18} strokeWidth={2} />
         </div>
@@ -62,7 +62,7 @@ function Card({ card }) {
 
   if (card.size === "small") {
     return (
-      <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-6 hover:border-zinc-700 transition-colors" style={{ padding:"20px"}}>
+      <div className="rounded-2xl border border-zinc-800 bg-[var(--element-background)] p-5 md:p-6 hover:border-[var(--accent-blue)] transition-colors" style={{ padding:"20px"}}>
         <div className="flex items-center gap-3 mb-2">
           <span className="text-indigo-400 flex-shrink-0">
             <Icon size={18} strokeWidth={2} />
@@ -76,7 +76,7 @@ function Card({ card }) {
 
   // wide
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 md:p-6 hover:border-zinc-700 transition-colors" style={{ padding:"20px"}}>
+    <div className="rounded-2xl border border-zinc-800 bg-[var(--element-background)] p-5 md:p-6 hover:border-[var(--accent-blue)] transition-colors" style={{ padding:"20px"}}>
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
         <div className="flex items-center gap-3">
           <span className="text-indigo-400 flex-shrink-0">
@@ -103,7 +103,7 @@ export default function skills() {
   const wide = CARDS.filter((c) => c.size === "wide");
 
   return (
-    <section className="w-full flex md:px-10 pt-28 md:pt-36 pb-16 gap-[20px] skills-section-wrapper">
+    <section className="w-full flex md:px-10 pt-28 md:pt-36 pb-16 gap-[20px] skills-section-wrapper" style={{padding:"60px 50px"}}>
       {/* flex+justify-center centers this reliably regardless of what the
           parent layout is doing — more robust than relying on mx-auto */}
       <div className="w-full max-w-5xl">
@@ -113,9 +113,8 @@ export default function skills() {
         </div>
 
         <h2 className="about-title hero-title">Core capabilities</h2>
-        <p className="text-zinc-500 text-base md:text-lg mb-10 md:mb-12">How I engineer software.</p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex justify-center skills-grid">
+<div style={{marginTop:"30px"}}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex justify-center skills-grid " style={{marginLeft:"100px"}} >
           <Card card={tall} />
           <div className="grid grid-cols-1 gap-4 ">
             {small.map((c) => (
@@ -123,15 +122,13 @@ export default function skills() {
             ))}
           </div>
         </div>
-
-       
-
-        <div className="grid grid-cols-1 gap-4 skills-grid-wide">
+        <div className="grid grid-cols-1 gap-4  skills-grid-wide " style={{marginTop:"20px", marginLeft:"100px"}}>
           {wide.map((c) => (
-            <Card key={c.id} card={c} />
+            <Card key={c.id} card={c}/>
           ))}
         </div>
       </div>
+    </div>
     </section>
   );
 }

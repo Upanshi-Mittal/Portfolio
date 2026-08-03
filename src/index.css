@@ -11,6 +11,8 @@
   --secondary-text : #8B949E;
   --muted-text : #6B7280;
   --accent-blue : #5E6AD2;
+  --element-background : #5856560d;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
