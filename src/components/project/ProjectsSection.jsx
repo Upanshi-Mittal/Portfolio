@@ -62,7 +62,7 @@ const PROJECTS = [
     module: ["Dependency Parser", "Build Graph", "Incremental Compiler", "CLI Tool"],
     tech: ["C++17", "CMake", "LLVM", "Graphviz"],
     code: "https://github.com/Upanshi-Mittal/Optibuild",
-    Link: "https://beat-fall.vercel.app/",
+    Link: "https://optibuild-nok5.vercel.app/",
     url: "optibuild.dev",
   },
   {
