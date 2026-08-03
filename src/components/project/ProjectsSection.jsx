@@ -47,7 +47,7 @@ const PROJECTS = [
     module: ["Hand Tracking", "Beat Engine", "3D Renderer", "Audio Sync"],
     tech: ["React Three Fiber", "MediaPipe", "Web Audio API", "Zustand"],
     code: "https://github.com/Upanshi-Mittal/BeatFall",
-    Link: "https://beatfall.netlify.app/",
+    Link: "https://beat-fall.vercel.app/",
     url: "beatfall.netlify.app",
     visible: false
   },
@@ -62,7 +62,7 @@ const PROJECTS = [
     module: ["Dependency Parser", "Build Graph", "Incremental Compiler", "CLI Tool"],
     tech: ["C++17", "CMake", "LLVM", "Graphviz"],
     code: "https://github.com/Upanshi-Mittal/Optibuild",
-    Link: "#",
+    Link: "https://beat-fall.vercel.app/",
     url: "optibuild.dev",
   },
   {
