@@ -137,9 +137,9 @@ const ProjectCard = forwardRef(({ project, index, total }, ref) => {
         <div className="mission-preview">
           <div className="browser-chrome">
             <div className="browser-dots">
-              <span />
-              <span />
-              <span />
+              <span className="bg-red-400"/>
+              <span className="bg-yellow-400"/>
+              <span className="bg-green-600"/>
             </div>
             <span className="browser-url">
               {hasLiveDemo ? project.url || Link : "no live deploy"}
