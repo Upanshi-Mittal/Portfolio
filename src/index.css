@@ -12,11 +12,11 @@
   --muted-text : #6B7280;
   --accent-blue : #5E6AD2;
   --element-background : #5856560d;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
 }
 @font-face {
   font-family: 'Researcher';
@@ -72,4 +72,9 @@ html,body{
 
 html{
   scroll-behavior: auto;
+}
+
+.mc-palette {
+  color-scheme: dark;
+  background: #09090b;
 }

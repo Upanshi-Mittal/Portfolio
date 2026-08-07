@@ -29,7 +29,7 @@ const DATA = [
       { id: "Paperplane", title: "Paperplane", subtitle: "react · three.js · webgl", icon: FolderGit2, shortcut: "↵", target: "#paperplane", keywords: "paperplane Paperplane react three webgl generative" },
       { id: "sentinelmesh", title: "SentinelMesh", subtitle: "next . Web3 . Solidity", icon: FolderGit2, shortcut: "↵", target: "#sentinelmesh", keywords: "sentinelmesh next Web3 Solidity" },
       { id: "intervue", title: "Intervue", subtitle: "react · express · llm interview tool", icon: FolderGit2, shortcut: "↵", target: "#intervue", keywords: "intervue react interview ai llm" },
-     // { id: "vision-sorter", title: "Vision Sorter", subtitle: "python · tensorflow · cv", icon: FolderGit2, shortcut: "↵", target: "#vision-sorter", keywords: "vision sorter tensorflow computer vision cv" },
+      // { id: "vision-sorter", title: "Vision Sorter", subtitle: "python · tensorflow · cv", icon: FolderGit2, shortcut: "↵", target: "#vision-sorter", keywords: "vision sorter tensorflow computer vision cv" },
       //{ id: "automl-dashboard", title: "AutoML Dashboard", subtitle: "python · tensorflow · react", icon: FolderGit2, shortcut: "↵", target: "#automl-dashboard", keywords: "automl dashboard tensorflow react ml" },
     ],
   },
@@ -282,6 +282,15 @@ export default function MissionCommandPalette() {
   return (
     <>
       <style>{`
+        /* Force dark rendering everywhere, regardless of the visitor's
+           OS/browser light-mode preference. Without this, unstyled native
+           chrome (button/input backgrounds, scrollbars, focus rings) is
+           painted by the browser based on prefers-color-scheme, which is
+           why the trigger button was showing up white in light mode. */
+        :root {
+          color-scheme: dark;
+        }
+
         @media (min-width: 640px) {
           .mc-palette { max-width: 740px; max-height: 62vh; }
         }
@@ -300,11 +309,10 @@ export default function MissionCommandPalette() {
       {/* header trigger — desktop */}
       <button
         onClick={openPalette}
-        style={{ height: "52px", width: "280px" }}
-        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl bg-[rgba(255, 255, 255, 0.03);
-] border border-[var(--border)] text-[var(--secondary-text)] bg-red-500 hover:border-[var(--accent-blue)] hover:bg-[var(--secondary-surface)] transition-colors"
+        style={{ height: "52px", width: "280px", backgroundColor: "#18181b", colorScheme: "dark" }}
+        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl border border-zinc-800 hover:border-indigo-500 hover:bg-zinc-800 transition-colors"
       >
-        <Search size={16} className={"flex-shrink-0 "+ (open ?"opacity-0 ":"opacity-80" ) }/>
+        <Search size={16} className={"flex-shrink-0 text-zinc-500 " + (open ? "opacity-0 " : "opacity-80")} />
         <span className="flex-1 text-left text-sm text-zinc-600">Search mission files...</span>
         <span className="font-mono text-xs text-zinc-500 border border-zinc-700 bg-zinc-800 rounded-md px-1.5 py-0.5">
           ⌘K
@@ -313,19 +321,13 @@ export default function MissionCommandPalette() {
 
       {/* header trigger — mobile */}
       <button
-  onClick={openPalette}
-  className="
-    sm:hidden
-    flex items-center justify-center
-    w-11 h-11
-    p-0
-    rounded-xl
-    border border-zinc-800
-  "
->
-  <Search className="w-5 h-5" />
-</button>
-{/*sm:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-500  */}
+        onClick={openPalette}
+        style={{ backgroundColor: "#18181b", colorScheme: "dark" }}
+        className="sm:hidden flex items-center justify-center w-12 h-12 p-0 rounded-xl border border-zinc-800 text-zinc-200"
+      >
+        <Search className="w-6 h-6" strokeWidth={2.25} />
+      </button>
+
       {/* toast for actions that don't navigate (copy email, toggles) */}
       {toast && (
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] font-mono text-xs text-zinc-200 bg-zinc-900 border border-zinc-700 rounded-lg px-3.5 py-2 shadow-2xl">
@@ -343,13 +345,14 @@ export default function MissionCommandPalette() {
           }
         >
           <div
+            style={{ colorScheme: "dark" }}
             className={
               "mc-palette w-full sm:mx-5 h-screen sm:h-auto bg-zinc-950 border border-zinc-800 sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-150 ease-out " +
               (animateIn ? "scale-100 opacity-100" : "scale-95 opacity-0")
             }
           >
             {/* input row */}
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-zinc-800 flex-shrink-0" style={{marginBottom:"10px"}}>
+            <div className="flex items-center gap-3 px-5 py-4 border-b border-zinc-800 flex-shrink-0" style={{ marginBottom: "10px" }}>
               <Search size={18} className="flex-shrink-0 text-zinc-500" />
               <input
                 ref={inputRef}
@@ -359,6 +362,7 @@ export default function MissionCommandPalette() {
                 placeholder="Type a command or search..."
                 autoComplete="off"
                 spellCheck={false}
+                style={{ colorScheme: "dark" }}
                 className="flex-1 bg-transparent border-none outline-none text-xl text-zinc-200 placeholder-zinc-600"
               />
               <span className="flex-shrink-0 font-mono text-xs text-zinc-500 border border-zinc-700 bg-zinc-900 rounded-md px-1.5 py-0.5">
@@ -427,7 +431,6 @@ export default function MissionCommandPalette() {
                               active={idx === activeIndex}
                               onHover={() => setActiveIndex(idx)}
                               onSelect={() => selectItem(it)}
-                              
                             />
                           );
                         })}
@@ -438,7 +441,7 @@ export default function MissionCommandPalette() {
                   {grouped &&
                     grouped.map((g) => (
                       <div key={g.group} className="mb-1">
-                        <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600" >
+                        <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
                           {g.group}
                         </div>
                         {g.items.map((it) => {
@@ -447,8 +450,8 @@ export default function MissionCommandPalette() {
                             it.id === "toggle-index"
                               ? { ...it, subtitle: `sidebar · ${missionIndexOpen ? "on" : "off"}` }
                               : it.id === "toggle-motion"
-                              ? { ...it, subtitle: `motion · ${animationsEnabled ? "on" : "off"}` }
-                              : it;
+                                ? { ...it, subtitle: `motion · ${animationsEnabled ? "on" : "off"}` }
+                                : it;
                           return (
                             <Row
                               key={it.id}
@@ -457,7 +460,6 @@ export default function MissionCommandPalette() {
                               active={idx === activeIndex}
                               onHover={() => setActiveIndex(idx)}
                               onSelect={() => selectItem(it)}
-                              
                             />
                           );
                         })}

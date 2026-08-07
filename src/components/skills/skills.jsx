@@ -103,7 +103,7 @@ export default function skills() {
   const wide = CARDS.filter((c) => c.size === "wide");
 
   return (
-    <section className="w-full flex md:px-10 pt-28 md:pt-36 pb-16 gap-[20px] skills-section-wrapper" id ="skills" style={{padding:"60px 50px"}}>
+    <section className="w-full flex md:px-10 pt-28 md:pt-36 pb-16 gap-[20px] skills-section-wrapper " id ="skills" style={{padding:"60px 50px"}}>
       {/* flex+justify-center centers this reliably regardless of what the
           parent layout is doing — more robust than relying on mx-auto */}
       <div className="w-full max-w-5xl">
@@ -114,7 +114,7 @@ export default function skills() {
 
         <h2 className="about-title hero-title">Core capabilities</h2>
 <div style={{marginTop:"30px"}}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex justify-center skills-grid " style={{marginLeft:"100px"}} >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex justify-center skills-grid  " style={{marginLeft:"100px"}} >
           <Card card={tall} />
           <div className="grid grid-cols-1 gap-4 ">
             {small.map((c) => (
