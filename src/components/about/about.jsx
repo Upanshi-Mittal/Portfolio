@@ -4,12 +4,11 @@ function About() {
     return (
         <div className="about " id="about">
             <div className="log-badge">
-          <span className="log-dot" />
-          <span className="log-label">Log Entry 02</span>
-        </div>
+                <span className="log-dot" />
+                <span className="log-label">Log Entry 01</span>
+            </div>
             <div className="about-title hero-title">
                 About
-
             </div>
 
             <div className="about-wrapper">
@@ -66,7 +65,7 @@ function About() {
                     </div>
                     <div className="stats">
                         <div className="stat-card">
-                            <h2>2+</h2>
+                            <h2>2yr +</h2>
                             <p>Experience</p>
                         </div>
                         <div className="stat-card">

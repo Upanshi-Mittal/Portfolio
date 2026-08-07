@@ -53,7 +53,7 @@ const PROJECTS = [
   },
   {
     sno: 4,
-    status: "In Progress",
+    status: "Deployed",
     Name: "OptiBuild",
     Description:
       "A C++ build optimization framework that analyzes project dependencies, constructs build graphs, and minimizes unnecessary recompilation for faster and more efficient software builds.",

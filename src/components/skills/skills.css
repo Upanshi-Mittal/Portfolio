@@ -22,13 +22,6 @@
   border-radius: 50%;
   background: #5E6AD2;
 }
-.log-label {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #8B949E;
-}
-
 .skills-title {
   font-family: var(--font-voice, serif);
   font-size: 38px;

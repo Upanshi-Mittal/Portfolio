@@ -60,7 +60,7 @@ function Hero() {
 
   return (
     <div className="phero relative pt-32 " id="phero" ref={heroRef}>
-      <div className="absolute top-[90px] right-[-170px] hidden lg:flex flex-col gap-5 opacity-65 select-none  absolute">
+      <div className="absolute top-[15%] right-[-15%] hidden lg:flex flex-col gap-5 opacity-65 select-none ">
         <div className="flex items-center justify-between gap-8 " >
           <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
             STATUS

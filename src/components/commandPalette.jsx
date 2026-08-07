@@ -26,17 +26,17 @@ const DATA = [
   {
     group: "Projects",
     items: [
-      { id: "dreamscape", title: "Dreamscape", subtitle: "react · three.js · webgl", icon: FolderGit2, shortcut: "↵", target: "#dreamscape", keywords: "dreamscape react three webgl generative" },
-      { id: "sentinelmesh", title: "SentinelMesh", subtitle: "go · distributed systems", icon: FolderGit2, shortcut: "↵", target: "#sentinelmesh", keywords: "sentinelmesh go distributed monitoring mesh" },
-      { id: "intervue", title: "Intervue", subtitle: "react · node · llm interview tool", icon: FolderGit2, shortcut: "↵", target: "#intervue", keywords: "intervue react interview ai llm" },
-      { id: "vision-sorter", title: "Vision Sorter", subtitle: "python · tensorflow · cv", icon: FolderGit2, shortcut: "↵", target: "#vision-sorter", keywords: "vision sorter tensorflow computer vision cv" },
-      { id: "automl-dashboard", title: "AutoML Dashboard", subtitle: "python · tensorflow · react", icon: FolderGit2, shortcut: "↵", target: "#automl-dashboard", keywords: "automl dashboard tensorflow react ml" },
+      { id: "Paperplane", title: "Paperplane", subtitle: "react · three.js · webgl", icon: FolderGit2, shortcut: "↵", target: "#paperplane", keywords: "paperplane Paperplane react three webgl generative" },
+      { id: "sentinelmesh", title: "SentinelMesh", subtitle: "next . Web3 . Solidity", icon: FolderGit2, shortcut: "↵", target: "#sentinelmesh", keywords: "sentinelmesh next Web3 Solidity" },
+      { id: "intervue", title: "Intervue", subtitle: "react · express · llm interview tool", icon: FolderGit2, shortcut: "↵", target: "#intervue", keywords: "intervue react interview ai llm" },
+     // { id: "vision-sorter", title: "Vision Sorter", subtitle: "python · tensorflow · cv", icon: FolderGit2, shortcut: "↵", target: "#vision-sorter", keywords: "vision sorter tensorflow computer vision cv" },
+      //{ id: "automl-dashboard", title: "AutoML Dashboard", subtitle: "python · tensorflow · react", icon: FolderGit2, shortcut: "↵", target: "#automl-dashboard", keywords: "automl dashboard tensorflow react ml" },
     ],
   },
   {
     group: "Actions",
     items: [
-      { id: "resume", title: "Download Resume", subtitle: "pdf · updated jul 2026", icon: CornerDownLeft, shortcut: "R", action: "resume", keywords: "download resume cv pdf" },
+      { id: "resume", title: "Open Resume", subtitle: "pdf · updated jul 2026", icon: CornerDownLeft, shortcut: "R", action: "resume", keywords: "open resume cv pdf" },
       { id: "github", title: "Open GitHub", subtitle: "github.com", icon: FaGithub, shortcut: "G", action: "https://github.com/Upanshi-Mittal", keywords: "github code repos source" },
       { id: "linkedin", title: "Open LinkedIn", subtitle: "linkedin.com", icon: FaLinkedin, shortcut: "L", action: "https://www.linkedin.com/in/upanshi-mittal-498213320/?skipRedirect=true", keywords: "linkedin profile network" },
       { id: "email", title: "Copy Email", subtitle: "clipboard", icon: Mail, shortcut: "E", action: "email", keywords: "email copy contact mail" },
@@ -289,7 +289,7 @@ export default function MissionCommandPalette() {
         .mc-results::-webkit-scrollbar-track { background: transparent; }
         .mc-results::-webkit-scrollbar-thumb { background: #27272a; border-radius: 10px; border: 2px solid #09090b; }
         .mc-results::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
-        .mc-results { scrollbar-width: thin; scrollbar-color: #27272a transparent; }
+        .mc-results { scrollbar-width: thin; scrollbar-color: #1b1bc4 transparent; }
         .reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
           animation-duration: 0.001ms !important;
           animation-iteration-count: 1 !important;
