@@ -72,7 +72,7 @@ const ProjectCard = forwardRef(({ project, index, total }, ref) => {
         <div className="mission-divider-line" />
       </div>
 
-      <div className="mission-card-inner">
+      <div className="mission-card-inner ">
         {/* Left: Content */}
         <div className="mission-content">
           <div className="mission-meta">

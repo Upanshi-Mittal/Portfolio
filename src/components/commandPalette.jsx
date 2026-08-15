@@ -10,8 +10,8 @@ import {
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const RESUME_URL = ".././public/Upanshi_Mittal_resume.pdf"; // TODO: point this at your actual résumé file
-const EMAIL_ADDRESS = "upanshimittal7@gmail.com"; // TODO: your real email
+const RESUME_URL = "/resume.pdf"; 
+const EMAIL_ADDRESS = "upanshimittal7@gmail.com"; 
 
 const DATA = [
   {
@@ -190,12 +190,7 @@ export default function MissionCommandPalette() {
         return;
       }
       if (action === "resume") {
-        const link = document.createElement("a");
-        link.href = RESUME_URL;
-        link.download = "";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
+        window.open(RESUME_URL, "_blank", "noopener,noreferrer");
         return;
       }
       if (action === "email") {
