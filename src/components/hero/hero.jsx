@@ -96,6 +96,7 @@ function Hero() {
         <h1 className="hero-title">Upanshi Mittal</h1>
         <h2>Building intelligent systems through full-stack engineering and AI</h2>
         <Separator />
+        
         <div className="">CORE TECHNOLOGIES</div>
         <p className="hero-tech ">
           <span className="tag"><FaReact />  React</span>,
