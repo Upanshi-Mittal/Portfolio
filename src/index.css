@@ -78,3 +78,8 @@ html{
   color-scheme: dark;
   background: #09090b;
 }
+
+::selection {
+  background: #5E6AD2;
+  color: white;
+}
