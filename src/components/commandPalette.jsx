@@ -304,23 +304,22 @@ export default function MissionCommandPalette() {
       {/* header trigger — desktop */}
       <button
         onClick={openPalette}
-        style={{ height: "52px", width: "280px", backgroundColor: "#18181b", colorScheme: "dark" }}
-        className="hidden sm:flex items-center gap-2.5 px-4 rounded-xl border border-zinc-800 hover:border-indigo-500 hover:bg-zinc-800 transition-colors"
+        style={{ height: "42px", width: "35px", backgroundColor: "transparent", colorScheme: "dark" , borderColor:"#18181b", borderWidth:"2px"  }}
+        className="hidden sm:flex items-center justify-center w-12 h-12 p-0 rounded-xl border border-zinc-800 text-zinc-200"
       >
-        <Search size={16} className={"flex-shrink-0 text-zinc-500 " + (open ? "opacity-0 " : "opacity-80")} />
-        <span className="flex-1 text-left text-sm text-zinc-600">Search mission files...</span>
-        <span className="font-mono text-xs text-zinc-500 border border-zinc-700 bg-zinc-800 rounded-md px-1.5 py-0.5">
+        <span className="font-mono text-xs text-zinc-500  rounded-md items-center py-0.5">
           ⌘K
         </span>
       </button>
 
-      {/* header trigger — mobile */}
       <button
         onClick={openPalette}
-        style={{ backgroundColor: "#18181b", colorScheme: "dark" }}
+        style={{ backgroundColor: "transparent", colorScheme: "dark", borderColor:"#18181b", borderWidth:"2px" }}
         className="sm:hidden flex items-center justify-center w-12 h-12 p-0 rounded-xl border border-zinc-800 text-zinc-200"
       >
-        <Search className="w-6 h-6" strokeWidth={2.25} />
+        <span className="font-mono text-xs text-zinc-500 rounded-md items-center py-0.5">
+          ⌘K
+        </span>
       </button>
 
       {/* toast for actions that don't navigate (copy email, toggles) */}
@@ -335,7 +334,7 @@ export default function MissionCommandPalette() {
         <div
           onMouseDown={(e) => e.target === e.currentTarget && closePalette()}
           className={
-            "fixed inset-0 z-50 flex items-start justify-center bg-black/70 backdrop-blur-sm pt-0 sm:pt-24 transition-opacity duration-150 " +
+            "fixed inset-0 h-100 z-50 flex items-start justify-center bg-transparent backdrop-blur-sm pt-0 sm:pt-24 transition-opacity duration-150 " +
             (animateIn ? "opacity-100" : "opacity-0")
           }
         >

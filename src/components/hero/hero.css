@@ -1,7 +1,6 @@
 
 .intro-wrapper {
   position: relative;
-  background: radial-gradient(circle at center, #1b1f3b, #0f1123);
   display: flex;
   font-family: 'Poppins', sans-serif;
   z-index:10;
