@@ -83,10 +83,6 @@
   bottom:-10%;
 }
 
-.intro-text h1 span.char {
-  color: aquamarine !important;
-}
-
 @media screen and (max-width: 768px) {
   .intro-text{
     margin-top: 70px !important;
@@ -211,7 +207,7 @@ hr{
   background: var(--border);
   border: none;
 
-  margin: 1rem 0;   /* <-- control spacing here */
+  margin: 1rem 0;  
 }
 
 .hero-title{

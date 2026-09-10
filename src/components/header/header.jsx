@@ -19,20 +19,30 @@ function Header() {
         <div className="header border-b border-[var(--border)]">
             <div className="content">
                 <h1 className="gap-4"><a href="#page1" className="text-2xl">Um<span className=" inline-block mr-3 h-1 w-1 rounded-full bg-[#5E6AD2]" > </span></a></h1>
-                <div className="flex gap-5 items-center">
-                    <div className="block"><a href="#about" onClick={() => setActive("about")}>About</a>
-                    {active === "about" ? <hr />: null}</div>
-                    <div className="block"><a href="#skills" onClick={() => setActive("skills")}>Skills</a>
-                    {active === "skills" ? <hr />: null}</div>
-                    <div className="block"><a href="#projects" onClick={() => setActive("project")}>Projects</a>
-                    {active === "project" ? <hr />: null}</div>
-                    <div className="block"><a href="#contact" onClick={() => setActive("contact")}>Contact</a>
-                    {active === "contact" ? <hr />: null}</div>
-                    <div className="block"><a href="/resume.pdf" target="blank" onClick={() => setActive("resume")}>Resume</a>
-                    {active === "resume" ? <hr />: null}</div>
+                <div className="flex gap-10">
+                    <div className={`flex gap-5 items-center nav-links ${menuOpen ? "open" : ""}`}>
+                        <div className="block"><a href="#about" onClick={() => setActive("about")}>About</a>
+                            {active === "about" ? <hr /> : null}</div>
+                        <div className="block"><a href="#skills" onClick={() => setActive("skills")}>Skills</a>
+                            {active === "skills" ? <hr /> : null}</div>
+                        <div className="block"><a href="#projects" onClick={() => setActive("project")}>Projects</a>
+                            {active === "project" ? <hr /> : null}</div>
+                        <div className="block"><a href="#contact" onClick={() => setActive("contact")}>Contact</a>
+                            {active === "contact" ? <hr /> : null}</div>
+                        <div className="block"><a href="/resume.pdf" target="blank" onClick={() => setActive("resume")}>Resume</a>
+                            {active === "resume" ? <hr /> : null}</div>
+                    </div>
                     <MissionCommandPalette />
+
+                    <div className="hamburger" onClick={toggleMenu}>
+                        ☰
+                    </div>
+
                 </div>
-                
+
+
+
+
             </div>
 
         </div>

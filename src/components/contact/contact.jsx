@@ -27,19 +27,37 @@ function Contact({ contactRef }) {
     );
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const name = e.target.name.value;
+    const message = e.target.message.value;
+
+    const subject = `Portfolio Contact from ${name}`;
+
+    const body = `Hi Upanshi,
+
+My name is ${name}.
+
+${message}`;
+
+    window.location.href =
+      `mailto:upanshimittal7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div>
-    <div className="contact" id="contact" ref={contactRef}>
-      <div className="log-badge">
-        <span className="log-dot" />
-        <span className="log-label">Log Entry 04</span>
-      </div>
+      <div className="contact" id="contact" ref={contactRef}>
+        <div className="log-badge">
+          <span className="log-dot" />
+          <span className="log-label">Log Entry 04</span>
+        </div>
 
-      <h1 className="contact-title hero-title">Open a transmission</h1>
-      <p className="contact-subtitle">Reach out — I read every message myself.</p>
+        <h1 className="contact-title hero-title">Open a transmission</h1>
+        <p className="contact-subtitle">Reach out — I read every message myself.</p>
 
-      <div className="contact-container">
-        <form
+        <div className="contact-container">
+          {/*<form
           action="https://api.web3forms.com/submit"
           method="POST"
           className="contact-form"
@@ -79,53 +97,72 @@ function Contact({ contactRef }) {
           <button type="submit" className="submit-btn">
             Send transmission
           </button>
-        </form>
+        </form>*/}
 
-        <div className="social-links">
-          <div className="form-header">Get in touch</div>
+          <div className="social-links">
+            <div className="form-header">Get in touch</div>
 
-          <a
-            className="contact-row"
-            href="mailto:upanshimittal7@gmail.com"
-          >
-            <FaEnvelope className="contact-icon" />
-            <div className="contact-box">
-              <span className="contact-label">Email</span>
-              <span className="contact-value">upanshimittal7@gmail.com</span>
-            </div>
-          </a>
+            <a
+              className="contact-row"
+              href="mailto:upanshimittal7@gmail.com"
+            >
+              <FaEnvelope className="contact-icon" />
+              <div className="contact-box">
+                <span className="contact-label">Email</span>
+                <span className="contact-value">upanshimittal7@gmail.com</span>
+              </div>
+            </a>
+            <a
+              className="contact-row"
+              href="https://github.com/Upanshi-Mittal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="contact-icon" />
+              <div className="contact-box">
+                <span className="contact-label">GitHub</span>
+                <span className="contact-value">Upanshi-Mittal</span>
+              </div>
+            </a>
 
-          <a
-            className="contact-row"
-            href="https://github.com/Upanshi-Mittal"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="contact-icon" />
-            <div className="contact-box">
-              <span className="contact-label">GitHub</span>
-              <span className="contact-value">Upanshi-Mittal</span>
-            </div>
-          </a>
+            <a
+              className="contact-row"
+              href="https://www.linkedin.com/in/upanshi-mittal-498213320/?skipRedirect=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="contact-icon" />
+              <div className="contact-box">
+                <span className="contact-label">LinkedIn</span>
+                <span className="contact-value">upanshi-mittal</span>
+              </div>
+            </a>
+          </div>
+          <form onSubmit={handleSubmit} className="items-center bg-[var(--element-background)] border-[0.1px] border-[var(--secondary-text)] rounded-[100px] flex justify-between " style={{ padding: "5px 50px 5px 50px" }}>
+            <input className="flex-1 bg-transparent text-l outline-none placeholder:text-white/50"
+              name="name"
+              placeholder="Your name"
+              required
+            />
 
-          <a
-            className="contact-row"
-            href="https://www.linkedin.com/in/upanshi-mittal-498213320/?skipRedirect=true"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin className="contact-icon" />
-            <div className="contact-box">
-              <span className="contact-label">LinkedIn</span>
-              <span className="contact-value">upanshi-mittal</span>
-            </div>
-          </a>
+            <textarea
+              className="flex-1 resize-none bg-transparent text-m outline-none placeholder:text-white/50"
+              name="message"
+              placeholder="Your message..."
+              rows="1"
+              required
+            />
+
+            <button className="shrink-0 rounded-2xl px-10 py-6 text-m text-white"
+              type="submit">
+              Send
+            </button>
+          </form>
         </div>
-      </div>
 
-      
-    </div>
-    <div className="footer">
+
+      </div>
+      <div className="footer">
         <div className="footer-content">
           <p className="footer-text">Um. — built from scratch, {new Date().getFullYear()}</p>
           <p className="copyright">
@@ -133,7 +170,7 @@ function Contact({ contactRef }) {
           </p>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
