@@ -80,6 +80,7 @@ const PROJECTS = [
     url: "intervue.ai",
     visible: true
   },
+  /*
   {
     sno: 6,
     status: "In Progress",
@@ -94,7 +95,7 @@ const PROJECTS = [
     Link: "#",
     url: "nerf-project",
     visible: false
-  },
+  },*/
 ];
 
 const ProjectsSection = () => {

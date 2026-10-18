@@ -3,7 +3,7 @@
 :root {
     font-family: url("../assets/Yaparivariable-ultra.ttf");     
   color-scheme: light dark;
-  --background: #0B0D10;
+  --background: #181c21;
   --surface : #14181D;
   --secondary-surface: #1B2128;
   --border : #2A313A;
@@ -67,6 +67,7 @@ html,body{
   padding:0;
   overflow-x: hidden;
 }
+
 
 html{
   scroll-behavior: auto;
