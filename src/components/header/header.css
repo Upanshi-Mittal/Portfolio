@@ -2,16 +2,18 @@
   display: flex;
   align-items: center;
   position: fixed;
-  min-width: 100%;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.01);
   height: 70px;
   justify-content: space-between;
   padding: 0 15px;
   backdrop-filter: blur(5px);
-  margin:0 !important;
-  left:0;
-  top:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto !important;
+  width: 900px;
+  max-width: 100%;
 }
 
 .nav-links li {

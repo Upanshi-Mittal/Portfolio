@@ -1,13 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
-import {
-  Search,
-  LayoutGrid,
-  FolderGit2,
-  CornerDownLeft,
-  Settings2,
-  Mail,
-  SatelliteDish,
-} from "lucide-react";
+import { createPortal } from "react-dom";
+import { Search, LayoutGrid, FolderGit2, CornerDownLeft, Settings2, Mail, SatelliteDish,} from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const RESUME_URL = "/resume.pdf"; 
@@ -55,29 +48,14 @@ const ALL_ITEMS = DATA.flatMap((g) => g.items);
 const POPULAR_IDS = ["projects", "resume", "github", "contact"];
 const TOTAL_COUNT = ALL_ITEMS.length;
 
-function highlight(text, q) {
-  if (!q) return text;
-  const i = text.toLowerCase().indexOf(q.toLowerCase());
-  if (i === -1) return text;
-  return (
-    <>
-      {text.slice(0, i)}
-      <mark className="bg-transparent text-indigo-400 font-semibold">
-        {text.slice(i, i + q.length)}
-      </mark>
-      {text.slice(i + q.length)}
-    </>
-  );
-}
-
-function Row({ item, query, active, onHover, onSelect }) {
+function Row({ item, active, onHover, onSelect }) {
   const Icon = item.icon;
   return (
     <div
       onMouseEnter={onHover}
       onClick={onSelect}
       className={
-        "flex items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer border-l-2 transition-colors duration-100 " +
+        "flex  items-center gap-3 px-3 py-2.5 rounded-lg cursor-pointer border-l-2 transition-colors duration-100 " +
         (active
           ? "bg-zinc-900 border-indigo-500"
           : "border-transparent hover:bg-zinc-900/60")
@@ -95,7 +73,7 @@ function Row({ item, query, active, onHover, onSelect }) {
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-sm font-medium text-zinc-200 truncate">
-          {highlight(item.title, query)}
+          {item.title}
         </div>
         <div className="text-xs font-mono text-zinc-600 truncate mt-0.5">
           {item.subtitle}
@@ -276,7 +254,7 @@ export default function MissionCommandPalette() {
 
   return (
     <>
-      <style>{`
+      <style>{` 
         /* Force dark rendering everywhere, regardless of the visitor's
            OS/browser light-mode preference. Without this, unstyled native
            chrome (button/input backgrounds, scrollbars, focus rings) is
@@ -322,170 +300,175 @@ export default function MissionCommandPalette() {
         </span>
       </button>
 
-      {/* toast for actions that don't navigate (copy email, toggles) */}
-      {toast && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] font-mono text-xs text-zinc-200 bg-zinc-900 border border-zinc-700 rounded-lg px-3.5 py-2 shadow-2xl">
-          {toast}
-        </div>
-      )}
+      {typeof document !== "undefined" &&
+        createPortal(
+          <>
+            {/* toast for actions that don't navigate (copy email, toggles) */}
+            {toast && (
+              <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[10001] font-mono text-xs text-zinc-200 bg-zinc-900 border border-zinc-700 rounded-lg px-3.5 py-2 shadow-2xl">
+                {toast}
+              </div>
+            )}
 
-      {/* overlay */}
-      {open && (
-        <div
-          onMouseDown={(e) => e.target === e.currentTarget && closePalette()}
-          className={
-            "fixed inset-0 h-100 z-50 flex items-start justify-center bg-transparent backdrop-blur-sm pt-0 sm:pt-24 transition-opacity duration-150 " +
-            (animateIn ? "opacity-100" : "opacity-0")
-          }
-        >
-          <div
-            style={{ colorScheme: "dark" }}
-            className={
-              "mc-palette w-full sm:mx-5 h-screen sm:h-auto bg-zinc-950 border border-zinc-800 sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-150 ease-out " +
-              (animateIn ? "scale-100 opacity-100" : "scale-95 opacity-0")
-            }
-          >
-            {/* input row */}
-            <div className="flex items-center gap-3 px-5 py-4 border-b border-zinc-800 flex-shrink-0" style={{ marginBottom: "10px" }}>
-              <Search size={18} className="flex-shrink-0 text-zinc-500" />
-              <input
-                ref={inputRef}
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                type="text"
-                placeholder="Type a command or search..."
-                autoComplete="off"
-                spellCheck={false}
-                style={{ colorScheme: "dark" }}
-                className="flex-1 bg-transparent border-none outline-none text-xl text-zinc-200 placeholder-zinc-600"
-              />
-              <span className="flex-shrink-0 font-mono text-xs text-zinc-500 border border-zinc-700 bg-zinc-900 rounded-md px-1.5 py-0.5">
-                ESC
-              </span>
-            </div>
+            {/* overlay */}
+            {open && (
+              <div
+                onMouseDown={(e) => e.target === e.currentTarget && closePalette()}
+                className={
+                  "fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-150 " +
+                  (animateIn ? "opacity-100" : "opacity-0")
+                }
+              >
+                <div
+                  className={
+                    "w-full max-w-2xl max-h-[70vh] bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-150 ease-out " +
+                    (animateIn ? "scale-100 opacity-100" : "scale-95 opacity-0")
+                  }
+                >
+                  {/* input row */}
+                  <div className="flex items-center gap-3 px-5 py-4 border-b border-zinc-800 flex-shrink-0" style={{ marginBottom: "10px" }}>
+                    <Search size={18} className="flex-shrink-0 text-zinc-500" />
+                    <input
+                      ref={inputRef}
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                      type="text"
+                      placeholder="Type a command or search..."
+                      autoComplete="off"
+                      spellCheck={false}
+                      style={{ colorScheme: "dark" }}
+                      className="flex-1 bg-transparent border-none outline-none text-xl text-zinc-200 placeholder-zinc-600"
+                    />
+                    <span className="flex-shrink-0 font-mono text-xs text-zinc-500 border border-zinc-700 bg-zinc-900 rounded-md px-1.5 py-0.5">
+                      ESC
+                    </span>
+                  </div>
 
-            {/* results */}
-            <div className="mc-results overflow-y-auto p-2 flex-1">
-              {grouped && resultCount === 0 ? (
-                <div className="flex flex-col items-center justify-center text-center px-5 py-12 text-zinc-500">
-                  <SatelliteDish size={40} strokeWidth={1.5} className="mb-4 opacity-50" />
-                  <div className="text-sm font-medium text-zinc-200 mb-3">No mission found.</div>
-                  <div className="text-xs text-zinc-600 mb-2.5">Try searching:</div>
-                  <div className="flex gap-2 flex-wrap justify-center">
-                    {["React", "Dreamscape", "Contact"].map((s) => (
-                      <button
-                        key={s}
-                        onClick={() => setQuery(s)}
-                        className="font-mono text-xs text-zinc-400 border border-zinc-800 hover:border-indigo-500/60 hover:text-zinc-200 rounded-md px-2.5 py-1.5 transition-colors"
-                      >
-                        {s}
-                      </button>
-                    ))}
+                  {/* results */}
+                  <div className="mc-results overflow-y-auto p-2 flex-1">
+                    {grouped && resultCount === 0 ? (
+                      <div className="flex flex-col items-center justify-center text-center px-5 py-12 text-zinc-500">
+                        <SatelliteDish size={40} strokeWidth={1.5} className="mb-4 opacity-50" />
+                        <div className="text-sm font-medium text-zinc-200 mb-3">No mission found.</div>
+                        <div className="text-xs text-zinc-600 mb-2.5">Try searching:</div>
+                        <div className="flex gap-2 flex-wrap justify-center">
+                          {["React", "Dreamscape", "Contact"].map((s) => (
+                            <button
+                              key={s}
+                              onClick={() => setQuery(s)}
+                              className="font-mono text-xs text-zinc-400 border border-zinc-800 hover:border-indigo-500/60 hover:text-zinc-200 rounded-md px-2.5 py-1.5 transition-colors"
+                            >
+                              {s}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <div ref={listRef}>
+                        {!grouped && (
+                          <>
+                            {recent.length > 0 && (
+                              <div className="mb-1">
+                                <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
+                                  Recent
+                                </div>
+                                {recent.map((id) => {
+                                  const it = ALL_ITEMS.find((x) => x.id === id);
+                                  if (!it) return null;
+                                  const idx = flatItems.indexOf(it);
+                                  return (
+                                    <Row
+                                      key={it.id}
+                                      item={it}
+                                      query=""
+                                      active={idx === activeIndex}
+                                      onHover={() => setActiveIndex(idx)}
+                                      onSelect={() => selectItem(it)}
+                                    />
+                                  );
+                                })}
+                              </div>
+                            )}
+                            <div className="mb-1">
+                              <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
+                                Popular Commands
+                              </div>
+                              {POPULAR_IDS.map((id) => {
+                                const it = ALL_ITEMS.find((x) => x.id === id);
+                                if (!it) return null;
+                                const idx = flatItems.indexOf(it);
+                                return (
+                                  <Row
+                                    key={it.id}
+                                    item={it}
+                                    query=""
+                                    active={idx === activeIndex}
+                                    onHover={() => setActiveIndex(idx)}
+                                    onSelect={() => selectItem(it)}
+                                  />
+                                );
+                              })}
+                            </div>
+                          </>
+                        )}
+
+                        {grouped &&
+                          grouped.map((g) => (
+                            <div key={g.group} className="mb-1">
+                              <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
+                                {g.group}
+                              </div>
+                              {g.items.map((it) => {
+                                const idx = flatItems.indexOf(it);
+                                const displayItem =
+                                  it.id === "toggle-index"
+                                    ? { ...it, subtitle: `sidebar · ${missionIndexOpen ? "on" : "off"}` }
+                                    : it.id === "toggle-motion"
+                                      ? { ...it, subtitle: `motion · ${animationsEnabled ? "on" : "off"}` }
+                                      : it;
+                                return (
+                                  <Row
+                                    key={it.id}
+                                    item={displayItem}
+                                    query={query}
+                                    active={idx === activeIndex}
+                                    onHover={() => setActiveIndex(idx)}
+                                    onSelect={() => selectItem(it)}
+                                  />
+                                );
+                              })}
+                            </div>
+                          ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* footer */}
+                  <div className="flex items-center justify-between px-4 py-2.5 border-t border-zinc-800 flex-shrink-0 font-mono text-xs text-zinc-600">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span>
+                        {grouped ? `${resultCount} result${resultCount === 1 ? "" : "s"}` : `${TOTAL_COUNT} files indexed`}
+                      </span>
+                    </div>
+                    <div className="hidden sm:flex gap-3.5">
+                      <span className="flex items-center gap-1.5">
+                        <kbd className="font-mono bg-zinc-900 border border-zinc-800 rounded px-1 py-0.5 text-zinc-500">↑↓</kbd> Navigate
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <kbd className="font-mono bg-zinc-900 border border-zinc-800 rounded px-1 py-0.5 text-zinc-500">↵</kbd> Select
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <kbd className="font-mono bg-zinc-900 border border-zinc-800 rounded px-1 py-0.5 text-zinc-500">esc</kbd> Close
+                      </span>
+                    </div>
                   </div>
                 </div>
-              ) : (
-                <div ref={listRef}>
-                  {!grouped && (
-                    <>
-                      {recent.length > 0 && (
-                        <div className="mb-1">
-                          <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
-                            Recent
-                          </div>
-                          {recent.map((id) => {
-                            const it = ALL_ITEMS.find((x) => x.id === id);
-                            if (!it) return null;
-                            const idx = flatItems.indexOf(it);
-                            return (
-                              <Row
-                                key={it.id}
-                                item={it}
-                                query=""
-                                active={idx === activeIndex}
-                                onHover={() => setActiveIndex(idx)}
-                                onSelect={() => selectItem(it)}
-                              />
-                            );
-                          })}
-                        </div>
-                      )}
-                      <div className="mb-1">
-                        <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
-                          Popular Commands
-                        </div>
-                        {POPULAR_IDS.map((id) => {
-                          const it = ALL_ITEMS.find((x) => x.id === id);
-                          if (!it) return null;
-                          const idx = flatItems.indexOf(it);
-                          return (
-                            <Row
-                              key={it.id}
-                              item={it}
-                              query=""
-                              active={idx === activeIndex}
-                              onHover={() => setActiveIndex(idx)}
-                              onSelect={() => selectItem(it)}
-                            />
-                          );
-                        })}
-                      </div>
-                    </>
-                  )}
-
-                  {grouped &&
-                    grouped.map((g) => (
-                      <div key={g.group} className="mb-1">
-                        <div className="px-3 pt-2.5 pb-1.5 font-mono text-xs uppercase tracking-wider text-zinc-600">
-                          {g.group}
-                        </div>
-                        {g.items.map((it) => {
-                          const idx = flatItems.indexOf(it);
-                          const displayItem =
-                            it.id === "toggle-index"
-                              ? { ...it, subtitle: `sidebar · ${missionIndexOpen ? "on" : "off"}` }
-                              : it.id === "toggle-motion"
-                                ? { ...it, subtitle: `motion · ${animationsEnabled ? "on" : "off"}` }
-                                : it;
-                          return (
-                            <Row
-                              key={it.id}
-                              item={displayItem}
-                              query={query}
-                              active={idx === activeIndex}
-                              onHover={() => setActiveIndex(idx)}
-                              onSelect={() => selectItem(it)}
-                            />
-                          );
-                        })}
-                      </div>
-                    ))}
-                </div>
-              )}
-            </div>
-
-            {/* footer */}
-            <div className="flex items-center justify-between px-4 py-2.5 border-t border-zinc-800 flex-shrink-0 font-mono text-xs text-zinc-600">
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>
-                  {grouped ? `${resultCount} result${resultCount === 1 ? "" : "s"}` : `${TOTAL_COUNT} files indexed`}
-                </span>
               </div>
-              <div className="hidden sm:flex gap-3.5">
-                <span className="flex items-center gap-1.5">
-                  <kbd className="font-mono bg-zinc-900 border border-zinc-800 rounded px-1 py-0.5 text-zinc-500">↑↓</kbd> Navigate
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <kbd className="font-mono bg-zinc-900 border border-zinc-800 rounded px-1 py-0.5 text-zinc-500">↵</kbd> Select
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <kbd className="font-mono bg-zinc-900 border border-zinc-800 rounded px-1 py-0.5 text-zinc-500">esc</kbd> Close
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+            )}
+          </>,
+          document.body
+        )}
     </>
   );
 }

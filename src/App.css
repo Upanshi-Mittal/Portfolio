@@ -5,11 +5,29 @@
   color:white;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position:relative;
+  position: relative;
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-left: 1px solid rgb(88, 88, 88);
+  border-right: 1px solid rgb(88, 88, 88);
+}
+
+/* Decorative second border with 2px margin/gap */
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;  /* 2px gap outside the left border */
+  right: -10px; /* 2px gap outside the right border */
+  border-left: 1px solid rgb(88, 88, 88);
+  border-right: 1px solid rgb(88, 88, 88);
+  pointer-events: none; /* ensures it doesn't block clicks or scroll */
 }
 .page1, .page2{
   display: flex;

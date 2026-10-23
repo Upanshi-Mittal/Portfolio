@@ -60,38 +60,6 @@ function Hero() {
 
   return (
     <div className="phero relative pt-32 " id="phero" ref={heroRef}>
-      <div className="absolute top-[15%] right-[-15%] hidden lg:flex flex-col gap-5 opacity-65 select-none ">
-        <div className="flex items-center justify-between gap-8 " >
-          <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
-            STATUS
-          </span>
-
-          <span className="flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
-            <span className="h-2 w-2 rounded-full bg-[var(--accent-blue)] shadow-[0_0_10px_var(--accent-blue)]"></span>
-            ONLINE
-          </span>
-        </div>
-
-        <div className="flex items-center justify-between gap-8">
-          <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
-            FOCUS
-          </span>
-
-          <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
-            AI SYSTEMS
-          </span>
-        </div>
-
-        <div className="flex items-center justify-between gap-8">
-          <span className="text-[10px] uppercase tracking-[0.28em] text-[var(--secondary-text)]">
-            AVAILABLE
-          </span>
-
-          <span className="text-[11px] uppercase tracking-[0.18em] text-[var(--primary-text)]">
-            OPEN TO WORK
-          </span>
-        </div>
-      </div>
       <div className="intro-text">
         <h1 className="hero-title">Upanshi Mittal</h1>
         <h2>Building intelligent systems through full-stack engineering and AI</h2>
