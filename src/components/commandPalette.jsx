@@ -7,6 +7,7 @@ import {
   Settings2,
   Mail,
   SatelliteDish,
+  GitPullRequest,
 } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -20,6 +21,7 @@ const DATA = [
       { id: "about", title: "About", subtitle: "~/mission/about", icon: LayoutGrid, shortcut: "G A", target: "#about", keywords: "about bio profile who" },
       { id: "capabilities", title: "Capability Map", subtitle: "~/mission/capabilities", icon: LayoutGrid, shortcut: "G C", target: "#skills", keywords: "skills capability map react tensorflow stack technologies skills skill" },
       { id: "projects", title: "Projects", subtitle: "~/mission/projects", icon: LayoutGrid, shortcut: "G P", target: "#projects", keywords: "projects work missions" },
+      { id: "opensource", title: "Open Source", subtitle: "~/mission/opensource", icon: GitPullRequest, shortcut: "G O", target: "#opensource", keywords: "opensource open source github prs contributions merged" },
       { id: "contact", title: "Open Transmission", subtitle: "~/mission/contact", icon: LayoutGrid, shortcut: "G T", target: "#contact", keywords: "contact transmission reach message form" },
     ],
   },

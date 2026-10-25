@@ -27,6 +27,8 @@ function Header() {
                             {active === "skills" ? <hr /> : null}</div>
                         <div className="block"><a href="#projects" onClick={() => setActive("project")}>Projects</a>
                             {active === "project" ? <hr /> : null}</div>
+                        <div className="block"><a href="#opensource" onClick={() => setActive("opensource")}>Open Source</a>
+                            {active === "opensource" ? <hr /> : null}</div>
                         <div className="block"><a href="#contact" onClick={() => setActive("contact")}>Contact</a>
                             {active === "contact" ? <hr /> : null}</div>
                         <div className="block"><a href="/resume.pdf" target="blank" onClick={() => setActive("resume")}>Resume</a>

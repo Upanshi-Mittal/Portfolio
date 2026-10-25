@@ -13,6 +13,7 @@ import Header from './components/header/header';
 import Sidebar from './components/sidebar/Sidebar';
 import About from './components/about/about';
 import ProjectsSection from './components/project/ProjectsSection';
+import OpenSource from './components/opensource/OpenSource';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 function App() {
@@ -75,8 +76,10 @@ function App() {
 
         <div className="page3" id="projectpage">
           <ProjectsSection />
-          
         </div>
+        
+        <OpenSource />
+
         <div className="page4" id="contactpage">
           <Contact contactRef={contactRef} />
           <Sidebar contactRef={contactRef} />
