@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiPython, SiTensorflow, SiScikitlearn, SiMongodb } from "react-icons/si";
+import PixelBanner from "./PixelBanner";
 gsap.registerPlugin(ScrollTrigger);
 
 function Separator() {
@@ -59,8 +60,9 @@ function Hero() {
 
 
   return (
-    <div className="phero relative pt-32 " id="phero" ref={heroRef}>
-      <div className="intro-text">
+    <div className="phero relative pt-24" id="phero" ref={heroRef}>
+      <PixelBanner />
+      <div className="intro-text" style={{ marginTop: "1.5rem" }}>
         <h1 className="hero-title">Upanshi Mittal</h1>
         <h2>Building intelligent systems through full-stack engineering and AI</h2>
         <Separator />
